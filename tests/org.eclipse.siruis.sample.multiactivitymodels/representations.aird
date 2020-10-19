@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:multiactivity="http://www.example.org/multiactivity" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_gj3UkAyWEeuTYeNMkME9QA" selectedViews="_xqIfsAybEeuTYeNMkME9QA" version="14.3.1.202003261200">
+    <semanticResources>MyFirstModel.multiactivity</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_xqIfsAybEeuTYeNMkME9QA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_yMSxkAybEeuTYeNMkME9QA" name="new MultiActivity diagram" repPath="#_yLVvUAybEeuTYeNMkME9QA" changeId="e0013e29-5383-4007-b9b3-100d0ae41dd1">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']"/>
+        <target xmi:type="multiactivity:Application" href="MyFirstModel.multiactivity#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_9BRmYBHmEeum3ZlNLYV77w" name="new MultiActivity diagram1" repPath="#_9BEyEBHmEeum3ZlNLYV77w" changeId="b8a11e8e-7c7a-4c7e-8bf1-4a4bf947d715">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']"/>
+        <target xmi:type="multiactivity:Application" href="MyFirstModel.multiactivity#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_yLVvUAybEeuTYeNMkME9QA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_yMNSAAybEeuTYeNMkME9QA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_yMN5EAybEeuTYeNMkME9QA"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_yNPMwAybEeuTYeNMkME9QA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_yNPMwQybEeuTYeNMkME9QA" type="Sirius" element="_yLVvUAybEeuTYeNMkME9QA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_yNiHsAybEeuTYeNMkME9QA" type="2001" element="_yMDhAAybEeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_yOH9kAybEeuTYeNMkME9QA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_yOH9kQybEeuTYeNMkME9QA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_0muMoAybEeuTYeNMkME9QA" type="3003" element="_0k-gMAybEeuTYeNMkME9QA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_0muMoQybEeuTYeNMkME9QA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0muMogybEeuTYeNMkME9QA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_yNiHsQybEeuTYeNMkME9QA" fontName="Ubuntu"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yNiHsgybEeuTYeNMkME9QA" x="450" y="10" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_yOPSUAybEeuTYeNMkME9QA" type="2001" element="_yMKOsAybEeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_yOP5YAybEeuTYeNMkME9QA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_yOP5YQybEeuTYeNMkME9QA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_0muzsAybEeuTYeNMkME9QA" type="3003" element="_0lBjgAybEeuTYeNMkME9QA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_0muzsQybEeuTYeNMkME9QA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0muzsgybEeuTYeNMkME9QA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_yOPSUQybEeuTYeNMkME9QA" fontName="Ubuntu"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yOPSUgybEeuTYeNMkME9QA" x="40" y="305" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_yOQgcAybEeuTYeNMkME9QA" type="2001" element="_yMK1wAybEeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_yORHgAybEeuTYeNMkME9QA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_yORHgQybEeuTYeNMkME9QA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_0mvawAybEeuTYeNMkME9QA" type="3003" element="_0lCKkQybEeuTYeNMkME9QA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_0mvawQybEeuTYeNMkME9QA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0mvawgybEeuTYeNMkME9QA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_yOQgcQybEeuTYeNMkME9QA" fontName="Ubuntu"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yOQgcgybEeuTYeNMkME9QA" x="720" y="315" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_yORHggybEeuTYeNMkME9QA" type="2001" element="_yMK1wQybEeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_yORukAybEeuTYeNMkME9QA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_yORukQybEeuTYeNMkME9QA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_0mwB0AybEeuTYeNMkME9QA" type="3003" element="_0lCxoQybEeuTYeNMkME9QA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_0mwB0QybEeuTYeNMkME9QA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0mwB0gybEeuTYeNMkME9QA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_yORHgwybEeuTYeNMkME9QA" fontName="Ubuntu"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yORHhAybEeuTYeNMkME9QA" x="-140" y="555" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_-MLjoAyeEeuTYeNMkME9QA" type="2001" element="_-K6_YAyeEeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_-MSRUAyeEeuTYeNMkME9QA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_-MSRUQyeEeuTYeNMkME9QA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-MVUoAyeEeuTYeNMkME9QA" type="3003" element="_-LC7MAyeEeuTYeNMkME9QA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-MVUoQyeEeuTYeNMkME9QA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-MVUogyeEeuTYeNMkME9QA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_-MLjoQyeEeuTYeNMkME9QA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-MLjogyeEeuTYeNMkME9QA" x="205" y="185" width="136" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_-MS4YAyeEeuTYeNMkME9QA" type="2001" element="_-LEJUAyeEeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_-MTfcAyeEeuTYeNMkME9QA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_-MTfcQyeEeuTYeNMkME9QA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-MV7sAyeEeuTYeNMkME9QA" type="3003" element="_-LHMoAyeEeuTYeNMkME9QA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-MV7sQyeEeuTYeNMkME9QA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-MV7sgyeEeuTYeNMkME9QA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_-MS4YQyeEeuTYeNMkME9QA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-MS4YgyeEeuTYeNMkME9QA" x="710" y="185" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_-MUGgAyeEeuTYeNMkME9QA" type="2001" element="_-LHzsQyeEeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_-MUtkAyeEeuTYeNMkME9QA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_-MUtkQyeEeuTYeNMkME9QA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-MWiwAyeEeuTYeNMkME9QA" type="3003" element="_-LK3AAyeEeuTYeNMkME9QA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_-MWiwQyeEeuTYeNMkME9QA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-MWiwgyeEeuTYeNMkME9QA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_-MUGgQyeEeuTYeNMkME9QA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-MUGggyeEeuTYeNMkME9QA" x="-109" y="430" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_g_Z8oA08EeuTYeNMkME9QA" type="2001" element="_g9vIsA08EeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_g_ajsA08EeuTYeNMkME9QA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_g_ajsQ08EeuTYeNMkME9QA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g_e1IA08EeuTYeNMkME9QA" type="3003" element="_g9vIsQ08EeuTYeNMkME9QA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_g_e1IQ08EeuTYeNMkME9QA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g_e1Ig08EeuTYeNMkME9QA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_g_Z8oQ08EeuTYeNMkME9QA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g_Z8og08EeuTYeNMkME9QA" x="465" y="195" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_g_bKwA08EeuTYeNMkME9QA" type="2001" element="_g9vvwA08EeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_g_bKww08EeuTYeNMkME9QA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_g_bKxA08EeuTYeNMkME9QA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g_fcMA08EeuTYeNMkME9QA" type="3003" element="_g9vvwQ08EeuTYeNMkME9QA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_g_fcMQ08EeuTYeNMkME9QA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g_fcMg08EeuTYeNMkME9QA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_g_bKwQ08EeuTYeNMkME9QA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g_bKwg08EeuTYeNMkME9QA" x="105" y="435" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_g_cY4A08EeuTYeNMkME9QA" type="2001" element="_g9vvww08EeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_g_c_8A08EeuTYeNMkME9QA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_g_c_8Q08EeuTYeNMkME9QA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g_fcMw08EeuTYeNMkME9QA" type="3003" element="_g9vvxA08EeuTYeNMkME9QA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_g_fcNA08EeuTYeNMkME9QA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g_fcNQ08EeuTYeNMkME9QA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_g_cY4Q08EeuTYeNMkME9QA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g_cY4g08EeuTYeNMkME9QA" x="720" y="455" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_g_dnAA08EeuTYeNMkME9QA" type="2001" element="_g9wW0Q08EeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_g_eOEA08EeuTYeNMkME9QA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_g_eOEQ08EeuTYeNMkME9QA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_g_gDQA08EeuTYeNMkME9QA" type="3003" element="_g9wW0g08EeuTYeNMkME9QA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_g_gDQQ08EeuTYeNMkME9QA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g_gDQg08EeuTYeNMkME9QA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_g_dnAQ08EeuTYeNMkME9QA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g_dnAg08EeuTYeNMkME9QA" x="-220" y="700" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E-idcA09EeuTYeNMkME9QA" type="2001" element="_E79qkA09EeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_E-jEgA09EeuTYeNMkME9QA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_E-jEgQ09EeuTYeNMkME9QA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E-kSoA09EeuTYeNMkME9QA" type="3003" element="_E79qkQ09EeuTYeNMkME9QA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E-kSoQ09EeuTYeNMkME9QA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-kSog09EeuTYeNMkME9QA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_E-idcQ09EeuTYeNMkME9QA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E-idcg09EeuTYeNMkME9QA" x="984" y="455" width="150" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_tz5tYA09EeuTYeNMkME9QA" type="2001" element="_txjkAQ09EeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_tz67gA09EeuTYeNMkME9QA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_tz67gQ09EeuTYeNMkME9QA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3kZXEA09EeuTYeNMkME9QA" type="3017" element="_3hw50Q09EeuTYeNMkME9QA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_3kZXEQ09EeuTYeNMkME9QA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3kZXEg09EeuTYeNMkME9QA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_tz5tYQ09EeuTYeNMkME9QA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tz5tYg09EeuTYeNMkME9QA" x="490" y="90" width="101" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_tz67gg09EeuTYeNMkME9QA" type="2001" element="_txpqoQ09EeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_tz7ikA09EeuTYeNMkME9QA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_tz7ikQ09EeuTYeNMkME9QA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3kalMA09EeuTYeNMkME9QA" type="3017" element="_3h0kMQ09EeuTYeNMkME9QA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_3kalMQ09EeuTYeNMkME9QA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3kalMg09EeuTYeNMkME9QA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_tz67gw09EeuTYeNMkME9QA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tz67hA09EeuTYeNMkME9QA" x="785" y="386" width="111" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_tz8JoA09EeuTYeNMkME9QA" type="2001" element="_txvxQA09EeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_tz8wsA09EeuTYeNMkME9QA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_tz8wsQ09EeuTYeNMkME9QA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3kbMQA09EeuTYeNMkME9QA" type="3017" element="_3h4OkQ09EeuTYeNMkME9QA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_3kbMQQ09EeuTYeNMkME9QA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3kbMQg09EeuTYeNMkME9QA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_tz8JoQ09EeuTYeNMkME9QA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tz8Jog09EeuTYeNMkME9QA" x="56" y="375" width="95" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_tz8wsg09EeuTYeNMkME9QA" type="2001" element="_tx0pwg09EeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_tz9XwA09EeuTYeNMkME9QA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_tz9XwQ09EeuTYeNMkME9QA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_3kbzUA09EeuTYeNMkME9QA" type="3017" element="_3h7R4Q09EeuTYeNMkME9QA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_3kbzUQ09EeuTYeNMkME9QA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3kbzUg09EeuTYeNMkME9QA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_tz8wsw09EeuTYeNMkME9QA" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tz8wtA09EeuTYeNMkME9QA" x="-155" y="620" width="91" height="50"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_yNPz0AybEeuTYeNMkME9QA"/>
+        <edges xmi:type="notation:Edge" xmi:id="_M_ZRUA1EEeuTYeNMkME9QA" type="4001" element="_M_MdAA1EEeuTYeNMkME9QA" source="_-MLjoAyeEeuTYeNMkME9QA" target="_yOPSUAybEeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_M_Z4YA1EEeuTYeNMkME9QA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_M_Z4YQ1EEeuTYeNMkME9QA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_M_Z4Yg1EEeuTYeNMkME9QA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_M_Z4Yw1EEeuTYeNMkME9QA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_M_Z4ZA1EEeuTYeNMkME9QA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_M_Z4ZQ1EEeuTYeNMkME9QA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_M_ZRUQ1EEeuTYeNMkME9QA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_M_ZRUg1EEeuTYeNMkME9QA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_M_ZRUw1EEeuTYeNMkME9QA" points="[-33, 25, 125, -95]$[-126, 95, 32, -25]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_M_bGgA1EEeuTYeNMkME9QA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_M_bGgQ1EEeuTYeNMkME9QA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_M_bGgg1EEeuTYeNMkME9QA" type="4001" element="_M_NrIA1EEeuTYeNMkME9QA" source="_-MS4YAyeEeuTYeNMkME9QA" target="_yOQgcAybEeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_M_btkA1EEeuTYeNMkME9QA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_M_btkQ1EEeuTYeNMkME9QA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_M_btkg1EEeuTYeNMkME9QA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_M_btkw1EEeuTYeNMkME9QA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_M_btlA1EEeuTYeNMkME9QA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_M_btlQ1EEeuTYeNMkME9QA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_M_bGgw1EEeuTYeNMkME9QA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_M_bGhA1EEeuTYeNMkME9QA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_M_bGhQ1EEeuTYeNMkME9QA" points="[1, 25, -9, -105]$[8, 105, -2, -25]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_M_cUoA1EEeuTYeNMkME9QA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_M_cUoQ1EEeuTYeNMkME9QA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_M_cUog1EEeuTYeNMkME9QA" type="4001" element="_M_OSMg1EEeuTYeNMkME9QA" source="_-MUGgAyeEeuTYeNMkME9QA" target="_yORHggybEeuTYeNMkME9QA">
+          <children xmi:type="notation:Node" xmi:id="_M_c7sA1EEeuTYeNMkME9QA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_M_c7sQ1EEeuTYeNMkME9QA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_M_c7sg1EEeuTYeNMkME9QA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_M_c7sw1EEeuTYeNMkME9QA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_M_c7tA1EEeuTYeNMkME9QA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_M_c7tQ1EEeuTYeNMkME9QA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_M_cUow1EEeuTYeNMkME9QA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_M_cUpA1EEeuTYeNMkME9QA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_M_cUpQ1EEeuTYeNMkME9QA" points="[-7, 25, 24, -100]$[-25, 100, 6, -25]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_M_diwA1EEeuTYeNMkME9QA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_M_diwQ1EEeuTYeNMkME9QA" id="(0.5,0.5)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_yMDhAAybEeuTYeNMkME9QA" name="MainActivity" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="multiactivity:Activity" href="MyFirstModel.multiactivity#//@activities.0"/>
+      <semanticElements xmi:type="multiactivity:Activity" href="MyFirstModel.multiactivity#//@activities.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_0k-gMAybEeuTYeNMkME9QA" labelSize="12" labelPosition="node" width="15" height="5" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_yMKOsAybEeuTYeNMkME9QA" name="ActivityTwo" incomingEdges="_M_MdAA1EEeuTYeNMkME9QA" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="multiactivity:Activity" href="MyFirstModel.multiactivity#//@activities.1"/>
+      <semanticElements xmi:type="multiactivity:Activity" href="MyFirstModel.multiactivity#//@activities.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_0lBjgAybEeuTYeNMkME9QA" labelSize="12" labelPosition="node" width="15" height="5" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_yMK1wAybEeuTYeNMkME9QA" name="ActivityThree" incomingEdges="_M_NrIA1EEeuTYeNMkME9QA" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="multiactivity:Activity" href="MyFirstModel.multiactivity#//@activities.2"/>
+      <semanticElements xmi:type="multiactivity:Activity" href="MyFirstModel.multiactivity#//@activities.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_0lCKkQybEeuTYeNMkME9QA" labelSize="12" labelPosition="node" width="15" height="5" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_yMK1wQybEeuTYeNMkME9QA" name="ActivityFour" incomingEdges="_M_OSMg1EEeuTYeNMkME9QA" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="multiactivity:Activity" href="MyFirstModel.multiactivity#//@activities.3"/>
+      <semanticElements xmi:type="multiactivity:Activity" href="MyFirstModel.multiactivity#//@activities.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_0lCxoQybEeuTYeNMkME9QA" labelSize="12" labelPosition="node" width="15" height="5" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_-K6_YAyeEeuTYeNMkME9QA" name="Activity2" outgoingEdges="_M_MdAA1EEeuTYeNMkME9QA" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.1"/>
+      <semanticElements xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_-LC7MAyeEeuTYeNMkME9QA" labelSize="12" labelPosition="node" width="15" height="5" color="252,175,62">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityButtonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityButtonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_-LEJUAyeEeuTYeNMkME9QA" name="Activity3" outgoingEdges="_M_NrIA1EEeuTYeNMkME9QA" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.2"/>
+      <semanticElements xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_-LHMoAyeEeuTYeNMkME9QA" labelSize="12" labelPosition="node" width="15" height="5" color="252,175,62">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityButtonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityButtonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_-LHzsQyeEeuTYeNMkME9QA" name="Activity4" outgoingEdges="_M_OSMg1EEeuTYeNMkME9QA" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.1/@layouts.0/@views.1"/>
+      <semanticElements xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.1/@layouts.0/@views.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_-LK3AAyeEeuTYeNMkME9QA" labelSize="12" labelPosition="node" width="15" height="5" color="252,175,62">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityButtonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityButtonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_g9vIsA08EeuTYeNMkME9QA" name="I am Activity 1" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="multiactivity:PopupMessageButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.0"/>
+      <semanticElements xmi:type="multiactivity:PopupMessageButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_g9vIsQ08EeuTYeNMkME9QA" labelSize="12" labelPosition="node" width="15" height="5" color="173,127,168">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='PopUpMessageButtonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='PopUpMessageButtonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_g9vvwA08EeuTYeNMkME9QA" name="I am Activity 2" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="multiactivity:PopupMessageButton" href="MyFirstModel.multiactivity#//@activities.1/@layouts.0/@views.0"/>
+      <semanticElements xmi:type="multiactivity:PopupMessageButton" href="MyFirstModel.multiactivity#//@activities.1/@layouts.0/@views.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_g9vvwQ08EeuTYeNMkME9QA" labelSize="12" labelPosition="node" width="15" height="5" color="173,127,168">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='PopUpMessageButtonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='PopUpMessageButtonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_g9vvww08EeuTYeNMkME9QA" name="I am Activity3" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="multiactivity:PopupMessageButton" href="MyFirstModel.multiactivity#//@activities.2/@layouts.0/@views.0"/>
+      <semanticElements xmi:type="multiactivity:PopupMessageButton" href="MyFirstModel.multiactivity#//@activities.2/@layouts.0/@views.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_g9vvxA08EeuTYeNMkME9QA" labelSize="12" labelPosition="node" width="15" height="5" color="173,127,168">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='PopUpMessageButtonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='PopUpMessageButtonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_g9wW0Q08EeuTYeNMkME9QA" name="I am Activity4" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="multiactivity:PopupMessageButton" href="MyFirstModel.multiactivity#//@activities.3/@layouts.0/@views.0"/>
+      <semanticElements xmi:type="multiactivity:PopupMessageButton" href="MyFirstModel.multiactivity#//@activities.3/@layouts.0/@views.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_g9wW0g08EeuTYeNMkME9QA" labelSize="12" labelPosition="node" width="15" height="5" color="173,127,168">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='PopUpMessageButtonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='PopUpMessageButtonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_E79qkA09EeuTYeNMkME9QA" name=" Time" width="15" height="5" resizeKind="NSEW">
+      <target xmi:type="multiactivity:PopupTimeButton" href="MyFirstModel.multiactivity#//@activities.2/@layouts.0/@views.1"/>
+      <semanticElements xmi:type="multiactivity:PopupTimeButton" href="MyFirstModel.multiactivity#//@activities.2/@layouts.0/@views.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_E79qkQ09EeuTYeNMkME9QA" labelSize="12" labelPosition="node" width="15" height="5" color="238,201,142">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='PopUpTimeButtonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='PopUpTimeButtonNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_txjkAQ09EeuTYeNMkME9QA" name="activity_main" width="5" height="5" resizeKind="NSEW">
+      <target xmi:type="multiactivity:Layout" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0"/>
+      <semanticElements xmi:type="multiactivity:Layout" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_3hw50Q09EeuTYeNMkME9QA" labelSize="12" borderLineStyle="dot" color="239,41,41">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='LayoutNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='LayoutNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_txpqoQ09EeuTYeNMkME9QA" name="activity_two" width="5" height="5" resizeKind="NSEW">
+      <target xmi:type="multiactivity:Layout" href="MyFirstModel.multiactivity#//@activities.1/@layouts.0"/>
+      <semanticElements xmi:type="multiactivity:Layout" href="MyFirstModel.multiactivity#//@activities.1/@layouts.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_3h0kMQ09EeuTYeNMkME9QA" labelSize="12" borderLineStyle="dot" color="239,41,41">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='LayoutNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='LayoutNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_txvxQA09EeuTYeNMkME9QA" name="activity_three" width="5" height="5" resizeKind="NSEW">
+      <target xmi:type="multiactivity:Layout" href="MyFirstModel.multiactivity#//@activities.2/@layouts.0"/>
+      <semanticElements xmi:type="multiactivity:Layout" href="MyFirstModel.multiactivity#//@activities.2/@layouts.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_3h4OkQ09EeuTYeNMkME9QA" labelSize="12" borderLineStyle="dot" color="239,41,41">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='LayoutNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='LayoutNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_tx0pwg09EeuTYeNMkME9QA" name="activity_four" width="5" height="5" resizeKind="NSEW">
+      <target xmi:type="multiactivity:Layout" href="MyFirstModel.multiactivity#//@activities.3/@layouts.0"/>
+      <semanticElements xmi:type="multiactivity:Layout" href="MyFirstModel.multiactivity#//@activities.3/@layouts.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_3h7R4Q09EeuTYeNMkME9QA" labelSize="12" borderLineStyle="dot" color="239,41,41">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='LayoutNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='LayoutNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_M_MdAA1EEeuTYeNMkME9QA" sourceNode="_-K6_YAyeEeuTYeNMkME9QA" targetNode="_yMKOsAybEeuTYeNMkME9QA">
+      <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_M_NEEA1EEeuTYeNMkME9QA" size="2" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@edgeMappings[name='activityEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_M_NEEQ1EEeuTYeNMkME9QA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@edgeMappings[name='activityEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_M_NrIA1EEeuTYeNMkME9QA" sourceNode="_-LEJUAyeEeuTYeNMkME9QA" targetNode="_yMK1wAybEeuTYeNMkME9QA">
+      <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_M_NrIQ1EEeuTYeNMkME9QA" size="2" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@edgeMappings[name='activityEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_M_NrIg1EEeuTYeNMkME9QA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@edgeMappings[name='activityEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_M_OSMg1EEeuTYeNMkME9QA" sourceNode="_-LHzsQyeEeuTYeNMkME9QA" targetNode="_yMK1wQybEeuTYeNMkME9QA">
+      <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.1/@layouts.0/@views.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_M_OSMw1EEeuTYeNMkME9QA" size="2" strokeColor="39,76,114">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@edgeMappings[name='activityEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_M_OSNA1EEeuTYeNMkME9QA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@edgeMappings[name='activityEdge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_yLijoAybEeuTYeNMkME9QA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer"/>
+    <target xmi:type="multiactivity:Application" href="MyFirstModel.multiactivity#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_9BEyEBHmEeum3ZlNLYV77w">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_9BN8ARHmEeum3ZlNLYV77w" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_9BN8AhHmEeum3ZlNLYV77w"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_9BTbkBHmEeum3ZlNLYV77w" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_9BTbkRHmEeum3ZlNLYV77w" type="Sirius" element="_9BEyEBHmEeum3ZlNLYV77w" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_9BUCoBHmEeum3ZlNLYV77w" type="2002" element="_Ry8aUBHuEeum3ZlNLYV77w">
+          <children xmi:type="notation:Node" xmi:id="_9BVQwBHmEeum3ZlNLYV77w" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_9BV30BHmEeum3ZlNLYV77w" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_R1xE0BHuEeum3ZlNLYV77w" type="3009" element="_RzAEshHuEeum3ZlNLYV77w">
+              <children xmi:type="notation:Node" xmi:id="_mpOQMBHvEeum3ZlNLYV77w" type="3012" element="_mm4G0xHvEeum3ZlNLYV77w">
+                <children xmi:type="notation:Node" xmi:id="_mpPeUBHvEeum3ZlNLYV77w" type="5010">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mpPeURHvEeum3ZlNLYV77w" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mpShoBHvEeum3ZlNLYV77w" type="3003" element="_mm4t4BHvEeum3ZlNLYV77w">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mpShoRHvEeum3ZlNLYV77w" fontName="Ubuntu"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mpShohHvEeum3ZlNLYV77w"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mpOQMRHvEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mpOQMhHvEeum3ZlNLYV77w" x="-22" y="41" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mpQscBHvEeum3ZlNLYV77w" type="3012" element="_mm4t4hHvEeum3ZlNLYV77w">
+                <children xmi:type="notation:Node" xmi:id="_mpRTgBHvEeum3ZlNLYV77w" type="5010">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mpRTgRHvEeum3ZlNLYV77w" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mpShoxHvEeum3ZlNLYV77w" type="3003" element="_mm5U8BHvEeum3ZlNLYV77w">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mpShpBHvEeum3ZlNLYV77w" fontName="Ubuntu"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mpShpRHvEeum3ZlNLYV77w"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mpQscRHvEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mpQschHvEeum3ZlNLYV77w" x="-22" y="82" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_fhvXsBIREeuqU7lzR7fO-w" type="3012" element="_fhkYkBIREeuqU7lzR7fO-w">
+                <children xmi:type="notation:Node" xmi:id="_fiF9ABIREeuqU7lzR7fO-w" type="5010">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_fiF9ARIREeuqU7lzR7fO-w" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_fiKOcBIREeuqU7lzR7fO-w" type="3003" element="_fhkYkRIREeuqU7lzR7fO-w">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_fiKOcRIREeuqU7lzR7fO-w" fontName="Ubuntu"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fiKOchIREeuqU7lzR7fO-w"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_fhv-wBIREeuqU7lzR7fO-w" fontName="Ubuntu" fontHeight="12"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fhv-wRIREeuqU7lzR7fO-w" x="223" y="53" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_R1xr4BHuEeum3ZlNLYV77w" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_R1xr4RHuEeum3ZlNLYV77w" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_R1yS8BHuEeum3ZlNLYV77w" type="3010" element="_RzArwRHuEeum3ZlNLYV77w">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_R1yS8RHuEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_R1yS8hHuEeum3ZlNLYV77w"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_R1yS8xHuEeum3ZlNLYV77w" type="3010" element="_RzBS0BHuEeum3ZlNLYV77w">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_R1yS9BHuEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_R1yS9RHuEeum3ZlNLYV77w"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_R1y6ABHuEeum3ZlNLYV77w" type="3010" element="_RzBS0hHuEeum3ZlNLYV77w">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_R1y6ARHuEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_R1y6AhHuEeum3ZlNLYV77w"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_fiK1gBIREeuqU7lzR7fO-w" type="3010" element="_fhZZcBIREeuqU7lzR7fO-w">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_fiK1gRIREeuqU7lzR7fO-w" fontName="Ubuntu" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_fiK1ghIREeuqU7lzR7fO-w"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_R1xr4hHuEeum3ZlNLYV77w"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_R1xr4xHuEeum3ZlNLYV77w"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_R1xr5BHuEeum3ZlNLYV77w"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_R1xE0RHuEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R1xE0hHuEeum3ZlNLYV77w" width="231" height="146"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_9BV30RHmEeum3ZlNLYV77w"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_9BV30hHmEeum3ZlNLYV77w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9BUCoRHmEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9BUCohHmEeum3ZlNLYV77w" x="464" y="35"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9BWe4BHmEeum3ZlNLYV77w" type="2002" element="_Ry9ochHuEeum3ZlNLYV77w">
+          <children xmi:type="notation:Node" xmi:id="_9BXtABHmEeum3ZlNLYV77w" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_9BXtARHmEeum3ZlNLYV77w" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_R1y6AxHuEeum3ZlNLYV77w" type="3009" element="_RzB54RHuEeum3ZlNLYV77w">
+              <children xmi:type="notation:Node" xmi:id="_mpTIsBHvEeum3ZlNLYV77w" type="3012" element="_mm6jEhHvEeum3ZlNLYV77w">
+                <children xmi:type="notation:Node" xmi:id="_mpTvwBHvEeum3ZlNLYV77w" type="5010">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_mpTvwRHvEeum3ZlNLYV77w" y="5"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_mpUW0BHvEeum3ZlNLYV77w" type="3003" element="_mm6jExHvEeum3ZlNLYV77w">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_mpUW0RHvEeum3ZlNLYV77w" fontName="Ubuntu"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mpUW0hHvEeum3ZlNLYV77w"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mpTIsRHvEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mpTIshHvEeum3ZlNLYV77w" x="-22" y="41" width="30" height="30"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_R1zhEBHuEeum3ZlNLYV77w" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_R1zhERHuEeum3ZlNLYV77w" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_R1zhFRHuEeum3ZlNLYV77w" type="3010" element="_RzCg8hHuEeum3ZlNLYV77w">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_R1zhFhHuEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_R1zhFxHuEeum3ZlNLYV77w"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_R10IIBHuEeum3ZlNLYV77w" type="3010" element="_RzDIABHuEeum3ZlNLYV77w">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_R10IIRHuEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_R10IIhHuEeum3ZlNLYV77w"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_R1zhEhHuEeum3ZlNLYV77w"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_R1zhExHuEeum3ZlNLYV77w"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_R1zhFBHuEeum3ZlNLYV77w"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_R1y6BBHuEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R1y6BRHuEeum3ZlNLYV77w" width="168" height="155"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_9BYUEBHmEeum3ZlNLYV77w"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_9BYUERHmEeum3ZlNLYV77w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9BWe4RHmEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9BWe4hHmEeum3ZlNLYV77w" x="180" y="271"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9BYUEhHmEeum3ZlNLYV77w" type="2002" element="_Ry-2kRHuEeum3ZlNLYV77w">
+          <children xmi:type="notation:Node" xmi:id="_9BZiMBHmEeum3ZlNLYV77w" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_9BZiMRHmEeum3ZlNLYV77w" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_R10vMBHuEeum3ZlNLYV77w" type="3009" element="_RzDvERHuEeum3ZlNLYV77w">
+              <children xmi:type="notation:Node" xmi:id="_R10vMxHuEeum3ZlNLYV77w" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_R11WQBHuEeum3ZlNLYV77w" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_R119UBHuEeum3ZlNLYV77w" type="3010" element="_RzEWIRHuEeum3ZlNLYV77w">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_R119URHuEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_R119UhHuEeum3ZlNLYV77w"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_R119UxHuEeum3ZlNLYV77w" type="3010" element="_RzE9MBHuEeum3ZlNLYV77w">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_R119VBHuEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_R119VRHuEeum3ZlNLYV77w"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_R119VhHuEeum3ZlNLYV77w" type="3010" element="_RzFkQBHuEeum3ZlNLYV77w">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_R12kYBHuEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_R12kYRHuEeum3ZlNLYV77w"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_R11WQRHuEeum3ZlNLYV77w"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_R11WQhHuEeum3ZlNLYV77w"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_R11WQxHuEeum3ZlNLYV77w"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_R10vMRHuEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R10vMhHuEeum3ZlNLYV77w"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_9BZiMhHmEeum3ZlNLYV77w"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_9BZiMxHmEeum3ZlNLYV77w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9BYUExHmEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9BYUFBHmEeum3ZlNLYV77w" x="675" y="271"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9BaJQBHmEeum3ZlNLYV77w" type="2002" element="_Ry_dohHuEeum3ZlNLYV77w">
+          <children xmi:type="notation:Node" xmi:id="_9BawUBHmEeum3ZlNLYV77w" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_9BawURHmEeum3ZlNLYV77w" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_R12kYhHuEeum3ZlNLYV77w" type="3009" element="_RzGLUBHuEeum3ZlNLYV77w">
+              <children xmi:type="notation:Node" xmi:id="_R13LcBHuEeum3ZlNLYV77w" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_R13LcRHuEeum3ZlNLYV77w" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_R13LdRHuEeum3ZlNLYV77w" type="3010" element="_RzGyYBHuEeum3ZlNLYV77w">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_R13LdhHuEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_R13LdxHuEeum3ZlNLYV77w"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_R13LchHuEeum3ZlNLYV77w"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_R13LcxHuEeum3ZlNLYV77w"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_R13LdBHuEeum3ZlNLYV77w"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_R12kYxHuEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R12kZBHuEeum3ZlNLYV77w"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_9BawUhHmEeum3ZlNLYV77w"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_9BawUxHmEeum3ZlNLYV77w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9BaJQRHmEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9BaJQhHmEeum3ZlNLYV77w" x="455" y="420"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_9BTbkhHmEeum3ZlNLYV77w"/>
+        <edges xmi:type="notation:Edge" xmi:id="_E6jEMBHxEeum3ZlNLYV77w" type="4001" element="_E4OwARHxEeum3ZlNLYV77w" source="_mpOQMBHvEeum3ZlNLYV77w" target="_9BWe4BHmEeum3ZlNLYV77w">
+          <children xmi:type="notation:Node" xmi:id="_E6jrQBHxEeum3ZlNLYV77w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E6jrQRHxEeum3ZlNLYV77w" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E6jrQhHxEeum3ZlNLYV77w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E6jrQxHxEeum3ZlNLYV77w" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E6kSUBHxEeum3ZlNLYV77w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E6kSURHxEeum3ZlNLYV77w" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_E6jEMRHxEeum3ZlNLYV77w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_E6jEMhHxEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E6jEMxHxEeum3ZlNLYV77w" points="[0, 0, 338, -179]$[-338, 179, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E6k5YBHxEeum3ZlNLYV77w" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E6k5YRHxEeum3ZlNLYV77w" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_E6k5YhHxEeum3ZlNLYV77w" type="4001" element="_E4P-IhHxEeum3ZlNLYV77w" source="_mpQscBHvEeum3ZlNLYV77w" target="_9BYUEhHmEeum3ZlNLYV77w">
+          <children xmi:type="notation:Node" xmi:id="_E6k5ZhHxEeum3ZlNLYV77w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E6k5ZxHxEeum3ZlNLYV77w" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E6lgcBHxEeum3ZlNLYV77w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E6lgcRHxEeum3ZlNLYV77w" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E6lgchHxEeum3ZlNLYV77w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E6lgcxHxEeum3ZlNLYV77w" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_E6k5YxHxEeum3ZlNLYV77w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_E6k5ZBHxEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E6k5ZRHxEeum3ZlNLYV77w" points="[0, 0, -157, -138]$[157, 138, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E6mHgBHxEeum3ZlNLYV77w" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E6mukBHxEeum3ZlNLYV77w" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_E6mukRHxEeum3ZlNLYV77w" type="4001" element="_E4QlMhHxEeum3ZlNLYV77w" source="_mpTIsBHvEeum3ZlNLYV77w" target="_9BaJQBHmEeum3ZlNLYV77w">
+          <children xmi:type="notation:Node" xmi:id="_E6mulRHxEeum3ZlNLYV77w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E6mulhHxEeum3ZlNLYV77w" x="-9" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E6nVoBHxEeum3ZlNLYV77w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E6nVoRHxEeum3ZlNLYV77w" x="4" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E6nVohHxEeum3ZlNLYV77w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E6nVoxHxEeum3ZlNLYV77w" x="10" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_E6mukhHxEeum3ZlNLYV77w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_E6mukxHxEeum3ZlNLYV77w" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E6mulBHxEeum3ZlNLYV77w" points="[15, 4, -326, -98]$[281, 84, -60, -18]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E6n8sBHxEeum3ZlNLYV77w" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_E6n8sRHxEeum3ZlNLYV77w" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_kzsZgBIREeuqU7lzR7fO-w" type="4001" element="_kzmS5hIREeuqU7lzR7fO-w" source="_fhvXsBIREeuqU7lzR7fO-w" target="_9BaJQBHmEeum3ZlNLYV77w">
+          <children xmi:type="notation:Node" xmi:id="_kzwq8BIREeuqU7lzR7fO-w" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kzwq8RIREeuqU7lzR7fO-w" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_kzxSABIREeuqU7lzR7fO-w" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kzxSARIREeuqU7lzR7fO-w" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_kzygIBIREeuqU7lzR7fO-w" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kzygIRIREeuqU7lzR7fO-w" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_kzsZgRIREeuqU7lzR7fO-w"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_kzsZghIREeuqU7lzR7fO-w" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kzsZgxIREeuqU7lzR7fO-w" points="[0, 0, 248, -316]$[-248, 316, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kz3YoBIREeuqU7lzR7fO-w" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kz3YoRIREeuqU7lzR7fO-w" id="(0.5,0.5)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_Ry8aUBHuEeum3ZlNLYV77w" name="MainActivity" childrenPresentation="HorizontalStack">
+      <target xmi:type="multiactivity:Activity" href="MyFirstModel.multiactivity#//@activities.0"/>
+      <semanticElements xmi:type="multiactivity:Activity" href="MyFirstModel.multiactivity#//@activities.0"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Ry8aURHuEeum3ZlNLYV77w" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_RzAEshHuEeum3ZlNLYV77w" name="activity_main">
+        <target xmi:type="multiactivity:Layout" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0"/>
+        <semanticElements xmi:type="multiactivity:Layout" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_mm4G0xHvEeum3ZlNLYV77w" outgoingEdges="_E4OwARHxEeum3ZlNLYV77w" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.1"/>
+          <semanticElements xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.1"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Square" uid="_mm4t4BHvEeum3ZlNLYV77w" labelSize="12" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@borderedNodeMappings[name='StartActivityBorderNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@borderedNodeMappings[name='StartActivityBorderNode']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_mm4t4hHvEeum3ZlNLYV77w" outgoingEdges="_E4P-IhHxEeum3ZlNLYV77w" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.2"/>
+          <semanticElements xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.2"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Square" uid="_mm5U8BHvEeum3ZlNLYV77w" labelSize="12" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@borderedNodeMappings[name='StartActivityBorderNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@borderedNodeMappings[name='StartActivityBorderNode']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_fhkYkBIREeuqU7lzR7fO-w" outgoingEdges="_kzmS5hIREeuqU7lzR7fO-w" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.3"/>
+          <semanticElements xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.3"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_fhkYkRIREeuqU7lzR7fO-w" labelSize="12" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@borderedNodeMappings[name='StartActivityBorderNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@borderedNodeMappings[name='StartActivityBorderNode']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_RzAEsxHuEeum3ZlNLYV77w" labelSize="12" borderSize="1" borderSizeComputationExpression="1" foregroundColor="204,242,166">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_RzArwRHuEeum3ZlNLYV77w" name=" who am I ?">
+          <target xmi:type="multiactivity:PopupMessageButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.0"/>
+          <semanticElements xmi:type="multiactivity:PopupMessageButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.0"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_RzArwhHuEeum3ZlNLYV77w" labelSize="12" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='PopUpMsgButtonNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='PopUpMsgButtonNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_RzBS0BHuEeum3ZlNLYV77w" name="Activity2">
+          <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.1"/>
+          <semanticElements xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.1"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_RzBS0RHuEeum3ZlNLYV77w" labelSize="12" borderSize="1" borderSizeComputationExpression="1" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='NewActivityButtonNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='NewActivityButtonNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_RzBS0hHuEeum3ZlNLYV77w" name="Activity3">
+          <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.2"/>
+          <semanticElements xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.2"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_RzB54BHuEeum3ZlNLYV77w" labelSize="12" borderSize="1" borderSizeComputationExpression="1" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='NewActivityButtonNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='NewActivityButtonNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_fhZZcBIREeuqU7lzR7fO-w" name="NewActivityButton4">
+          <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.3"/>
+          <semanticElements xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.3"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_fhankBIREeuqU7lzR7fO-w" labelSize="12" borderSize="1" borderSizeComputationExpression="1" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='NewActivityButtonNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='NewActivityButtonNode']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_Ry9ochHuEeum3ZlNLYV77w" name="ActivityTwo" incomingEdges="_E4OwARHxEeum3ZlNLYV77w" childrenPresentation="HorizontalStack">
+      <target xmi:type="multiactivity:Activity" href="MyFirstModel.multiactivity#//@activities.1"/>
+      <semanticElements xmi:type="multiactivity:Activity" href="MyFirstModel.multiactivity#//@activities.1"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Ry9ocxHuEeum3ZlNLYV77w" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_RzB54RHuEeum3ZlNLYV77w" name="activity_two">
+        <target xmi:type="multiactivity:Layout" href="MyFirstModel.multiactivity#//@activities.1/@layouts.0"/>
+        <semanticElements xmi:type="multiactivity:Layout" href="MyFirstModel.multiactivity#//@activities.1/@layouts.0"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_mm6jEhHvEeum3ZlNLYV77w" outgoingEdges="_E4QlMhHxEeum3ZlNLYV77w" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.1/@layouts.0/@views.1"/>
+          <semanticElements xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.1/@layouts.0/@views.1"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Square" uid="_mm6jExHvEeum3ZlNLYV77w" labelSize="12" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@borderedNodeMappings[name='StartActivityBorderNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@borderedNodeMappings[name='StartActivityBorderNode']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_RzCg8BHuEeum3ZlNLYV77w" labelSize="12" borderSize="1" borderSizeComputationExpression="1" foregroundColor="204,242,166">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_RzCg8hHuEeum3ZlNLYV77w" name="Who am I ?">
+          <target xmi:type="multiactivity:PopupMessageButton" href="MyFirstModel.multiactivity#//@activities.1/@layouts.0/@views.0"/>
+          <semanticElements xmi:type="multiactivity:PopupMessageButton" href="MyFirstModel.multiactivity#//@activities.1/@layouts.0/@views.0"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_RzCg8xHuEeum3ZlNLYV77w" labelSize="12" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='PopUpMsgButtonNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='PopUpMsgButtonNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_RzDIABHuEeum3ZlNLYV77w" name="Activity4">
+          <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.1/@layouts.0/@views.1"/>
+          <semanticElements xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.1/@layouts.0/@views.1"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_RzDvEBHuEeum3ZlNLYV77w" labelSize="12" borderSize="1" borderSizeComputationExpression="1" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='NewActivityButtonNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='NewActivityButtonNode']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_Ry-2kRHuEeum3ZlNLYV77w" name="ActivityThree" incomingEdges="_E4P-IhHxEeum3ZlNLYV77w" childrenPresentation="HorizontalStack">
+      <target xmi:type="multiactivity:Activity" href="MyFirstModel.multiactivity#//@activities.2"/>
+      <semanticElements xmi:type="multiactivity:Activity" href="MyFirstModel.multiactivity#//@activities.2"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Ry-2khHuEeum3ZlNLYV77w" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_RzDvERHuEeum3ZlNLYV77w" name="activity_three">
+        <target xmi:type="multiactivity:Layout" href="MyFirstModel.multiactivity#//@activities.2/@layouts.0"/>
+        <semanticElements xmi:type="multiactivity:Layout" href="MyFirstModel.multiactivity#//@activities.2/@layouts.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_RzDvEhHuEeum3ZlNLYV77w" labelSize="12" borderSize="1" borderSizeComputationExpression="1" foregroundColor="204,242,166">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_RzEWIRHuEeum3ZlNLYV77w" name="Who am I ?">
+          <target xmi:type="multiactivity:PopupMessageButton" href="MyFirstModel.multiactivity#//@activities.2/@layouts.0/@views.0"/>
+          <semanticElements xmi:type="multiactivity:PopupMessageButton" href="MyFirstModel.multiactivity#//@activities.2/@layouts.0/@views.0"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_RzEWIhHuEeum3ZlNLYV77w" labelSize="12" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='PopUpMsgButtonNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='PopUpMsgButtonNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_RzE9MBHuEeum3ZlNLYV77w" name=" Time">
+          <target xmi:type="multiactivity:PopupTimeButton" href="MyFirstModel.multiactivity#//@activities.2/@layouts.0/@views.1"/>
+          <semanticElements xmi:type="multiactivity:PopupTimeButton" href="MyFirstModel.multiactivity#//@activities.2/@layouts.0/@views.1"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_RzE9MRHuEeum3ZlNLYV77w" labelSize="12" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='PopupTimeNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='PopupTimeNode']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_RzFkQBHuEeum3ZlNLYV77w" name="It's 10.00 am">
+          <target xmi:type="multiactivity:TextView" href="MyFirstModel.multiactivity#//@activities.2/@layouts.0/@views.2"/>
+          <semanticElements xmi:type="multiactivity:TextView" href="MyFirstModel.multiactivity#//@activities.2/@layouts.0/@views.2"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_RzFkQRHuEeum3ZlNLYV77w" labelSize="12" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='TextViewNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='TextViewNode']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_Ry_dohHuEeum3ZlNLYV77w" name="ActivityFour" incomingEdges="_E4QlMhHxEeum3ZlNLYV77w _kzmS5hIREeuqU7lzR7fO-w" childrenPresentation="HorizontalStack">
+      <target xmi:type="multiactivity:Activity" href="MyFirstModel.multiactivity#//@activities.3"/>
+      <semanticElements xmi:type="multiactivity:Activity" href="MyFirstModel.multiactivity#//@activities.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Ry_doxHuEeum3ZlNLYV77w" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_RzGLUBHuEeum3ZlNLYV77w" name="activity_four">
+        <target xmi:type="multiactivity:Layout" href="MyFirstModel.multiactivity#//@activities.3/@layouts.0"/>
+        <semanticElements xmi:type="multiactivity:Layout" href="MyFirstModel.multiactivity#//@activities.3/@layouts.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_RzGLURHuEeum3ZlNLYV77w" labelSize="12" borderSize="1" borderSizeComputationExpression="1" foregroundColor="204,242,166">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_RzGyYBHuEeum3ZlNLYV77w" name="Who am I ?">
+          <target xmi:type="multiactivity:PopupMessageButton" href="MyFirstModel.multiactivity#//@activities.3/@layouts.0/@views.0"/>
+          <semanticElements xmi:type="multiactivity:PopupMessageButton" href="MyFirstModel.multiactivity#//@activities.3/@layouts.0/@views.0"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_RzGyYRHuEeum3ZlNLYV77w" labelSize="12" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='PopUpMsgButtonNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='PopUpMsgButtonNode']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E4OwARHxEeum3ZlNLYV77w" sourceNode="_mm4G0xHvEeum3ZlNLYV77w" targetNode="_Ry9ochHuEeum3ZlNLYV77w">
+      <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E4PXEBHxEeum3ZlNLYV77w" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@edgeMappings[name='ButtonToActivityEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E4PXERHxEeum3ZlNLYV77w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@edgeMappings[name='ButtonToActivityEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E4P-IhHxEeum3ZlNLYV77w" sourceNode="_mm4t4hHvEeum3ZlNLYV77w" targetNode="_Ry-2kRHuEeum3ZlNLYV77w">
+      <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E4P-IxHxEeum3ZlNLYV77w" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@edgeMappings[name='ButtonToActivityEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E4P-JBHxEeum3ZlNLYV77w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@edgeMappings[name='ButtonToActivityEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E4QlMhHxEeum3ZlNLYV77w" sourceNode="_mm6jEhHvEeum3ZlNLYV77w" targetNode="_Ry_dohHuEeum3ZlNLYV77w">
+      <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.1/@layouts.0/@views.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E4QlMxHxEeum3ZlNLYV77w" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@edgeMappings[name='ButtonToActivityEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E4QlNBHxEeum3ZlNLYV77w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@edgeMappings[name='ButtonToActivityEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_kzmS5hIREeuqU7lzR7fO-w" sourceNode="_fhkYkBIREeuqU7lzR7fO-w" targetNode="_Ry_dohHuEeum3ZlNLYV77w">
+      <target xmi:type="multiactivity:NewActivityButton" href="MyFirstModel.multiactivity#//@activities.0/@layouts.0/@views.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_kzm58BIREeuqU7lzR7fO-w" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@edgeMappings[name='ButtonToActivityEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_kzm58RIREeuqU7lzR7fO-w" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@edgeMappings[name='ButtonToActivityEdge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_9BEyERHmEeum3ZlNLYV77w"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/org.eclipse.siruis.sample.multiactivity.project.design/description/project.odesign#//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer"/>
+    <target xmi:type="multiactivity:Application" href="MyFirstModel.multiactivity#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

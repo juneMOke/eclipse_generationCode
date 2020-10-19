@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<multiactivity:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:multiactivity="http://www.example.org/multiactivity">
+  <activities name="MainActivity">
+    <layouts name="activity_main">
+      <views xsi:type="multiactivity:PopupMessageButton" content=" who am I ?" message="I am Activity 1"/>
+      <views xsi:type="multiactivity:NewActivityButton" content="Activity2" activity="//@activities.1"/>
+      <views xsi:type="multiactivity:NewActivityButton" content="Activity3" activity="//@activities.2"/>
+      <views xsi:type="multiactivity:NewActivityButton" content="NewActivityButton4" activity="//@activities.3"/>
+    </layouts>
+  </activities>
+  <activities name="ActivityTwo">
+    <layouts name="activity_two">
+      <views xsi:type="multiactivity:PopupMessageButton" content="Who am I ?" message="I am Activity 2"/>
+      <views xsi:type="multiactivity:NewActivityButton" content="Activity4" activity="//@activities.3"/>
+    </layouts>
+  </activities>
+  <activities name="ActivityThree">
+    <layouts name="activity_three">
+      <views xsi:type="multiactivity:PopupMessageButton" content="Who am I ?" message="I am Activity3"/>
+      <views xsi:type="multiactivity:PopupTimeButton" content=" Time"/>
+      <views xsi:type="multiactivity:TextView" content="It's 10.00 am"/>
+    </layouts>
+  </activities>
+  <activities name="ActivityFour">
+    <layouts name="activity_four">
+      <views xsi:type="multiactivity:PopupMessageButton" content="Who am I ?" message="I am Activity4"/>
+    </layouts>
+  </activities>
+</multiactivity:Application>
