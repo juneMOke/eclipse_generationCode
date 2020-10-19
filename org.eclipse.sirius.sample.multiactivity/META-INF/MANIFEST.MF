@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.sirius.sample.multiactivity;singleton:=true
+Automatic-Module-Name: org.eclipse.sirius.sample.multiactivity
+Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .,
+ bin/
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.eclipse.sirius.sample.multiactivity,
+ org.eclipse.sirius.sample.multiactivity.impl,
+ org.eclipse.sirius.sample.multiactivity.util
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
