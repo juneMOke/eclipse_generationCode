@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="project" version="12.0.0.2017041100">
+  <ownedViewpoints name="multiActivity" modelFileExtension="multiactivity">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="MultiActivity diagram" domainClass="multiactivity::Application">
+      <metamodel href="http://www.example.org/multiactivity#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="ActivityNode" semanticCandidatesExpression="feature:activities" domainClass="multiactivity::Activity">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="15" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ActivityButtonNode" semanticCandidatesExpression="aql:self.activities.layouts.views" domainClass="multiactivity::NewActivityButton">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:content " sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW" width="15" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="PopUpMessageButtonNode" semanticCandidatesExpression="aql:self.activities.layouts.views" domainClass="multiactivity::PopupMessageButton">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:message" labelPosition="node" resizeKind="NSEW" width="15" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="PopUpTimeButtonNode" semanticCandidatesExpression="aql:self.activities.layouts.views" domainClass="multiactivity::PopupTimeButton">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:content" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW" width="15" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="LayoutNode" semanticCandidatesExpression="aql:self.activities.layouts" domainClass="multiactivity::Layout">
+          <style xsi:type="style:LozengeNodeDescription" borderLineStyle="dot" labelSize="12" sizeComputationExpression="5" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="activityEdge" sourceMapping="//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityButtonNode']" targetMapping="//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityNode']" targetFinderExpression="feature:activity">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="layoutActivityEdge" sourceMapping="//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='LayoutNode']" targetMapping="//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram']/@defaultLayer/@nodeMappings[name='ActivityNode']" targetFinderExpression="feature:views">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="MultiActivity diagram1" domainClass="multiactivity::Application">
+      <metamodel href="http://www.example.org/multiactivity#/"/>
+      <defaultLayer name="Default">
+        <edgeMappings name="ButtonToActivityEdge" sourceMapping="//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@borderedNodeMappings[name='StartActivityBorderNode']" targetMapping="//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']" targetFinderExpression="feature:activity">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="ActivityContainer" semanticCandidatesExpression="aql:self.activities" domainClass="multiactivity::Activity" childrenPresentation="HorizontalStack">
+          <subContainerMappings name="LayoutContainer" semanticCandidatesExpression="aql:self.layouts -> first()" domainClass="multiactivity::Layout" childrenPresentation="List">
+            <borderedNodeMappings name="StartActivityBorderNode" semanticCandidatesExpression="feature:views" domainClass="multiactivity::NewActivityButton">
+              <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </borderedNodeMappings>
+            <subNodeMappings name="PopUpMsgButtonNode" semanticCandidatesExpression="feature:views" domainClass="multiactivity::PopupMessageButton">
+              <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:content" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="PopupTimeNode" semanticCandidatesExpression="feature:views" domainClass="multiactivity::PopupTimeButton">
+              <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:content" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="TextViewNode" semanticCandidatesExpression="feature:views" domainClass="multiactivity::TextView">
+              <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:content" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="NewActivityButtonNode" semanticCandidatesExpression="feature:views" domainClass="multiactivity::NewActivityButton">
+              <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="feature:content" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="containersCreationTools ">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="createActivity" forceRefresh="true" containerMappings="//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="multiactivity::Activity" referenceName="activities">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Activity' + container.activities -> size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="createLayout" containerMappings="//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="multiactivity::Layout" referenceName="layouts">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="layouts" valueExpression="aql:'Layout' +  container.layouts -> size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="nodeCreationTools">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createNewActivityButton" nodeMappings="//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='NewActivityButtonNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="multiactivity::NewActivityButton" referenceName="views">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="content" valueExpression="aql:'NewActivityButton' + container.views -> size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="org.eclipse.siruis.sample.multiactivity.project.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
