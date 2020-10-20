@@ -21,6 +21,7 @@
     </genClasses>
     <genClasses image="false" ecoreClass="multiactivity.ecore#//View">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//View/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//View/name"/>
     </genClasses>
     <genClasses ecoreClass="multiactivity.ecore#//NewActivityButton">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference multiactivity.ecore#//NewActivityButton/activity"/>
