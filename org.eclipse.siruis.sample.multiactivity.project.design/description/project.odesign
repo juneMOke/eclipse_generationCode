@@ -62,7 +62,7 @@
       <defaultLayer name="Default">
         <edgeMappings name="ButtonToActivityEdge" sourceMapping="//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@borderedNodeMappings[name='StartActivityBorderNode']" targetMapping="//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']" targetFinderExpression="feature:activity">
           <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
             <centerLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
@@ -71,10 +71,10 @@
         <containerMappings name="ActivityContainer" semanticCandidatesExpression="aql:self.activities" domainClass="multiactivity::Activity" childrenPresentation="HorizontalStack">
           <subContainerMappings name="LayoutContainer" semanticCandidatesExpression="aql:self.layouts -> first()" domainClass="multiactivity::Layout" childrenPresentation="List">
             <borderedNodeMappings name="StartActivityBorderNode" semanticCandidatesExpression="feature:views" domainClass="multiactivity::NewActivityButton">
-              <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+              <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
               </style>
             </borderedNodeMappings>
             <subNodeMappings name="PopUpMsgButtonNode" semanticCandidatesExpression="feature:views" domainClass="multiactivity::PopupMessageButton">
@@ -139,7 +139,7 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="multiactivity::Layout" referenceName="layouts">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="layouts" valueExpression="aql:'Layout' +  container.layouts -> size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Layout' +  container.layouts -> size()"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -152,8 +152,54 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="multiactivity::NewActivityButton" referenceName="views">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="content" valueExpression="aql:'NewActivityButton' + container.views -> size()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="content" valueExpression="aql:'NewActivityButton' + container.views -> filter(multiactivity::NewActivityButton) -> size()"/>
                 </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createPopupMsgButton" nodeMappings="//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='PopUpMsgButtonNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="multiactivity::PopupMessageButton" referenceName="views">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="content" valueExpression="aql:'PopupMsgButton' + container.views -> filter(multiactivity::PopupMessageButton) -> size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createPopupTimeButton" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='PopupTimeNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="multiactivity::PopupTimeButton" referenceName="views">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="content" valueExpression="aql:'PopupTimeButton' + container.views -> filter(multiactivity::PopupTimeButton) -> size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="TextView" nodeMappings="//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@containerMappings[name='ActivityContainer']/@subContainerMappings[name='LayoutContainer']/@subNodeMappings[name='TextViewNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="multiactivity::TextView" referenceName="views">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="content" valueExpression="aql:'TextView' + container.views -> filter(multiactivity::TextView) -> size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="relationsCreationTools">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="referenceEdge" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='multiActivity']/@ownedRepresentations[name='MultiActivity%20diagram1']/@defaultLayer/@edgeMappings[name='ButtonToActivityEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="activity" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
