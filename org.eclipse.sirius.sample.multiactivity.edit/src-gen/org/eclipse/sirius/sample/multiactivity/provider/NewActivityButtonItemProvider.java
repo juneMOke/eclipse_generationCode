@@ -91,7 +91,7 @@ public class NewActivityButtonItemProvider extends ViewItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((NewActivityButton) object).getContent();
+		String label = ((NewActivityButton) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_NewActivityButton_type")
 				: getString("_UI_NewActivityButton_type") + " " + label;
 	}

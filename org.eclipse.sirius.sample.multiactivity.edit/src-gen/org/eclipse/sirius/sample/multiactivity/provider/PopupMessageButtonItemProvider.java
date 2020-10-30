@@ -94,7 +94,7 @@ public class PopupMessageButtonItemProvider extends ViewItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PopupMessageButton) object).getContent();
+		String label = ((PopupMessageButton) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_PopupMessageButton_type")
 				: getString("_UI_PopupMessageButton_type") + " " + label;
 	}

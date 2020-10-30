@@ -20,6 +20,8 @@ import org.eclipse.sirius.sample.multiactivity.View;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.sirius.sample.multiactivity.impl.ViewImpl#getContent <em>Content</em>}</li>
+ *   <li>{@link org.eclipse.sirius.sample.multiactivity.impl.ViewImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.sirius.sample.multiactivity.impl.ViewImpl#getId_view <em>Id view</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,6 +45,44 @@ public abstract class ViewImpl extends MinimalEObjectImpl.Container implements V
 	 * @ordered
 	 */
 	protected String content = CONTENT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getId_view() <em>Id view</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId_view()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_VIEW_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getId_view() <em>Id view</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId_view()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id_view = ID_VIEW_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -93,10 +133,61 @@ public abstract class ViewImpl extends MinimalEObjectImpl.Container implements V
 	 * @generated
 	 */
 	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MultiactivityPackage.VIEW__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getId_view() {
+		return id_view;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setId_view(String newId_view) {
+		String oldId_view = id_view;
+		id_view = newId_view;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MultiactivityPackage.VIEW__ID_VIEW, oldId_view,
+					id_view));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case MultiactivityPackage.VIEW__CONTENT:
 			return getContent();
+		case MultiactivityPackage.VIEW__NAME:
+			return getName();
+		case MultiactivityPackage.VIEW__ID_VIEW:
+			return getId_view();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,6 +202,12 @@ public abstract class ViewImpl extends MinimalEObjectImpl.Container implements V
 		switch (featureID) {
 		case MultiactivityPackage.VIEW__CONTENT:
 			setContent((String) newValue);
+			return;
+		case MultiactivityPackage.VIEW__NAME:
+			setName((String) newValue);
+			return;
+		case MultiactivityPackage.VIEW__ID_VIEW:
+			setId_view((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -127,6 +224,12 @@ public abstract class ViewImpl extends MinimalEObjectImpl.Container implements V
 		case MultiactivityPackage.VIEW__CONTENT:
 			setContent(CONTENT_EDEFAULT);
 			return;
+		case MultiactivityPackage.VIEW__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case MultiactivityPackage.VIEW__ID_VIEW:
+			setId_view(ID_VIEW_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -141,6 +244,10 @@ public abstract class ViewImpl extends MinimalEObjectImpl.Container implements V
 		switch (featureID) {
 		case MultiactivityPackage.VIEW__CONTENT:
 			return CONTENT_EDEFAULT == null ? content != null : !CONTENT_EDEFAULT.equals(content);
+		case MultiactivityPackage.VIEW__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case MultiactivityPackage.VIEW__ID_VIEW:
+			return ID_VIEW_EDEFAULT == null ? id_view != null : !ID_VIEW_EDEFAULT.equals(id_view);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -158,6 +265,10 @@ public abstract class ViewImpl extends MinimalEObjectImpl.Container implements V
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (content: ");
 		result.append(content);
+		result.append(", name: ");
+		result.append(name);
+		result.append(", id_view: ");
+		result.append(id_view);
 		result.append(')');
 		return result.toString();
 	}

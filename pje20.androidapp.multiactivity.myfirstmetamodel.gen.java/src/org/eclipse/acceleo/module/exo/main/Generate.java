@@ -8,7 +8,7 @@
  * Contributors:
  *     Obeo - initial API and implementation
  *******************************************************************************/
-package org.eclipse.acceleo.module.multiactivity.main;
+package org.eclipse.acceleo.module.exo.main;
 
 import java.io.File;
 import java.io.IOException;
@@ -35,14 +35,14 @@ public class Generate extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public static final String MODULE_FILE_NAME = "/org/eclipse/acceleo/module/multiactivity/main/generate";
+    public static final String MODULE_FILE_NAME = "/org/eclipse/acceleo/module/exo/main/generate";
     
     /**
      * The name of the templates that are to be generated.
      *
      * @generated
      */
-    public static final String[] TEMPLATE_NAMES = { "generateElement" };
+    public static final String[] TEMPLATE_NAMES = { "generateApplication" };
     
     /**
      * The list of properties files from the launch parameters (Launch configuration).

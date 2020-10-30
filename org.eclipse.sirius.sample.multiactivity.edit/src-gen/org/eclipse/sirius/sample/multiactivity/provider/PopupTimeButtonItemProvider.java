@@ -73,7 +73,7 @@ public class PopupTimeButtonItemProvider extends ViewItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PopupTimeButton) object).getContent();
+		String label = ((PopupTimeButton) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_PopupTimeButton_type")
 				: getString("_UI_PopupTimeButton_type") + " " + label;
 	}

@@ -168,13 +168,31 @@ public interface MultiactivityPackage extends EPackage {
 	int VIEW__CONTENT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Id view</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__ID_VIEW = 2;
+
+	/**
 	 * The number of structural features of the '<em>View</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_FEATURE_COUNT = 1;
+	int VIEW_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>View</em>' class.
@@ -203,6 +221,24 @@ public interface MultiactivityPackage extends EPackage {
 	 * @ordered
 	 */
 	int NEW_ACTIVITY_BUTTON__CONTENT = VIEW__CONTENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEW_ACTIVITY_BUTTON__NAME = VIEW__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id view</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEW_ACTIVITY_BUTTON__ID_VIEW = VIEW__ID_VIEW;
 
 	/**
 	 * The feature id for the '<em><b>Activity</b></em>' reference.
@@ -251,6 +287,24 @@ public interface MultiactivityPackage extends EPackage {
 	int POPUP_MESSAGE_BUTTON__CONTENT = VIEW__CONTENT;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POPUP_MESSAGE_BUTTON__NAME = VIEW__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id view</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POPUP_MESSAGE_BUTTON__ID_VIEW = VIEW__ID_VIEW;
+
+	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -297,6 +351,24 @@ public interface MultiactivityPackage extends EPackage {
 	int TEXT_VIEW__CONTENT = VIEW__CONTENT;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_VIEW__NAME = VIEW__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id view</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_VIEW__ID_VIEW = VIEW__ID_VIEW;
+
+	/**
 	 * The number of structural features of the '<em>Text View</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -332,6 +404,24 @@ public interface MultiactivityPackage extends EPackage {
 	 * @ordered
 	 */
 	int POPUP_TIME_BUTTON__CONTENT = VIEW__CONTENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POPUP_TIME_BUTTON__NAME = VIEW__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id view</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POPUP_TIME_BUTTON__ID_VIEW = VIEW__ID_VIEW;
 
 	/**
 	 * The number of structural features of the '<em>Popup Time Button</em>' class.
@@ -472,6 +562,28 @@ public interface MultiactivityPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getView_Content();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.sirius.sample.multiactivity.View#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.View#getName()
+	 * @see #getView()
+	 * @generated
+	 */
+	EAttribute getView_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.sirius.sample.multiactivity.View#getId_view <em>Id view</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id view</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.View#getId_view()
+	 * @see #getView()
+	 * @generated
+	 */
+	EAttribute getView_Id_view();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.sirius.sample.multiactivity.NewActivityButton <em>New Activity Button</em>}'.
@@ -648,6 +760,22 @@ public interface MultiactivityPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VIEW__CONTENT = eINSTANCE.getView_Content();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VIEW__NAME = eINSTANCE.getView_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Id view</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VIEW__ID_VIEW = eINSTANCE.getView_Id_view();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.sirius.sample.multiactivity.impl.NewActivityButtonImpl <em>New Activity Button</em>}' class.

@@ -73,7 +73,7 @@ public class TextViewItemProvider extends ViewItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((TextView) object).getContent();
+		String label = ((TextView) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_TextView_type")
 				: getString("_UI_TextView_type") + " " + label;
 	}

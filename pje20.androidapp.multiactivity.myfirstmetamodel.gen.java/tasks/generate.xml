@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="generate" name="pje20.androidapp.multiactivity.myfirstmetamodel.gen.java">
-    <property name="ECLIPSE_HOME" value="../../../../modeling-2020-06/eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../../eclipse-workspace/runtime-New_configuration"/>
+<project default="generate" name="org.eclipse.acceleo.module.exo">
+    <property name="ECLIPSE_HOME" value="../../../modeling-2020-06/eclipse"/>
+    <property name="ECLIPSE_WORKSPACE" value="../.."/>
 
     <!-- The classpath with only the dependencies used by the project -->
-    <path id="pje20.androidapp.multiactivity.myfirstmetamodel.gen.java.libraryclasspath">
-        <pathelement location="${ECLIPSE_WORKSPACE}/pje20.androidapp.multiactivity.myfirstmetamodel.gen.java/bin"/>
+    <path id="org.eclipse.acceleo.module.exo.libraryclasspath">
+        <pathelement location="${ECLIPSE_WORKSPACE}/org.eclipse.acceleo.module.exo/bin"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.runtime_3.18.0.v20200506-2143.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi_3.15.300.v20200520-1959.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi.compatibility.state_1.1.800.v20200511-1223.jar"/>
@@ -31,23 +31,23 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/com.google.guava_27.1.0.v20190517-1946.jar"/>
     </path>
 
-    <path id="pje20.androidapp.multiactivity.myfirstmetamodel.gen.java.classpath">
-        <path refid="pje20.androidapp.multiactivity.myfirstmetamodel.gen.java.libraryclasspath"/>
+    <path id="org.eclipse.acceleo.module.exo.classpath">
+        <path refid="org.eclipse.acceleo.module.exo.libraryclasspath"/>
     </path>
 
     <!-- The classpath with only the jars available in the plugin folder of Eclipse -->
-    <path id="pje20.androidapp.multiactivity.myfirstmetamodel.gen.java.libraryclasspath.alljars">
-        <pathelement location="../pje20.androidapp.multiactivity.myfirstmetamodel.gen.java/bin"/>
+    <path id="org.eclipse.acceleo.module.exo.libraryclasspath.alljars">
+        <pathelement location="../org.eclipse.acceleo.module.exo/bin"/>
         <fileset dir="${ECLIPSE_HOME}/plugins/" includes="*.jar"/>
     </path>
 
-    <path id="pje20.androidapp.multiactivity.myfirstmetamodel.gen.java.classpath.alljars">
-        <path refid="pje20.androidapp.multiactivity.myfirstmetamodel.gen.java.libraryclasspath.alljars"/>
+    <path id="org.eclipse.acceleo.module.exo.classpath.alljars">
+        <path refid="org.eclipse.acceleo.module.exo.libraryclasspath.alljars"/>
     </path>
 
     <!-- The default task with the jars used by this project -->
     <target name="generate">
-        <java classname="org.eclipse.acceleo.module.multiactivity.main.Generate" classpathref="pje20.androidapp.multiactivity.myfirstmetamodel.gen.java.classpath">
+        <java classname="org.eclipse.acceleo.module.exo.main.Generate" classpathref="org.eclipse.acceleo.module.exo.classpath">
             <arg value="${model}"/>
             <arg value="${target}"/>
         </java>
@@ -58,7 +58,7 @@
         Keep in mind that having two versions of the same jar can create problems
     -->
     <target name="generate.alljars">
-        <java classname="org.eclipse.acceleo.module.multiactivity.main.Generate" classpathref="pje20.androidapp.multiactivity.myfirstmetamodel.gen.java.classpath">
+        <java classname="org.eclipse.acceleo.module.exo.main.Generate" classpathref="org.eclipse.acceleo.module.exo.classpath">
             <arg value="${model}"/>
             <arg value="${target}"/>
         </java>

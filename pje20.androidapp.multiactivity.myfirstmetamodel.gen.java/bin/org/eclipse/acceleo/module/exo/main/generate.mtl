@@ -1,0 +1,284 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+
+[module generate('http://www.example.org/multiactivity')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param anApplication
+ */]
+[template public generateApplication(anApplication : Application)]
+[comment @main/]
+	[self.generateManifest()/]
+	[if (self.eAllContents(PopupMessageButton) -> notEmpty())]
+		[self.createDialogPopUpClass()/]
+	[/if]
+	
+	
+	[for (anActivity : Activity | self.activities)]
+		[self.generateActivity()/]		
+	[/for]
+
+	
+[/template]
+
+[template public generateActivity(anActivity : Activity)
+{
+	layoutName : String = anActivity.layouts -> first().name;
+	xml : String = '<?xml version="1.0" encoding="utf-8"?>';
+
+}]
+
+[file ('java/pje20/androidapp/app1/' + anActivity.name.toUpperFirst() + '.java', false, 'UTF-8')]
+
+package pje20.androidapp.app1;
+
+[anActivity.generateMainImports()/]
+[anActivity.generateCommonImports()/]
+
+
+public class [anActivity.name.toUpperFirst()/] extends AppCompatActivity {
+
+[if (anActivity.eAllContents(PopupMessageButton)->notEmpty())]
+	HelloWorldDialogFragment mDialog;
+[/if]
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+
+		super.onCreate(savedInstanceState);
+		
+		setContentView(R.layout.[layoutName/]);
+		
+	[if (anActivity.eAllContents(PopupMessageButton)->notEmpty())]
+		mDialog = new HelloWorldDialogFragment("[anActivity.name/]");
+	[/if]
+		
+	}
+
+	@Override
+    protected void onStart() {
+        super.onStart();
+	[for (aView : View | anActivity.layouts.views)]		
+[if (self.oclIsTypeOf(TextView)=false)]
+	
+		findViewById(R.id.[aView.name/]_[aView.id_view/]).setOnClickListener(handleClickButton[aView.id_view.toUpperFirst()/]);
+[/if]
+	[/for]
+    }
+
+
+[for (aView : View | anActivity.layouts.views)]
+[if (self.oclIsTypeOf(TextView)=false)]
+	[aView.setClickListener()/]
+	[aView.handleClick()/]
+[/if]
+[/for]
+}
+[/file]
+
+[file ('res/layout/' +layoutName+ '.xml', false, 'UTF-8') ]
+[xml/]
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".[anActivity.name/]"
+    android:orientation="horizontal"
+    android:gravity="center">
+    
+[for (view : View | anActivity.layouts.views)]
+	[if (self.oclIsTypeOf(PopupTimeButton))]
+		<TextView
+			android:id="@+id/textview_[view.name/]_[view.id_view/]"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text=""
+	        app:layout_constraintBottom_toBottomOf="parent"
+	        app:layout_constraintEnd_toEndOf="parent"
+	        app:layout_constraintStart_toStartOf="parent"
+	        app:layout_constraintTop_toTopOf="parent" 
+			android:layout_gravity="top"
+			android:layout_margin="5dp"/>							
+	[/if]
+	<[view.name/]
+		android:id="@+id/[view.name/]_[view.id_view/]"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[view.content/]"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" 
+		android:layout_margin="5dp"/>		
+[/for]
+</LinearLayout>
+
+[/file]
+		
+
+
+[/template]
+
+[template public generateMainImports (anActivity : Activity) ? (anActivity.name = 'MainActivity')]
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Button;
+
+[/template]
+
+
+[template public generateCommonImports (anActivity : Activity) ]
+[if (anActivity.eAllContents(PopupMessageButton)->notEmpty())]
+import pje20.androidapp.app1.popup.HelloWorldDialogFragment;
+[/if]
+[if (self.eAllContents(PopupTimeButton) -> notEmpty())]
+import android.widget.TextView;
+import android.os.Build;
+import androidx.annotation.RequiresApi;
+import java.time.LocalDateTime; 
+import java.time.format.DateTimeFormatter; 
+[/if]
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+[/template]
+
+[template public handleClick(aView : View)]
+		
+	//!!! n'oublier d'implementer pour ce sous type
+[/template]
+
+[template public handleClick(buttonActivity : NewActivityButton)]
+	public void display[self.id_view.toUpperFirst()/](View view){
+		Intent intent = new Intent(this, [self.id_view.toUpperFirst()/].class);
+	    startActivity(intent);
+	}
+
+	
+[/template]
+
+[template public handleClick(buttonPopUp : PopupMessageButton)]
+	public void display[self.id_view.toUpperFirst()/](View view){
+        mDialog.show(getSupportFragmentManager(),"[self.message/]");
+    }
+	
+[/template]
+
+[template public handleClick(aTimeButton : PopupTimeButton)]
+	@RequiresApi(api = Build.VERSION_CODES.O)
+	public void display[self.id_view.toUpperFirst()/](View view){
+		 LocalDateTime myDateObj = LocalDateTime.now();
+		 DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+    	 String formattedDate = myDateObj.format(myFormatObj);
+		 TextView txt = findViewById(R.id.textview_[self.name/]_[self.id_view/]);
+		 txt.setText(formattedDate);
+			
+    }
+	
+[/template]
+
+[template public createDialogPopUpClass(anApplication : Application)]
+[file ('java/pje20/androidapp/app1/popup/HelloWorldDialogFragment.java', false, 'UTF-8')]
+	
+	package pje20.androidapp.app1.popup;
+
+	import android.app.AlertDialog;
+	import android.app.Dialog;
+	import android.content.DialogInterface;
+	import android.os.Bundle;
+	
+	import androidx.annotation.NonNull;
+	import androidx.annotation.Nullable;
+	import androidx.fragment.app.DialogFragment;
+	
+	public class HelloWorldDialogFragment extends DialogFragment {
+	    private String mActivityName;
+	    public HelloWorldDialogFragment(String name){
+	        mActivityName = name;
+	    }
+	    @NonNull
+	    @Override
+	    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+	        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+	        builder.setTitle("Helloo")
+	                .setMessage("Hello, I am " + getActivityName())
+	                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+	                    @Override
+	                    public void onClick(DialogInterface dialog, int which) {
+	                        
+	                    }
+	                });
+	
+	        //return super.onCreateDialog(savedInstanceState);
+	        return builder.create();
+	    }
+	
+	    public String getActivityName() {
+	        return mActivityName;
+	    }
+	
+	    public void setActivityName(String activityName) {
+	        mActivityName = activityName;
+	    }
+	}
+[/file]
+[/template]
+
+[template public setClickListener(aView : View)]
+	View.OnClickListener handleClickButton[aView.id_view.toUpperFirst()/] = new View.OnClickListener() {
+        public void onClick(View view) {
+           display[self.id_view.toUpperFirst()/](view);
+        }
+    };
+[/template]
+
+[template public generateManifest(anApplication : Application)]
+[file ('AndroidManifest.xml', false, 'UTF-8')]
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pje20.androidapp.app1">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Application1">
+	[for (anActivity : Activity | self.activities)]
+	[if (anActivity.name = 'MainActivity')]
+		<activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>	
+        </activity>
+	[/if]
+	[if (anActivity.name <> 'MainActivity')]
+        <activity android:name=".[anActivity.name.toUpperFirst()/]">
+			
+        </activity>
+    [/if]    
+    [/for]
+	</application>
+
+</manifest>
+
+        
+[/file]
+[/template]
+

@@ -233,6 +233,26 @@ public class MultiactivityPackageImpl extends EPackageImpl implements Multiactiv
 	 * @generated
 	 */
 	@Override
+	public EAttribute getView_Name() {
+		return (EAttribute) viewEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getView_Id_view() {
+		return (EAttribute) viewEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getNewActivityButton() {
 		return newActivityButtonEClass;
 	}
@@ -347,6 +367,8 @@ public class MultiactivityPackageImpl extends EPackageImpl implements Multiactiv
 
 		viewEClass = createEClass(VIEW);
 		createEAttribute(viewEClass, VIEW__CONTENT);
+		createEAttribute(viewEClass, VIEW__NAME);
+		createEAttribute(viewEClass, VIEW__ID_VIEW);
 
 		newActivityButtonEClass = createEClass(NEW_ACTIVITY_BUTTON);
 		createEReference(newActivityButtonEClass, NEW_ACTIVITY_BUTTON__ACTIVITY);
@@ -414,6 +436,10 @@ public class MultiactivityPackageImpl extends EPackageImpl implements Multiactiv
 
 		initEClass(viewEClass, View.class, "View", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getView_Content(), ecorePackage.getEString(), "content", null, 0, 1, View.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getView_Name(), ecorePackage.getEString(), "name", null, 0, 1, View.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getView_Id_view(), ecorePackage.getEString(), "id_view", null, 0, 1, View.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(newActivityButtonEClass, NewActivityButton.class, "NewActivityButton", !IS_ABSTRACT, !IS_INTERFACE,
