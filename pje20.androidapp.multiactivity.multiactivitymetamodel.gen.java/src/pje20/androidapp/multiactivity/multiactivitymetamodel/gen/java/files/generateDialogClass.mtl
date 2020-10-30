@@ -1,3 +1,16 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generateDialogClass.
+ */]
+[module generateDialogClass('http://www.example.org/multiactivity')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param anApplication
+ */]
+[template public createDialogPopUpClass(anApplication : Application)]
+[file ('java/pje20/androidapp/app1/popup/HelloWorldDialogFragment.java', false, 'UTF-8')]
 	
 	package pje20.androidapp.app1.popup;
 
@@ -40,3 +53,7 @@
 	        mActivityName = activityName;
 	    }
 	}
+[/file]
+[/template]
+
+

@@ -20,7 +20,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityThree extends AppCompatActivity {
 
-	HelloWorldDialogFragment mDialog;
+	HelloWorldDialogFragment mDialogActivity3;
+
+	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -28,7 +30,8 @@ public class ActivityThree extends AppCompatActivity {
 		
 		setContentView(R.layout.activity_three);
 		
-		mDialog = new HelloWorldDialogFragment("ActivityThree");
+		mDialogActivity3 = new HelloWorldDialogFragment("I am Activity3");
+
 		
 	}
 
@@ -48,7 +51,7 @@ public class ActivityThree extends AppCompatActivity {
 	        }
 	    };
 		public void displayActivity3(View view){
-	        mDialog.show(getSupportFragmentManager(),"I am Activity3");
+	        mDialogActivity3.show(getSupportFragmentManager(),"I am Activity3");
 	    }
 		
 		View.OnClickListener handleClickButtonTime = new View.OnClickListener() {

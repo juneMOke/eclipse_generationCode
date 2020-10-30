@@ -1,0 +1,61 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generateLayouts.
+ */]
+[module generateLayouts('http://www.example.org/multiactivity')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param anActivity
+ */]
+[template public generateLayout(anActivity : Activity)
+{
+	layoutName : String = anActivity.layouts -> first().name;
+	xml : String = '<?xml version="1.0" encoding="utf-8"?>';
+
+}]
+
+[file ('res/layout/' +layoutName+ '.xml', false, 'UTF-8') ]
+[xml/]
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".[anActivity.name/]"
+    android:orientation="horizontal"
+    android:gravity="center">
+    
+[for (view : View | anActivity.layouts.views)]
+	[if (self.oclIsTypeOf(PopupTimeButton))]
+		<TextView
+			android:id="@+id/textview_[view.name/]_[view.id_view/]"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text=""
+	        app:layout_constraintBottom_toBottomOf="parent"
+	        app:layout_constraintEnd_toEndOf="parent"
+	        app:layout_constraintStart_toStartOf="parent"
+	        app:layout_constraintTop_toTopOf="parent" 
+			android:layout_gravity="top"
+			android:layout_margin="5dp"/>							
+	[/if]
+	<[view.name/]
+		android:id="@+id/[view.name/]_[view.id_view/]"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[view.content/]"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" 
+		android:layout_margin="5dp"/>		
+[/for]
+</LinearLayout>
+
+[/file]
+		
+
+[/template]

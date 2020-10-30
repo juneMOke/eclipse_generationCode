@@ -8,7 +8,7 @@
  * Contributors:
  *     Obeo - initial API and implementation
  *******************************************************************************/
-package org.eclipse.acceleo.module.exo.main;
+package pje20.androidapp.multiactivity.multiactivitymetamodel.gen.java.main;
 
 import java.io.File;
 import java.io.IOException;
@@ -35,7 +35,7 @@ public class Generate extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public static final String MODULE_FILE_NAME = "/org/eclipse/acceleo/module/exo/main/generate";
+    public static final String MODULE_FILE_NAME = "/pje20/androidapp/multiactivity/multiactivitymetamodel/gen/java/main/generate";
     
     /**
      * The name of the templates that are to be generated.

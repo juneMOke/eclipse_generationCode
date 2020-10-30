@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<multiactivity:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:multiactivity="http://www.example.org/multiactivity">
+  <activities name="MainActivity">
+    <layouts name="activity_main">
+      <views xsi:type="multiactivity:NewActivityButton" content="Activity2" name="Button" id_view="activityTwo" activity="//@activities.1"/>
+      <views xsi:type="multiactivity:PopupMessageButton" content="Greet" name="Button" id_view="popup1" message="Have a greet day"/>
+      <views xsi:type="multiactivity:TextView" content="That's the first page" name="TextView" id_view="textview1"/>
+    </layouts>
+  </activities>
+  <activities name="ActivityTwo">
+    <layouts name="activity_two">
+      <views xsi:type="multiactivity:NewActivityButton" content="Activity3" name="Button" id_view="activityThree" activity="//@activities.2"/>
+      <views xsi:type="multiactivity:NewActivityButton" content="Activity4" name="Button" id_view="activityFour" activity="//@activities.3"/>
+      <views xsi:type="multiactivity:NewActivityButton" content="Activity5" name="Button" id_view="activityFive" activity="//@activities.4"/>
+    </layouts>
+  </activities>
+  <activities name="ActivityThree">
+    <layouts name="activity_three">
+      <views xsi:type="multiactivity:PopupMessageButton" content="FirstDisplay" name="Button" id_view="Button3" message="Hello, I am the first display"/>
+      <views xsi:type="multiactivity:PopupMessageButton" content="SecondDisplay" name="Button" id_view="button4" message="Hello, I am the second display"/>
+    </layouts>
+  </activities>
+  <activities name="ActivityFour">
+    <layouts name="activity_four">
+      <views xsi:type="multiactivity:TextView" content="Welcome to my home page" name="TextView" id_view="textView2"/>
+    </layouts>
+  </activities>
+  <activities name="ActivityFive">
+    <layouts name="activity_five">
+      <views xsi:type="multiactivity:TextView" content="Welcome to my home page" name="TextView" id_view="textview3"/>
+    </layouts>
+  </activities>
+  <activities name="ActivitySix">
+    <layouts name="activity_six">
+      <views xsi:type="multiactivity:TextView" content="welcome to my home page" name="TextView" id_view="textview4"/>
+    </layouts>
+  </activities>
+</multiactivity:Application>

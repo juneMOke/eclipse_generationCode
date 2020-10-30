@@ -15,7 +15,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityFour extends AppCompatActivity {
 
-	HelloWorldDialogFragment mDialog;
+	HelloWorldDialogFragment mDialogActivity4;
+
+	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -23,7 +25,8 @@ public class ActivityFour extends AppCompatActivity {
 		
 		setContentView(R.layout.activity_four);
 		
-		mDialog = new HelloWorldDialogFragment("ActivityFour");
+		mDialogActivity4 = new HelloWorldDialogFragment("I am Activity4");
+
 		
 	}
 
@@ -41,7 +44,7 @@ public class ActivityFour extends AppCompatActivity {
 	        }
 	    };
 		public void displayActivity4(View view){
-	        mDialog.show(getSupportFragmentManager(),"I am Activity4");
+	        mDialogActivity4.show(getSupportFragmentManager(),"I am Activity4");
 	    }
 		
 }

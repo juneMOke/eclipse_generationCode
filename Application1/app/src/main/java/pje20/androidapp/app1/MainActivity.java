@@ -21,7 +21,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-	HelloWorldDialogFragment mDialog;
+	HelloWorldDialogFragment mDialogMainActivity;
+
+	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -29,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
 		
 		setContentView(R.layout.activity_main);
 		
-		mDialog = new HelloWorldDialogFragment("MainActivity");
+		mDialogMainActivity = new HelloWorldDialogFragment("I am Activity 1");
+
 		
 	}
 
@@ -51,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 	        }
 	    };
 		public void displayMainActivity(View view){
-	        mDialog.show(getSupportFragmentManager(),"I am Activity 1");
+	        mDialogMainActivity.show(getSupportFragmentManager(),"I am Activity 1");
 	    }
 		
 		View.OnClickListener handleClickButtonActivityTwo = new View.OnClickListener() {

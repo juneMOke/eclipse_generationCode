@@ -1,0 +1,150 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generateActivityClass.
+ */]
+[module generateActivityClass('http://www.example.org/multiactivity')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param anActivity
+ */]
+[template public generateActivity(anActivity : Activity)
+{
+	layoutName : String = anActivity.layouts -> first().name;
+	xml : String = '<?xml version="1.0" encoding="utf-8"?>';
+
+}]
+
+[file ('java/pje20/androidapp/app1/' + anActivity.name.toUpperFirst() + '.java', false, 'UTF-8')]
+
+package pje20.androidapp.app1;
+
+[anActivity.generateMainImports()/]
+[anActivity.generateCommonImports()/]
+
+
+public class [anActivity.name.toUpperFirst()/] extends AppCompatActivity {
+
+[if (anActivity.eAllContents(PopupMessageButton)->notEmpty())]
+[for (aPopupMessage : PopupMessageButton | self.layouts.views -> filter(PopupMessageButton))]
+	HelloWorldDialogFragment mDialog[self.id_view.toUpperFirst()/];
+
+[/for]
+	
+[/if]
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+
+		super.onCreate(savedInstanceState);
+		
+		setContentView(R.layout.[layoutName/]);
+		
+	[if (anActivity.eAllContents(PopupMessageButton)->notEmpty())]
+	[for (aPopupMessage : PopupMessageButton | self.layouts.views -> filter(PopupMessageButton))]
+		mDialog[self.id_view.toUpperFirst()/] = new HelloWorldDialogFragment("[self.message/]");
+	[/for]
+
+	[/if]
+		
+	}
+
+	@Override
+    protected void onStart() {
+        super.onStart();
+	[for (aView : View | anActivity.layouts.views)]		
+	[if (self.oclIsTypeOf(TextView)=false)]
+	
+		findViewById(R.id.[aView.name/]_[aView.id_view/]).setOnClickListener(handleClickButton[aView.id_view.toUpperFirst()/]);
+	[/if]
+	[/for]
+    }
+
+
+[for (aView : View | anActivity.layouts.views)]
+[if (self.oclIsTypeOf(TextView)=false)]
+	[aView.setClickListener()/]
+	[aView.handleClick()/]
+[/if]
+[/for]
+}
+[/file]
+
+
+
+[/template]
+
+[template public generateMainImports (anActivity : Activity) ? (anActivity.name = 'MainActivity')]
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Button;
+
+[/template]
+
+
+[template public generateCommonImports (anActivity : Activity) ]
+[if (anActivity.eAllContents(PopupMessageButton)->notEmpty())]
+import pje20.androidapp.app1.popup.HelloWorldDialogFragment;
+[/if]
+[if (self.eAllContents(PopupTimeButton) -> notEmpty())]
+import android.widget.TextView;
+import android.os.Build;
+import androidx.annotation.RequiresApi;
+import java.time.LocalDateTime; 
+import java.time.format.DateTimeFormatter; 
+[/if]
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+[/template]
+
+[template public handleClick(aView : View)]
+		
+	//!!! n'oublier d'implementer pour ce sous type
+[/template]
+
+[template public handleClick(buttonActivity : NewActivityButton)]
+	public void display[self.id_view.toUpperFirst()/](View view){
+		Intent intent = new Intent(this, [self.id_view.toUpperFirst()/].class);
+	    startActivity(intent);
+	}
+
+	
+[/template]
+
+[template public handleClick(buttonPopUp : PopupMessageButton)]
+	public void display[self.id_view.toUpperFirst()/](View view){
+        mDialog[self.id_view.toUpperFirst()/].show(getSupportFragmentManager(),"[self.message/]");
+    }
+	
+[/template]
+
+[template public handleClick(aTimeButton : PopupTimeButton)]
+	@RequiresApi(api = Build.VERSION_CODES.O)
+	public void display[self.id_view.toUpperFirst()/](View view){
+		 LocalDateTime myDateObj = LocalDateTime.now();
+		 DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+    	 String formattedDate = myDateObj.format(myFormatObj);
+		 TextView txt = findViewById(R.id.textview_[self.name/]_[self.id_view/]);
+		 txt.setText(formattedDate);
+			
+    }
+	
+[/template]
+
+[template public setClickListener(aView : View)]
+	View.OnClickListener handleClickButton[aView.id_view.toUpperFirst()/] = new View.OnClickListener() {
+        public void onClick(View view) {
+           display[self.id_view.toUpperFirst()/](view);
+        }
+    };
+[/template]
+

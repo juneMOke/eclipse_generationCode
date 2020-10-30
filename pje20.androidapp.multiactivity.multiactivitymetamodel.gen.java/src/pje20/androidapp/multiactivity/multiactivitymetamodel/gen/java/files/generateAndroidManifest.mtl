@@ -1,3 +1,16 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generateAndroidManifest.
+ */]
+[module generateAndroidManifest('http://www.example.org/multiactivity')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param anActivity
+ */]
+[template public generateManifest(anApplication : Application)]
+[file ('AndroidManifest.xml', false, 'UTF-8')]
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="pje20.androidapp.app1">
@@ -9,6 +22,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Application1">
+	[for (anActivity : Activity | self.activities)]
+	[if (anActivity.name = 'MainActivity')]
 		<activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,16 +31,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>	
         </activity>
-        <activity android:name=".ActivityTwo">
+	[/if]
+	[if (anActivity.name <> 'MainActivity')]
+        <activity android:name=".[anActivity.name.toUpperFirst()/]">
 			
         </activity>
-        <activity android:name=".ActivityThree">
-			
-        </activity>
-        <activity android:name=".ActivityFour">
-			
-        </activity>
+    [/if]    
+    [/for]
 	</application>
 
 </manifest>
     
+[/file]
+[/template]
