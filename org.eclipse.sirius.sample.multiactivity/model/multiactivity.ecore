@@ -2,10 +2,9 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="multiactivity" nsURI="http://www.example.org/multiactivity"
     nsPrefix="multiactivity">
-  <eClassifiers xsi:type="ecore:EClass" name="Activity">
+  <eClassifiers xsi:type="ecore:EClass" name="Activity" eSuperTypes="#//Packageable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="layouts" lowerBound="1"
         upperBound="-1" eType="#//Layout" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Layout">
     <eStructuralFeatures xsi:type="ecore:EReference" name="views" upperBound="-1"
@@ -27,7 +26,53 @@
   <eClassifiers xsi:type="ecore:EClass" name="TextView" eSuperTypes="#//View"/>
   <eClassifiers xsi:type="ecore:EClass" name="PopupTimeButton" eSuperTypes="#//View"/>
   <eClassifiers xsi:type="ecore:EClass" name="Application">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="activities" upperBound="-1"
-        eType="#//Activity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="namedelements" upperBound="-1"
+        eType="#//NamedElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Packageable" abstract="true" eSuperTypes="#//NamedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Package" eSuperTypes="#//Packageable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="packageables" upperBound="-1"
+        eType="#//Packageable" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveType" eSuperTypes="#//Packageable #//Type">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyKind" eType="#//PropertyKind"
+        changeable="false" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//Packageable #//Type">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//Attribute" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="displayInList" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="displayInDetail" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Type" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ListDeclaration" eSuperTypes="#//Packageable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//Entity" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListView" eSuperTypes="#//View">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listdeclaration" upperBound="-1"
+        eType="#//ListDeclaration"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="displayDetail" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="allowedCreation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="allowDeletion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PropertyKind">
+    <eLiterals name="int" literal="int"/>
+    <eLiterals name="boolean" value="1" literal="boolean"/>
+    <eLiterals name="string" value="2" literal="string"/>
+    <eLiterals name="double" value="3"/>
+    <eLiterals name="Date" value="4"/>
   </eClassifiers>
 </ecore:EPackage>

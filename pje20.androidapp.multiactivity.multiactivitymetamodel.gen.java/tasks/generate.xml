@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="pje20.androidapp.multiactivity.multiactivitymetamodel.gen.java">
-    <property name="ECLIPSE_HOME" value="../../../../modeling-2020-06/eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../../runtime-New_configuration"/>
+    <property name="ECLIPSE_HOME" value="../../../../../modeling-2020-06/eclipse"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../../runtime-New_configuration"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="pje20.androidapp.multiactivity.multiactivitymetamodel.gen.java.libraryclasspath">

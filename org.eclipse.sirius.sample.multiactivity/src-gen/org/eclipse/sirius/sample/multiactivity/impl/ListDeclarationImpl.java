@@ -10,43 +10,44 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.sirius.sample.multiactivity.Application;
+
+import org.eclipse.sirius.sample.multiactivity.Entity;
+import org.eclipse.sirius.sample.multiactivity.ListDeclaration;
 import org.eclipse.sirius.sample.multiactivity.MultiactivityPackage;
-import org.eclipse.sirius.sample.multiactivity.NamedElement;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Application</b></em>'.
+ * An implementation of the model object '<em><b>List Declaration</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.sirius.sample.multiactivity.impl.ApplicationImpl#getNamedelements <em>Namedelements</em>}</li>
+ *   <li>{@link org.eclipse.sirius.sample.multiactivity.impl.ListDeclarationImpl#getEntities <em>Entities</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ApplicationImpl extends MinimalEObjectImpl.Container implements Application {
+public class ListDeclarationImpl extends PackageableImpl implements ListDeclaration {
 	/**
-	 * The cached value of the '{@link #getNamedelements() <em>Namedelements</em>}' containment reference list.
+	 * The cached value of the '{@link #getEntities() <em>Entities</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNamedelements()
+	 * @see #getEntities()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<NamedElement> namedelements;
+	protected EList<Entity> entities;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApplicationImpl() {
+	protected ListDeclarationImpl() {
 		super();
 	}
 
@@ -57,7 +58,7 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MultiactivityPackage.Literals.APPLICATION;
+		return MultiactivityPackage.Literals.LIST_DECLARATION;
 	}
 
 	/**
@@ -66,12 +67,12 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * @generated
 	 */
 	@Override
-	public EList<NamedElement> getNamedelements() {
-		if (namedelements == null) {
-			namedelements = new EObjectContainmentEList<NamedElement>(NamedElement.class, this,
-					MultiactivityPackage.APPLICATION__NAMEDELEMENTS);
+	public EList<Entity> getEntities() {
+		if (entities == null) {
+			entities = new EObjectContainmentEList<Entity>(Entity.class, this,
+					MultiactivityPackage.LIST_DECLARATION__ENTITIES);
 		}
-		return namedelements;
+		return entities;
 	}
 
 	/**
@@ -82,8 +83,8 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MultiactivityPackage.APPLICATION__NAMEDELEMENTS:
-			return ((InternalEList<?>) getNamedelements()).basicRemove(otherEnd, msgs);
+		case MultiactivityPackage.LIST_DECLARATION__ENTITIES:
+			return ((InternalEList<?>) getEntities()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -96,8 +97,8 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MultiactivityPackage.APPLICATION__NAMEDELEMENTS:
-			return getNamedelements();
+		case MultiactivityPackage.LIST_DECLARATION__ENTITIES:
+			return getEntities();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,9 +112,9 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MultiactivityPackage.APPLICATION__NAMEDELEMENTS:
-			getNamedelements().clear();
-			getNamedelements().addAll((Collection<? extends NamedElement>) newValue);
+		case MultiactivityPackage.LIST_DECLARATION__ENTITIES:
+			getEntities().clear();
+			getEntities().addAll((Collection<? extends Entity>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -127,8 +128,8 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MultiactivityPackage.APPLICATION__NAMEDELEMENTS:
-			getNamedelements().clear();
+		case MultiactivityPackage.LIST_DECLARATION__ENTITIES:
+			getEntities().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -142,10 +143,10 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MultiactivityPackage.APPLICATION__NAMEDELEMENTS:
-			return namedelements != null && !namedelements.isEmpty();
+		case MultiactivityPackage.LIST_DECLARATION__ENTITIES:
+			return entities != null && !entities.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //ApplicationImpl
+} //ListDeclarationImpl

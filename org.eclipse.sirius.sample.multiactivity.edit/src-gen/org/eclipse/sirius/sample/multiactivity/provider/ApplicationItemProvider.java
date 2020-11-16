@@ -70,7 +70,7 @@ public class ApplicationItemProvider extends ItemProviderAdapter implements IEdi
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MultiactivityPackage.Literals.APPLICATION__ACTIVITIES);
+			childrenFeatures.add(MultiactivityPackage.Literals.APPLICATION__NAMEDELEMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -132,7 +132,7 @@ public class ApplicationItemProvider extends ItemProviderAdapter implements IEdi
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Application.class)) {
-		case MultiactivityPackage.APPLICATION__ACTIVITIES:
+		case MultiactivityPackage.APPLICATION__NAMEDELEMENTS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -150,8 +150,20 @@ public class ApplicationItemProvider extends ItemProviderAdapter implements IEdi
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.APPLICATION__ACTIVITIES,
+		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.APPLICATION__NAMEDELEMENTS,
 				MultiactivityFactory.eINSTANCE.createActivity()));
+
+		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.APPLICATION__NAMEDELEMENTS,
+				MultiactivityFactory.eINSTANCE.createPackage()));
+
+		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.APPLICATION__NAMEDELEMENTS,
+				MultiactivityFactory.eINSTANCE.createPrimitiveType()));
+
+		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.APPLICATION__NAMEDELEMENTS,
+				MultiactivityFactory.eINSTANCE.createEntity()));
+
+		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.APPLICATION__NAMEDELEMENTS,
+				MultiactivityFactory.eINSTANCE.createListDeclaration()));
 	}
 
 	/**

@@ -3,7 +3,6 @@
 package org.eclipse.sirius.sample.multiactivity;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.sirius.sample.multiactivity.Application#getActivities <em>Activities</em>}</li>
+ *   <li>{@link org.eclipse.sirius.sample.multiactivity.Application#getNamedelements <em>Namedelements</em>}</li>
  * </ul>
  *
  * @see org.eclipse.sirius.sample.multiactivity.MultiactivityPackage#getApplication()
@@ -24,15 +23,15 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Application extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Activities</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.sirius.sample.multiactivity.Activity}.
+	 * Returns the value of the '<em><b>Namedelements</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.sirius.sample.multiactivity.NamedElement}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Activities</em>' containment reference list.
-	 * @see org.eclipse.sirius.sample.multiactivity.MultiactivityPackage#getApplication_Activities()
+	 * @return the value of the '<em>Namedelements</em>' containment reference list.
+	 * @see org.eclipse.sirius.sample.multiactivity.MultiactivityPackage#getApplication_Namedelements()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Activity> getActivities();
+	EList<NamedElement> getNamedelements();
 
 } // Application

@@ -4,6 +4,7 @@ package org.eclipse.sirius.sample.multiactivity;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -67,42 +68,6 @@ public interface MultiactivityPackage extends EPackage {
 	int ACTIVITY = 0;
 
 	/**
-	 * The feature id for the '<em><b>Layouts</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY__LAYOUTS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY__NAME = 1;
-
-	/**
-	 * The number of structural features of the '<em>Activity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Activity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTIVITY_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.LayoutImpl <em>Layout</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,6 +76,166 @@ public interface MultiactivityPackage extends EPackage {
 	 * @generated
 	 */
 	int LAYOUT = 1;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.ViewImpl <em>View</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.ViewImpl
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getView()
+	 * @generated
+	 */
+	int VIEW = 2;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.NewActivityButtonImpl <em>New Activity Button</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.NewActivityButtonImpl
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getNewActivityButton()
+	 * @generated
+	 */
+	int NEW_ACTIVITY_BUTTON = 3;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.PopupMessageButtonImpl <em>Popup Message Button</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.PopupMessageButtonImpl
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getPopupMessageButton()
+	 * @generated
+	 */
+	int POPUP_MESSAGE_BUTTON = 4;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.TextViewImpl <em>Text View</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.TextViewImpl
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getTextView()
+	 * @generated
+	 */
+	int TEXT_VIEW = 5;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.PopupTimeButtonImpl <em>Popup Time Button</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.PopupTimeButtonImpl
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getPopupTimeButton()
+	 * @generated
+	 */
+	int POPUP_TIME_BUTTON = 6;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.NamedElementImpl <em>Named Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.NamedElementImpl
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getNamedElement()
+	 * @generated
+	 */
+	int NAMED_ELEMENT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Named Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Named Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.PackageableImpl <em>Packageable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.PackageableImpl
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getPackageable()
+	 * @generated
+	 */
+	int PACKAGEABLE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGEABLE__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Packageable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGEABLE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Packageable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGEABLE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__NAME = PACKAGEABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Layouts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY__LAYOUTS = PACKAGEABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Activity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY_FEATURE_COUNT = PACKAGEABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Activity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTIVITY_OPERATION_COUNT = PACKAGEABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
@@ -147,16 +272,6 @@ public interface MultiactivityPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYOUT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.ViewImpl <em>View</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.sirius.sample.multiactivity.impl.ViewImpl
-	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getView()
-	 * @generated
-	 */
-	int VIEW = 2;
 
 	/**
 	 * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -202,16 +317,6 @@ public interface MultiactivityPackage extends EPackage {
 	 * @ordered
 	 */
 	int VIEW_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.NewActivityButtonImpl <em>New Activity Button</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.sirius.sample.multiactivity.impl.NewActivityButtonImpl
-	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getNewActivityButton()
-	 * @generated
-	 */
-	int NEW_ACTIVITY_BUTTON = 3;
 
 	/**
 	 * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -268,16 +373,6 @@ public interface MultiactivityPackage extends EPackage {
 	int NEW_ACTIVITY_BUTTON_OPERATION_COUNT = VIEW_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.PopupMessageButtonImpl <em>Popup Message Button</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.sirius.sample.multiactivity.impl.PopupMessageButtonImpl
-	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getPopupMessageButton()
-	 * @generated
-	 */
-	int POPUP_MESSAGE_BUTTON = 4;
-
-	/**
 	 * The feature id for the '<em><b>Content</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -332,16 +427,6 @@ public interface MultiactivityPackage extends EPackage {
 	int POPUP_MESSAGE_BUTTON_OPERATION_COUNT = VIEW_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.TextViewImpl <em>Text View</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.sirius.sample.multiactivity.impl.TextViewImpl
-	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getTextView()
-	 * @generated
-	 */
-	int TEXT_VIEW = 5;
-
-	/**
 	 * The feature id for the '<em><b>Content</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -385,16 +470,6 @@ public interface MultiactivityPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_VIEW_OPERATION_COUNT = VIEW_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.PopupTimeButtonImpl <em>Popup Time Button</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.sirius.sample.multiactivity.impl.PopupTimeButtonImpl
-	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getPopupTimeButton()
-	 * @generated
-	 */
-	int POPUP_TIME_BUTTON = 6;
 
 	/**
 	 * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -452,13 +527,13 @@ public interface MultiactivityPackage extends EPackage {
 	int APPLICATION = 7;
 
 	/**
-	 * The feature id for the '<em><b>Activities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Namedelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__ACTIVITIES = 0;
+	int APPLICATION__NAMEDELEMENTS = 0;
 
 	/**
 	 * The number of structural features of the '<em>Application</em>' class.
@@ -477,6 +552,383 @@ public interface MultiactivityPackage extends EPackage {
 	 * @ordered
 	 */
 	int APPLICATION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.PackageImpl <em>Package</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.PackageImpl
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getPackage()
+	 * @generated
+	 */
+	int PACKAGE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE__NAME = PACKAGEABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Packageables</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE__PACKAGEABLES = PACKAGEABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Package</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE_FEATURE_COUNT = PACKAGEABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Package</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE_OPERATION_COUNT = PACKAGEABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.PrimitiveTypeImpl <em>Primitive Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.PrimitiveTypeImpl
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getPrimitiveType()
+	 * @generated
+	 */
+	int PRIMITIVE_TYPE = 11;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE_TYPE__NAME = PACKAGEABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Property Kind</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE_TYPE__PROPERTY_KIND = PACKAGEABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Primitive Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE_TYPE_FEATURE_COUNT = PACKAGEABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Primitive Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE_TYPE_OPERATION_COUNT = PACKAGEABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.AttributeImpl <em>Attribute</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.AttributeImpl
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getAttribute()
+	 * @generated
+	 */
+	int ATTRIBUTE = 13;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.Type <em>Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.multiactivity.Type
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getType()
+	 * @generated
+	 */
+	int TYPE = 14;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.EntityImpl <em>Entity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.EntityImpl
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getEntity()
+	 * @generated
+	 */
+	int ENTITY = 12;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__NAME = PACKAGEABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__ATTRIBUTES = PACKAGEABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FEATURE_COUNT = PACKAGEABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_OPERATION_COUNT = PACKAGEABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__TYPE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Display In List</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__DISPLAY_IN_LIST = 2;
+
+	/**
+	 * The feature id for the '<em><b>Display In Detail</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__DISPLAY_IN_DETAIL = 3;
+
+	/**
+	 * The number of structural features of the '<em>Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_OPERATION_COUNT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.ListDeclarationImpl <em>List Declaration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.ListDeclarationImpl
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getListDeclaration()
+	 * @generated
+	 */
+	int LIST_DECLARATION = 15;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_DECLARATION__NAME = PACKAGEABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Entities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_DECLARATION__ENTITIES = PACKAGEABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>List Declaration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_DECLARATION_FEATURE_COUNT = PACKAGEABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>List Declaration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_DECLARATION_OPERATION_COUNT = PACKAGEABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.impl.ListViewImpl <em>List View</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.ListViewImpl
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getListView()
+	 * @generated
+	 */
+	int LIST_VIEW = 16;
+
+	/**
+	 * The feature id for the '<em><b>Content</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_VIEW__CONTENT = VIEW__CONTENT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_VIEW__NAME = VIEW__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id view</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_VIEW__ID_VIEW = VIEW__ID_VIEW;
+
+	/**
+	 * The feature id for the '<em><b>Listdeclaration</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_VIEW__LISTDECLARATION = VIEW_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Display Detail</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_VIEW__DISPLAY_DETAIL = VIEW_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Allowed Creation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_VIEW__ALLOWED_CREATION = VIEW_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Allow Deletion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_VIEW__ALLOW_DELETION = VIEW_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>List View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_VIEW_FEATURE_COUNT = VIEW_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>List View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_VIEW_OPERATION_COUNT = VIEW_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.multiactivity.PropertyKind <em>Property Kind</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.multiactivity.PropertyKind
+	 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getPropertyKind()
+	 * @generated
+	 */
+	int PROPERTY_KIND = 17;
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.sirius.sample.multiactivity.Activity <em>Activity</em>}'.
@@ -498,17 +950,6 @@ public interface MultiactivityPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getActivity_Layouts();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.sirius.sample.multiactivity.Activity#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipse.sirius.sample.multiactivity.Activity#getName()
-	 * @see #getActivity()
-	 * @generated
-	 */
-	EAttribute getActivity_Name();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.sirius.sample.multiactivity.Layout <em>Layout</em>}'.
@@ -658,15 +1099,258 @@ public interface MultiactivityPackage extends EPackage {
 	EClass getApplication();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.sirius.sample.multiactivity.Application#getActivities <em>Activities</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.sirius.sample.multiactivity.Application#getNamedelements <em>Namedelements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Activities</em>'.
-	 * @see org.eclipse.sirius.sample.multiactivity.Application#getActivities()
+	 * @return the meta object for the containment reference list '<em>Namedelements</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.Application#getNamedelements()
 	 * @see #getApplication()
 	 * @generated
 	 */
-	EReference getApplication_Activities();
+	EReference getApplication_Namedelements();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.sirius.sample.multiactivity.NamedElement <em>Named Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Named Element</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.NamedElement
+	 * @generated
+	 */
+	EClass getNamedElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.sirius.sample.multiactivity.NamedElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.NamedElement#getName()
+	 * @see #getNamedElement()
+	 * @generated
+	 */
+	EAttribute getNamedElement_Name();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.sirius.sample.multiactivity.Packageable <em>Packageable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Packageable</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.Packageable
+	 * @generated
+	 */
+	EClass getPackageable();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.sirius.sample.multiactivity.Package <em>Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Package</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.Package
+	 * @generated
+	 */
+	EClass getPackage();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.sirius.sample.multiactivity.Package#getPackageables <em>Packageables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Packageables</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.Package#getPackageables()
+	 * @see #getPackage()
+	 * @generated
+	 */
+	EReference getPackage_Packageables();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.sirius.sample.multiactivity.PrimitiveType <em>Primitive Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Primitive Type</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.PrimitiveType
+	 * @generated
+	 */
+	EClass getPrimitiveType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.sirius.sample.multiactivity.PrimitiveType#getPropertyKind <em>Property Kind</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Property Kind</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.PrimitiveType#getPropertyKind()
+	 * @see #getPrimitiveType()
+	 * @generated
+	 */
+	EAttribute getPrimitiveType_PropertyKind();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.sirius.sample.multiactivity.Attribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Attribute</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.Attribute
+	 * @generated
+	 */
+	EClass getAttribute();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.sirius.sample.multiactivity.Attribute#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.Attribute#getType()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EReference getAttribute_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.sirius.sample.multiactivity.Attribute#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.Attribute#getName()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EAttribute getAttribute_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.sirius.sample.multiactivity.Attribute#isDisplayInList <em>Display In List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Display In List</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.Attribute#isDisplayInList()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EAttribute getAttribute_DisplayInList();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.sirius.sample.multiactivity.Attribute#isDisplayInDetail <em>Display In Detail</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Display In Detail</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.Attribute#isDisplayInDetail()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EAttribute getAttribute_DisplayInDetail();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.sirius.sample.multiactivity.Type <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Type</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.Type
+	 * @generated
+	 */
+	EClass getType();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.sirius.sample.multiactivity.Entity <em>Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Entity</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.Entity
+	 * @generated
+	 */
+	EClass getEntity();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.sirius.sample.multiactivity.Entity#getAttributes <em>Attributes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.Entity#getAttributes()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Attributes();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.sirius.sample.multiactivity.ListDeclaration <em>List Declaration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>List Declaration</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.ListDeclaration
+	 * @generated
+	 */
+	EClass getListDeclaration();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.sirius.sample.multiactivity.ListDeclaration#getEntities <em>Entities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Entities</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.ListDeclaration#getEntities()
+	 * @see #getListDeclaration()
+	 * @generated
+	 */
+	EReference getListDeclaration_Entities();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.sirius.sample.multiactivity.ListView <em>List View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>List View</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.ListView
+	 * @generated
+	 */
+	EClass getListView();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.sirius.sample.multiactivity.ListView#getListdeclaration <em>Listdeclaration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Listdeclaration</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.ListView#getListdeclaration()
+	 * @see #getListView()
+	 * @generated
+	 */
+	EReference getListView_Listdeclaration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.sirius.sample.multiactivity.ListView#isDisplayDetail <em>Display Detail</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Display Detail</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.ListView#isDisplayDetail()
+	 * @see #getListView()
+	 * @generated
+	 */
+	EAttribute getListView_DisplayDetail();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.sirius.sample.multiactivity.ListView#isAllowedCreation <em>Allowed Creation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Allowed Creation</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.ListView#isAllowedCreation()
+	 * @see #getListView()
+	 * @generated
+	 */
+	EAttribute getListView_AllowedCreation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.sirius.sample.multiactivity.ListView#isAllowDeletion <em>Allow Deletion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Allow Deletion</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.ListView#isAllowDeletion()
+	 * @see #getListView()
+	 * @generated
+	 */
+	EAttribute getListView_AllowDeletion();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.sirius.sample.multiactivity.PropertyKind <em>Property Kind</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Property Kind</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.PropertyKind
+	 * @generated
+	 */
+	EEnum getPropertyKind();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -708,14 +1392,6 @@ public interface MultiactivityPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ACTIVITY__LAYOUTS = eINSTANCE.getActivity_Layouts();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ACTIVITY__NAME = eINSTANCE.getActivity_Name();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.sirius.sample.multiactivity.impl.LayoutImpl <em>Layout</em>}' class.
@@ -844,12 +1520,216 @@ public interface MultiactivityPackage extends EPackage {
 		EClass APPLICATION = eINSTANCE.getApplication();
 
 		/**
-		 * The meta object literal for the '<em><b>Activities</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Namedelements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference APPLICATION__ACTIVITIES = eINSTANCE.getApplication_Activities();
+		EReference APPLICATION__NAMEDELEMENTS = eINSTANCE.getApplication_Namedelements();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.sirius.sample.multiactivity.impl.NamedElementImpl <em>Named Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.NamedElementImpl
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getNamedElement()
+		 * @generated
+		 */
+		EClass NAMED_ELEMENT = eINSTANCE.getNamedElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.sirius.sample.multiactivity.impl.PackageableImpl <em>Packageable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.PackageableImpl
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getPackageable()
+		 * @generated
+		 */
+		EClass PACKAGEABLE = eINSTANCE.getPackageable();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.sirius.sample.multiactivity.impl.PackageImpl <em>Package</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.PackageImpl
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getPackage()
+		 * @generated
+		 */
+		EClass PACKAGE = eINSTANCE.getPackage();
+
+		/**
+		 * The meta object literal for the '<em><b>Packageables</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PACKAGE__PACKAGEABLES = eINSTANCE.getPackage_Packageables();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.sirius.sample.multiactivity.impl.PrimitiveTypeImpl <em>Primitive Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.PrimitiveTypeImpl
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getPrimitiveType()
+		 * @generated
+		 */
+		EClass PRIMITIVE_TYPE = eINSTANCE.getPrimitiveType();
+
+		/**
+		 * The meta object literal for the '<em><b>Property Kind</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRIMITIVE_TYPE__PROPERTY_KIND = eINSTANCE.getPrimitiveType_PropertyKind();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.sirius.sample.multiactivity.impl.AttributeImpl <em>Attribute</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.AttributeImpl
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getAttribute()
+		 * @generated
+		 */
+		EClass ATTRIBUTE = eINSTANCE.getAttribute();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATTRIBUTE__TYPE = eINSTANCE.getAttribute_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE__NAME = eINSTANCE.getAttribute_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Display In List</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE__DISPLAY_IN_LIST = eINSTANCE.getAttribute_DisplayInList();
+
+		/**
+		 * The meta object literal for the '<em><b>Display In Detail</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE__DISPLAY_IN_DETAIL = eINSTANCE.getAttribute_DisplayInDetail();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.sirius.sample.multiactivity.Type <em>Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.sirius.sample.multiactivity.Type
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getType()
+		 * @generated
+		 */
+		EClass TYPE = eINSTANCE.getType();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.sirius.sample.multiactivity.impl.EntityImpl <em>Entity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.EntityImpl
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getEntity()
+		 * @generated
+		 */
+		EClass ENTITY = eINSTANCE.getEntity();
+
+		/**
+		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENTITY__ATTRIBUTES = eINSTANCE.getEntity_Attributes();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.sirius.sample.multiactivity.impl.ListDeclarationImpl <em>List Declaration</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.ListDeclarationImpl
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getListDeclaration()
+		 * @generated
+		 */
+		EClass LIST_DECLARATION = eINSTANCE.getListDeclaration();
+
+		/**
+		 * The meta object literal for the '<em><b>Entities</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIST_DECLARATION__ENTITIES = eINSTANCE.getListDeclaration_Entities();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.sirius.sample.multiactivity.impl.ListViewImpl <em>List View</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.ListViewImpl
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getListView()
+		 * @generated
+		 */
+		EClass LIST_VIEW = eINSTANCE.getListView();
+
+		/**
+		 * The meta object literal for the '<em><b>Listdeclaration</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIST_VIEW__LISTDECLARATION = eINSTANCE.getListView_Listdeclaration();
+
+		/**
+		 * The meta object literal for the '<em><b>Display Detail</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LIST_VIEW__DISPLAY_DETAIL = eINSTANCE.getListView_DisplayDetail();
+
+		/**
+		 * The meta object literal for the '<em><b>Allowed Creation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LIST_VIEW__ALLOWED_CREATION = eINSTANCE.getListView_AllowedCreation();
+
+		/**
+		 * The meta object literal for the '<em><b>Allow Deletion</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LIST_VIEW__ALLOW_DELETION = eINSTANCE.getListView_AllowDeletion();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.sirius.sample.multiactivity.PropertyKind <em>Property Kind</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.sirius.sample.multiactivity.PropertyKind
+		 * @see org.eclipse.sirius.sample.multiactivity.impl.MultiactivityPackageImpl#getPropertyKind()
+		 * @generated
+		 */
+		EEnum PROPERTY_KIND = eINSTANCE.getPropertyKind();
 
 	}
 

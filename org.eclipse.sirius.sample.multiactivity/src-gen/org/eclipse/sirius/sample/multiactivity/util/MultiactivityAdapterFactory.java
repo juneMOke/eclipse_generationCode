@@ -9,7 +9,23 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.sirius.sample.multiactivity.*;
+import org.eclipse.sirius.sample.multiactivity.Activity;
+import org.eclipse.sirius.sample.multiactivity.Application;
+import org.eclipse.sirius.sample.multiactivity.Attribute;
+import org.eclipse.sirius.sample.multiactivity.Entity;
+import org.eclipse.sirius.sample.multiactivity.Layout;
+import org.eclipse.sirius.sample.multiactivity.ListDeclaration;
+import org.eclipse.sirius.sample.multiactivity.ListView;
+import org.eclipse.sirius.sample.multiactivity.MultiactivityPackage;
+import org.eclipse.sirius.sample.multiactivity.NamedElement;
+import org.eclipse.sirius.sample.multiactivity.NewActivityButton;
+import org.eclipse.sirius.sample.multiactivity.Packageable;
+import org.eclipse.sirius.sample.multiactivity.PopupMessageButton;
+import org.eclipse.sirius.sample.multiactivity.PopupTimeButton;
+import org.eclipse.sirius.sample.multiactivity.PrimitiveType;
+import org.eclipse.sirius.sample.multiactivity.TextView;
+import org.eclipse.sirius.sample.multiactivity.Type;
+import org.eclipse.sirius.sample.multiactivity.View;
 
 /**
  * <!-- begin-user-doc -->
@@ -104,6 +120,51 @@ public class MultiactivityAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseApplication(Application object) {
 			return createApplicationAdapter();
+		}
+
+		@Override
+		public Adapter caseNamedElement(NamedElement object) {
+			return createNamedElementAdapter();
+		}
+
+		@Override
+		public Adapter casePackageable(Packageable object) {
+			return createPackageableAdapter();
+		}
+
+		@Override
+		public Adapter casePackage(org.eclipse.sirius.sample.multiactivity.Package object) {
+			return createPackageAdapter();
+		}
+
+		@Override
+		public Adapter casePrimitiveType(PrimitiveType object) {
+			return createPrimitiveTypeAdapter();
+		}
+
+		@Override
+		public Adapter caseEntity(Entity object) {
+			return createEntityAdapter();
+		}
+
+		@Override
+		public Adapter caseAttribute(Attribute object) {
+			return createAttributeAdapter();
+		}
+
+		@Override
+		public Adapter caseType(Type object) {
+			return createTypeAdapter();
+		}
+
+		@Override
+		public Adapter caseListDeclaration(ListDeclaration object) {
+			return createListDeclarationAdapter();
+		}
+
+		@Override
+		public Adapter caseListView(ListView object) {
+			return createListViewAdapter();
 		}
 
 		@Override
@@ -234,6 +295,132 @@ public class MultiactivityAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createApplicationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.sirius.sample.multiactivity.NamedElement <em>Named Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.sirius.sample.multiactivity.NamedElement
+	 * @generated
+	 */
+	public Adapter createNamedElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.sirius.sample.multiactivity.Packageable <em>Packageable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.sirius.sample.multiactivity.Packageable
+	 * @generated
+	 */
+	public Adapter createPackageableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.sirius.sample.multiactivity.Package <em>Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.sirius.sample.multiactivity.Package
+	 * @generated
+	 */
+	public Adapter createPackageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.sirius.sample.multiactivity.PrimitiveType <em>Primitive Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.sirius.sample.multiactivity.PrimitiveType
+	 * @generated
+	 */
+	public Adapter createPrimitiveTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.sirius.sample.multiactivity.Attribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.sirius.sample.multiactivity.Attribute
+	 * @generated
+	 */
+	public Adapter createAttributeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.sirius.sample.multiactivity.Type <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.sirius.sample.multiactivity.Type
+	 * @generated
+	 */
+	public Adapter createTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.sirius.sample.multiactivity.Entity <em>Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.sirius.sample.multiactivity.Entity
+	 * @generated
+	 */
+	public Adapter createEntityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.sirius.sample.multiactivity.ListDeclaration <em>List Declaration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.sirius.sample.multiactivity.ListDeclaration
+	 * @generated
+	 */
+	public Adapter createListDeclarationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.sirius.sample.multiactivity.ListView <em>List View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.sirius.sample.multiactivity.ListView
+	 * @generated
+	 */
+	public Adapter createListViewAdapter() {
 		return null;
 	}
 
