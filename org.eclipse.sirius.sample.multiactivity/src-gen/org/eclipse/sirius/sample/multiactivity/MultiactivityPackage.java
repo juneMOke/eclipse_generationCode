@@ -803,13 +803,13 @@ public interface MultiactivityPackage extends EPackage {
 	int LIST_DECLARATION__NAME = PACKAGEABLE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Entities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Entity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIST_DECLARATION__ENTITIES = PACKAGEABLE_FEATURE_COUNT + 0;
+	int LIST_DECLARATION__ENTITY = PACKAGEABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>List Declaration</em>' class.
@@ -1278,15 +1278,15 @@ public interface MultiactivityPackage extends EPackage {
 	EClass getListDeclaration();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.sirius.sample.multiactivity.ListDeclaration#getEntities <em>Entities</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.sirius.sample.multiactivity.ListDeclaration#getEntity <em>Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Entities</em>'.
-	 * @see org.eclipse.sirius.sample.multiactivity.ListDeclaration#getEntities()
+	 * @return the meta object for the reference '<em>Entity</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.ListDeclaration#getEntity()
 	 * @see #getListDeclaration()
 	 * @generated
 	 */
-	EReference getListDeclaration_Entities();
+	EReference getListDeclaration_Entity();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.sirius.sample.multiactivity.ListView <em>List View</em>}'.
@@ -1672,12 +1672,12 @@ public interface MultiactivityPackage extends EPackage {
 		EClass LIST_DECLARATION = eINSTANCE.getListDeclaration();
 
 		/**
-		 * The meta object literal for the '<em><b>Entities</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Entity</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LIST_DECLARATION__ENTITIES = eINSTANCE.getListDeclaration_Entities();
+		EReference LIST_DECLARATION__ENTITY = eINSTANCE.getListDeclaration_Entity();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.sirius.sample.multiactivity.impl.ListViewImpl <em>List View</em>}' class.

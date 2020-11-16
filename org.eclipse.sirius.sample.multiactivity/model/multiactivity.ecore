@@ -39,7 +39,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrimitiveType" eSuperTypes="#//Packageable #//Type">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyKind" eType="#//PropertyKind"
-        changeable="false" transient="true" derived="true"/>
+        transient="true" defaultValueLiteral="" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//Packageable #//Type">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
@@ -55,8 +55,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Type" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="ListDeclaration" eSuperTypes="#//Packageable">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
-        eType="#//Entity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
+        eType="#//Entity"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ListView" eSuperTypes="#//View">
     <eStructuralFeatures xsi:type="ecore:EReference" name="listdeclaration" upperBound="-1"
