@@ -2,18 +2,11 @@
  */
 package org.eclipse.sirius.sample.multiactivity.impl;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.sirius.sample.multiactivity.Entity;
 import org.eclipse.sirius.sample.multiactivity.ListDeclaration;
 import org.eclipse.sirius.sample.multiactivity.MultiactivityPackage;
@@ -26,21 +19,21 @@ import org.eclipse.sirius.sample.multiactivity.MultiactivityPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.sirius.sample.multiactivity.impl.ListDeclarationImpl#getEntities <em>Entities</em>}</li>
+ *   <li>{@link org.eclipse.sirius.sample.multiactivity.impl.ListDeclarationImpl#getEntity <em>Entity</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ListDeclarationImpl extends PackageableImpl implements ListDeclaration {
 	/**
-	 * The cached value of the '{@link #getEntities() <em>Entities</em>}' containment reference list.
+	 * The cached value of the '{@link #getEntity() <em>Entity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEntities()
+	 * @see #getEntity()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Entity> entities;
+	protected Entity entity;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -67,12 +60,26 @@ public class ListDeclarationImpl extends PackageableImpl implements ListDeclarat
 	 * @generated
 	 */
 	@Override
-	public EList<Entity> getEntities() {
-		if (entities == null) {
-			entities = new EObjectContainmentEList<Entity>(Entity.class, this,
-					MultiactivityPackage.LIST_DECLARATION__ENTITIES);
+	public Entity getEntity() {
+		if (entity != null && entity.eIsProxy()) {
+			InternalEObject oldEntity = (InternalEObject) entity;
+			entity = (Entity) eResolveProxy(oldEntity);
+			if (entity != oldEntity) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							MultiactivityPackage.LIST_DECLARATION__ENTITY, oldEntity, entity));
+			}
 		}
-		return entities;
+		return entity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetEntity() {
+		return entity;
 	}
 
 	/**
@@ -81,12 +88,12 @@ public class ListDeclarationImpl extends PackageableImpl implements ListDeclarat
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case MultiactivityPackage.LIST_DECLARATION__ENTITIES:
-			return ((InternalEList<?>) getEntities()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public void setEntity(Entity newEntity) {
+		Entity oldEntity = entity;
+		entity = newEntity;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MultiactivityPackage.LIST_DECLARATION__ENTITY,
+					oldEntity, entity));
 	}
 
 	/**
@@ -97,8 +104,10 @@ public class ListDeclarationImpl extends PackageableImpl implements ListDeclarat
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MultiactivityPackage.LIST_DECLARATION__ENTITIES:
-			return getEntities();
+		case MultiactivityPackage.LIST_DECLARATION__ENTITY:
+			if (resolve)
+				return getEntity();
+			return basicGetEntity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -112,9 +121,8 @@ public class ListDeclarationImpl extends PackageableImpl implements ListDeclarat
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MultiactivityPackage.LIST_DECLARATION__ENTITIES:
-			getEntities().clear();
-			getEntities().addAll((Collection<? extends Entity>) newValue);
+		case MultiactivityPackage.LIST_DECLARATION__ENTITY:
+			setEntity((Entity) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -128,8 +136,8 @@ public class ListDeclarationImpl extends PackageableImpl implements ListDeclarat
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MultiactivityPackage.LIST_DECLARATION__ENTITIES:
-			getEntities().clear();
+		case MultiactivityPackage.LIST_DECLARATION__ENTITY:
+			setEntity((Entity) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -143,8 +151,8 @@ public class ListDeclarationImpl extends PackageableImpl implements ListDeclarat
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MultiactivityPackage.LIST_DECLARATION__ENTITIES:
-			return entities != null && !entities.isEmpty();
+		case MultiactivityPackage.LIST_DECLARATION__ENTITY:
+			return entity != null;
 		}
 		return super.eIsSet(featureID);
 	}

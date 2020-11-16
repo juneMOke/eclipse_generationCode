@@ -2,8 +2,10 @@
  */
 package org.eclipse.sirius.sample.multiactivity.impl;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.sirius.sample.multiactivity.MultiactivityPackage;
 import org.eclipse.sirius.sample.multiactivity.PrimitiveType;
 import org.eclipse.sirius.sample.multiactivity.PropertyKind;
@@ -76,12 +78,56 @@ public class PrimitiveTypeImpl extends PackageableImpl implements PrimitiveType 
 	 * @generated
 	 */
 	@Override
+	public void setPropertyKind(PropertyKind newPropertyKind) {
+		PropertyKind oldPropertyKind = propertyKind;
+		propertyKind = newPropertyKind == null ? PROPERTY_KIND_EDEFAULT : newPropertyKind;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MultiactivityPackage.PRIMITIVE_TYPE__PROPERTY_KIND,
+					oldPropertyKind, propertyKind));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case MultiactivityPackage.PRIMITIVE_TYPE__PROPERTY_KIND:
 			return getPropertyKind();
 		}
 		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case MultiactivityPackage.PRIMITIVE_TYPE__PROPERTY_KIND:
+			setPropertyKind((PropertyKind) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case MultiactivityPackage.PRIMITIVE_TYPE__PROPERTY_KIND:
+			setPropertyKind(PROPERTY_KIND_EDEFAULT);
+			return;
+		}
+		super.eUnset(featureID);
 	}
 
 	/**

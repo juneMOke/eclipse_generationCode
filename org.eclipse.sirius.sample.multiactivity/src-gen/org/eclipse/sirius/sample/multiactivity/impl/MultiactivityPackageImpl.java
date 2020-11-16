@@ -563,7 +563,7 @@ public class MultiactivityPackageImpl extends EPackageImpl implements Multiactiv
 	 * @generated
 	 */
 	@Override
-	public EReference getListDeclaration_Entities() {
+	public EReference getListDeclaration_Entity() {
 		return (EReference) listDeclarationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -705,7 +705,7 @@ public class MultiactivityPackageImpl extends EPackageImpl implements Multiactiv
 		typeEClass = createEClass(TYPE);
 
 		listDeclarationEClass = createEClass(LIST_DECLARATION);
-		createEReference(listDeclarationEClass, LIST_DECLARATION__ENTITIES);
+		createEReference(listDeclarationEClass, LIST_DECLARATION__ENTITY);
 
 		listViewEClass = createEClass(LIST_VIEW);
 		createEReference(listViewEClass, LIST_VIEW__LISTDECLARATION);
@@ -822,8 +822,8 @@ public class MultiactivityPackageImpl extends EPackageImpl implements Multiactiv
 
 		initEClass(primitiveTypeEClass, PrimitiveType.class, "PrimitiveType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPrimitiveType_PropertyKind(), this.getPropertyKind(), "propertyKind", null, 0, 1,
-				PrimitiveType.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getPrimitiveType_PropertyKind(), this.getPropertyKind(), "propertyKind", "", 0, 1,
+				PrimitiveType.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				IS_DERIVED, IS_ORDERED);
 
 		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -849,9 +849,9 @@ public class MultiactivityPackageImpl extends EPackageImpl implements Multiactiv
 
 		initEClass(listDeclarationEClass, ListDeclaration.class, "ListDeclaration", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getListDeclaration_Entities(), this.getEntity(), null, "entities", null, 0, -1,
-				ListDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getListDeclaration_Entity(), this.getEntity(), null, "entity", null, 1, 1, ListDeclaration.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(listViewEClass, ListView.class, "ListView", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
