@@ -85,6 +85,60 @@ public interface MultiactivityFactory extends EFactory {
 	Application createApplication();
 
 	/**
+	 * Returns a new object of class '<em>Package</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Package</em>'.
+	 * @generated
+	 */
+	Package createPackage();
+
+	/**
+	 * Returns a new object of class '<em>Primitive Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Primitive Type</em>'.
+	 * @generated
+	 */
+	PrimitiveType createPrimitiveType();
+
+	/**
+	 * Returns a new object of class '<em>Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Attribute</em>'.
+	 * @generated
+	 */
+	Attribute createAttribute();
+
+	/**
+	 * Returns a new object of class '<em>Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Entity</em>'.
+	 * @generated
+	 */
+	Entity createEntity();
+
+	/**
+	 * Returns a new object of class '<em>List Declaration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>List Declaration</em>'.
+	 * @generated
+	 */
+	ListDeclaration createListDeclaration();
+
+	/**
+	 * Returns a new object of class '<em>List View</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>List View</em>'.
+	 * @generated
+	 */
+	ListView createListView();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

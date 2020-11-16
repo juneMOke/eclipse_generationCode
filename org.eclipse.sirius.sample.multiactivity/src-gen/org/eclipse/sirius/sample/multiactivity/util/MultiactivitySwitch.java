@@ -6,8 +6,23 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
-
-import org.eclipse.sirius.sample.multiactivity.*;
+import org.eclipse.sirius.sample.multiactivity.Activity;
+import org.eclipse.sirius.sample.multiactivity.Application;
+import org.eclipse.sirius.sample.multiactivity.Attribute;
+import org.eclipse.sirius.sample.multiactivity.Entity;
+import org.eclipse.sirius.sample.multiactivity.Layout;
+import org.eclipse.sirius.sample.multiactivity.ListDeclaration;
+import org.eclipse.sirius.sample.multiactivity.ListView;
+import org.eclipse.sirius.sample.multiactivity.MultiactivityPackage;
+import org.eclipse.sirius.sample.multiactivity.NamedElement;
+import org.eclipse.sirius.sample.multiactivity.NewActivityButton;
+import org.eclipse.sirius.sample.multiactivity.Packageable;
+import org.eclipse.sirius.sample.multiactivity.PopupMessageButton;
+import org.eclipse.sirius.sample.multiactivity.PopupTimeButton;
+import org.eclipse.sirius.sample.multiactivity.PrimitiveType;
+import org.eclipse.sirius.sample.multiactivity.TextView;
+import org.eclipse.sirius.sample.multiactivity.Type;
+import org.eclipse.sirius.sample.multiactivity.View;
 
 /**
  * <!-- begin-user-doc -->
@@ -70,6 +85,10 @@ public class MultiactivitySwitch<T> extends Switch<T> {
 			Activity activity = (Activity) theEObject;
 			T result = caseActivity(activity);
 			if (result == null)
+				result = casePackageable(activity);
+			if (result == null)
+				result = caseNamedElement(activity);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -126,6 +145,93 @@ public class MultiactivitySwitch<T> extends Switch<T> {
 		case MultiactivityPackage.APPLICATION: {
 			Application application = (Application) theEObject;
 			T result = caseApplication(application);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MultiactivityPackage.NAMED_ELEMENT: {
+			NamedElement namedElement = (NamedElement) theEObject;
+			T result = caseNamedElement(namedElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MultiactivityPackage.PACKAGEABLE: {
+			Packageable packageable = (Packageable) theEObject;
+			T result = casePackageable(packageable);
+			if (result == null)
+				result = caseNamedElement(packageable);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MultiactivityPackage.PACKAGE: {
+			org.eclipse.sirius.sample.multiactivity.Package package_ = (org.eclipse.sirius.sample.multiactivity.Package) theEObject;
+			T result = casePackage(package_);
+			if (result == null)
+				result = casePackageable(package_);
+			if (result == null)
+				result = caseNamedElement(package_);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MultiactivityPackage.PRIMITIVE_TYPE: {
+			PrimitiveType primitiveType = (PrimitiveType) theEObject;
+			T result = casePrimitiveType(primitiveType);
+			if (result == null)
+				result = casePackageable(primitiveType);
+			if (result == null)
+				result = caseType(primitiveType);
+			if (result == null)
+				result = caseNamedElement(primitiveType);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MultiactivityPackage.ENTITY: {
+			Entity entity = (Entity) theEObject;
+			T result = caseEntity(entity);
+			if (result == null)
+				result = casePackageable(entity);
+			if (result == null)
+				result = caseType(entity);
+			if (result == null)
+				result = caseNamedElement(entity);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MultiactivityPackage.ATTRIBUTE: {
+			Attribute attribute = (Attribute) theEObject;
+			T result = caseAttribute(attribute);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MultiactivityPackage.TYPE: {
+			Type type = (Type) theEObject;
+			T result = caseType(type);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MultiactivityPackage.LIST_DECLARATION: {
+			ListDeclaration listDeclaration = (ListDeclaration) theEObject;
+			T result = caseListDeclaration(listDeclaration);
+			if (result == null)
+				result = casePackageable(listDeclaration);
+			if (result == null)
+				result = caseNamedElement(listDeclaration);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MultiactivityPackage.LIST_VIEW: {
+			ListView listView = (ListView) theEObject;
+			T result = caseListView(listView);
+			if (result == null)
+				result = caseView(listView);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -252,6 +358,141 @@ public class MultiactivitySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseApplication(Application object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamedElement(NamedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Packageable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Packageable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePackageable(Packageable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Package</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Package</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePackage(org.eclipse.sirius.sample.multiactivity.Package object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Primitive Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Primitive Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePrimitiveType(PrimitiveType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Attribute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAttribute(Attribute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseType(Type object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEntity(Entity object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>List Declaration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>List Declaration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseListDeclaration(ListDeclaration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>List View</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>List View</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseListView(ListView object) {
 		return null;
 	}
 

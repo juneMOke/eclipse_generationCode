@@ -10,43 +10,43 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.sirius.sample.multiactivity.Application;
+
 import org.eclipse.sirius.sample.multiactivity.MultiactivityPackage;
-import org.eclipse.sirius.sample.multiactivity.NamedElement;
+import org.eclipse.sirius.sample.multiactivity.Packageable;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Application</b></em>'.
+ * An implementation of the model object '<em><b>Package</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.sirius.sample.multiactivity.impl.ApplicationImpl#getNamedelements <em>Namedelements</em>}</li>
+ *   <li>{@link org.eclipse.sirius.sample.multiactivity.impl.PackageImpl#getPackageables <em>Packageables</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ApplicationImpl extends MinimalEObjectImpl.Container implements Application {
+public class PackageImpl extends PackageableImpl implements org.eclipse.sirius.sample.multiactivity.Package {
 	/**
-	 * The cached value of the '{@link #getNamedelements() <em>Namedelements</em>}' containment reference list.
+	 * The cached value of the '{@link #getPackageables() <em>Packageables</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNamedelements()
+	 * @see #getPackageables()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<NamedElement> namedelements;
+	protected EList<Packageable> packageables;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ApplicationImpl() {
+	protected PackageImpl() {
 		super();
 	}
 
@@ -57,7 +57,7 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MultiactivityPackage.Literals.APPLICATION;
+		return MultiactivityPackage.Literals.PACKAGE;
 	}
 
 	/**
@@ -66,12 +66,12 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * @generated
 	 */
 	@Override
-	public EList<NamedElement> getNamedelements() {
-		if (namedelements == null) {
-			namedelements = new EObjectContainmentEList<NamedElement>(NamedElement.class, this,
-					MultiactivityPackage.APPLICATION__NAMEDELEMENTS);
+	public EList<Packageable> getPackageables() {
+		if (packageables == null) {
+			packageables = new EObjectContainmentEList<Packageable>(Packageable.class, this,
+					MultiactivityPackage.PACKAGE__PACKAGEABLES);
 		}
-		return namedelements;
+		return packageables;
 	}
 
 	/**
@@ -82,8 +82,8 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MultiactivityPackage.APPLICATION__NAMEDELEMENTS:
-			return ((InternalEList<?>) getNamedelements()).basicRemove(otherEnd, msgs);
+		case MultiactivityPackage.PACKAGE__PACKAGEABLES:
+			return ((InternalEList<?>) getPackageables()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -96,8 +96,8 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MultiactivityPackage.APPLICATION__NAMEDELEMENTS:
-			return getNamedelements();
+		case MultiactivityPackage.PACKAGE__PACKAGEABLES:
+			return getPackageables();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,9 +111,9 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MultiactivityPackage.APPLICATION__NAMEDELEMENTS:
-			getNamedelements().clear();
-			getNamedelements().addAll((Collection<? extends NamedElement>) newValue);
+		case MultiactivityPackage.PACKAGE__PACKAGEABLES:
+			getPackageables().clear();
+			getPackageables().addAll((Collection<? extends Packageable>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -127,8 +127,8 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MultiactivityPackage.APPLICATION__NAMEDELEMENTS:
-			getNamedelements().clear();
+		case MultiactivityPackage.PACKAGE__PACKAGEABLES:
+			getPackageables().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -142,10 +142,10 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MultiactivityPackage.APPLICATION__NAMEDELEMENTS:
-			return namedelements != null && !namedelements.isEmpty();
+		case MultiactivityPackage.PACKAGE__PACKAGEABLES:
+			return packageables != null && !packageables.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //ApplicationImpl
+} //PackageImpl

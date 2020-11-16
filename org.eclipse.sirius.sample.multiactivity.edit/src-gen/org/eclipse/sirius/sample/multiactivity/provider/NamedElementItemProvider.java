@@ -10,8 +10,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -23,17 +21,16 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.sirius.sample.multiactivity.Layout;
-import org.eclipse.sirius.sample.multiactivity.MultiactivityFactory;
 import org.eclipse.sirius.sample.multiactivity.MultiactivityPackage;
+import org.eclipse.sirius.sample.multiactivity.NamedElement;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.sirius.sample.multiactivity.Layout} object.
+ * This is the item provider adapter for a {@link org.eclipse.sirius.sample.multiactivity.NamedElement} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LayoutItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class NamedElementItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -41,7 +38,7 @@ public class LayoutItemProvider extends ItemProviderAdapter implements IEditingD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LayoutItemProvider(AdapterFactory adapterFactory) {
+	public NamedElementItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -70,51 +67,22 @@ public class LayoutItemProvider extends ItemProviderAdapter implements IEditingD
 	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Layout_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Layout_name_feature", "_UI_Layout_type"),
-						MultiactivityPackage.Literals.LAYOUT__NAME, true, false, false,
+						getResourceLocator(), getString("_UI_NamedElement_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_NamedElement_name_feature",
+								"_UI_NamedElement_type"),
+						MultiactivityPackage.Literals.NAMED_ELEMENT__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(MultiactivityPackage.Literals.LAYOUT__VIEWS);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns Layout.gif.
+	 * This returns NamedElement.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Layout"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/NamedElement"));
 	}
 
 	/**
@@ -135,9 +103,9 @@ public class LayoutItemProvider extends ItemProviderAdapter implements IEditingD
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Layout) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Layout_type")
-				: getString("_UI_Layout_type") + " " + label;
+		String label = ((NamedElement) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_NamedElement_type")
+				: getString("_UI_NamedElement_type") + " " + label;
 	}
 
 	/**
@@ -151,12 +119,9 @@ public class LayoutItemProvider extends ItemProviderAdapter implements IEditingD
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Layout.class)) {
-		case MultiactivityPackage.LAYOUT__NAME:
+		switch (notification.getFeatureID(NamedElement.class)) {
+		case MultiactivityPackage.NAMED_ELEMENT__NAME:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		case MultiactivityPackage.LAYOUT__VIEWS:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -172,21 +137,6 @@ public class LayoutItemProvider extends ItemProviderAdapter implements IEditingD
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.LAYOUT__VIEWS,
-				MultiactivityFactory.eINSTANCE.createNewActivityButton()));
-
-		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.LAYOUT__VIEWS,
-				MultiactivityFactory.eINSTANCE.createPopupMessageButton()));
-
-		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.LAYOUT__VIEWS,
-				MultiactivityFactory.eINSTANCE.createTextView()));
-
-		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.LAYOUT__VIEWS,
-				MultiactivityFactory.eINSTANCE.createPopupTimeButton()));
-
-		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.LAYOUT__VIEWS,
-				MultiactivityFactory.eINSTANCE.createListView()));
 	}
 
 	/**

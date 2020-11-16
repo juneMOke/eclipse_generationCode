@@ -8,40 +8,28 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.sirius.sample.multiactivity.Layout;
 import org.eclipse.sirius.sample.multiactivity.MultiactivityFactory;
 import org.eclipse.sirius.sample.multiactivity.MultiactivityPackage;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.sirius.sample.multiactivity.Layout} object.
+ * This is the item provider adapter for a {@link org.eclipse.sirius.sample.multiactivity.Package} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LayoutItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class PackageItemProvider extends PackageableItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LayoutItemProvider(AdapterFactory adapterFactory) {
+	public PackageItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -56,24 +44,8 @@ public class LayoutItemProvider extends ItemProviderAdapter implements IEditingD
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Layout_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Layout_name_feature", "_UI_Layout_type"),
-						MultiactivityPackage.Literals.LAYOUT__NAME, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -88,7 +60,7 @@ public class LayoutItemProvider extends ItemProviderAdapter implements IEditingD
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MultiactivityPackage.Literals.LAYOUT__VIEWS);
+			childrenFeatures.add(MultiactivityPackage.Literals.PACKAGE__PACKAGEABLES);
 		}
 		return childrenFeatures;
 	}
@@ -107,14 +79,14 @@ public class LayoutItemProvider extends ItemProviderAdapter implements IEditingD
 	}
 
 	/**
-	 * This returns Layout.gif.
+	 * This returns Package.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Layout"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Package"));
 	}
 
 	/**
@@ -135,9 +107,9 @@ public class LayoutItemProvider extends ItemProviderAdapter implements IEditingD
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Layout) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Layout_type")
-				: getString("_UI_Layout_type") + " " + label;
+		String label = ((org.eclipse.sirius.sample.multiactivity.Package) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Package_type")
+				: getString("_UI_Package_type") + " " + label;
 	}
 
 	/**
@@ -151,11 +123,8 @@ public class LayoutItemProvider extends ItemProviderAdapter implements IEditingD
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Layout.class)) {
-		case MultiactivityPackage.LAYOUT__NAME:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		case MultiactivityPackage.LAYOUT__VIEWS:
+		switch (notification.getFeatureID(org.eclipse.sirius.sample.multiactivity.Package.class)) {
+		case MultiactivityPackage.PACKAGE__PACKAGEABLES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -173,31 +142,20 @@ public class LayoutItemProvider extends ItemProviderAdapter implements IEditingD
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.LAYOUT__VIEWS,
-				MultiactivityFactory.eINSTANCE.createNewActivityButton()));
+		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.PACKAGE__PACKAGEABLES,
+				MultiactivityFactory.eINSTANCE.createActivity()));
 
-		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.LAYOUT__VIEWS,
-				MultiactivityFactory.eINSTANCE.createPopupMessageButton()));
+		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.PACKAGE__PACKAGEABLES,
+				MultiactivityFactory.eINSTANCE.createPackage()));
 
-		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.LAYOUT__VIEWS,
-				MultiactivityFactory.eINSTANCE.createTextView()));
+		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.PACKAGE__PACKAGEABLES,
+				MultiactivityFactory.eINSTANCE.createPrimitiveType()));
 
-		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.LAYOUT__VIEWS,
-				MultiactivityFactory.eINSTANCE.createPopupTimeButton()));
+		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.PACKAGE__PACKAGEABLES,
+				MultiactivityFactory.eINSTANCE.createEntity()));
 
-		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.LAYOUT__VIEWS,
-				MultiactivityFactory.eINSTANCE.createListView()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return MultiactivityEditPlugin.INSTANCE;
+		newChildDescriptors.add(createChildParameter(MultiactivityPackage.Literals.PACKAGE__PACKAGEABLES,
+				MultiactivityFactory.eINSTANCE.createListDeclaration()));
 	}
 
 }

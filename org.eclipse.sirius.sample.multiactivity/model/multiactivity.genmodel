@@ -11,9 +11,15 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Multiactivity" basePackage="org.eclipse.sirius.sample" disposableProviderFactory="true"
       ecorePackage="multiactivity.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="multiactivity.ecore#//PropertyKind">
+      <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/int"/>
+      <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/string"/>
+      <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/double"/>
+      <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/Date"/>
+    </genEnums>
     <genClasses ecoreClass="multiactivity.ecore#//Activity">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference multiactivity.ecore#//Activity/layouts"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//Activity/name"/>
     </genClasses>
     <genClasses ecoreClass="multiactivity.ecore#//Layout">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference multiactivity.ecore#//Layout/views"/>
@@ -33,7 +39,36 @@
     <genClasses ecoreClass="multiactivity.ecore#//TextView"/>
     <genClasses ecoreClass="multiactivity.ecore#//PopupTimeButton"/>
     <genClasses ecoreClass="multiactivity.ecore#//Application">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference multiactivity.ecore#//Application/activities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference multiactivity.ecore#//Application/namedelements"/>
+    </genClasses>
+    <genClasses ecoreClass="multiactivity.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="multiactivity.ecore#//Packageable"/>
+    <genClasses ecoreClass="multiactivity.ecore#//Package">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference multiactivity.ecore#//Package/packageables"/>
+    </genClasses>
+    <genClasses ecoreClass="multiactivity.ecore#//PrimitiveType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//PrimitiveType/propertyKind"/>
+    </genClasses>
+    <genClasses ecoreClass="multiactivity.ecore#//Entity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference multiactivity.ecore#//Entity/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="multiactivity.ecore#//Attribute">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference multiactivity.ecore#//Attribute/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//Attribute/displayInList"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//Attribute/displayInDetail"/>
+    </genClasses>
+    <genClasses ecoreClass="multiactivity.ecore#//Type"/>
+    <genClasses ecoreClass="multiactivity.ecore#//ListDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference multiactivity.ecore#//ListDeclaration/entities"/>
+    </genClasses>
+    <genClasses ecoreClass="multiactivity.ecore#//ListView">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference multiactivity.ecore#//ListView/listdeclaration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//ListView/displayDetail"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//ListView/allowedCreation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//ListView/allowDeletion"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

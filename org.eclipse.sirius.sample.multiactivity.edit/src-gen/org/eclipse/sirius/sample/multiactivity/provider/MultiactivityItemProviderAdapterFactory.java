@@ -234,6 +234,144 @@ public class MultiactivityItemProviderAdapterFactory extends MultiactivityAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.sirius.sample.multiactivity.Package} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PackageItemProvider packageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.sirius.sample.multiactivity.Package}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPackageAdapter() {
+		if (packageItemProvider == null) {
+			packageItemProvider = new PackageItemProvider(this);
+		}
+
+		return packageItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.sirius.sample.multiactivity.PrimitiveType} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PrimitiveTypeItemProvider primitiveTypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.sirius.sample.multiactivity.PrimitiveType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPrimitiveTypeAdapter() {
+		if (primitiveTypeItemProvider == null) {
+			primitiveTypeItemProvider = new PrimitiveTypeItemProvider(this);
+		}
+
+		return primitiveTypeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.sirius.sample.multiactivity.Entity} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EntityItemProvider entityItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.sirius.sample.multiactivity.Entity}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEntityAdapter() {
+		if (entityItemProvider == null) {
+			entityItemProvider = new EntityItemProvider(this);
+		}
+
+		return entityItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.sirius.sample.multiactivity.Attribute} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AttributeItemProvider attributeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.sirius.sample.multiactivity.Attribute}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAttributeAdapter() {
+		if (attributeItemProvider == null) {
+			attributeItemProvider = new AttributeItemProvider(this);
+		}
+
+		return attributeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.sirius.sample.multiactivity.ListDeclaration} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ListDeclarationItemProvider listDeclarationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.sirius.sample.multiactivity.ListDeclaration}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createListDeclarationAdapter() {
+		if (listDeclarationItemProvider == null) {
+			listDeclarationItemProvider = new ListDeclarationItemProvider(this);
+		}
+
+		return listDeclarationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.sirius.sample.multiactivity.ListView} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ListViewItemProvider listViewItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.sirius.sample.multiactivity.ListView}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createListViewAdapter() {
+		if (listViewItemProvider == null) {
+			listViewItemProvider = new ListViewItemProvider(this);
+		}
+
+		return listViewItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -352,6 +490,18 @@ public class MultiactivityItemProviderAdapterFactory extends MultiactivityAdapte
 			popupTimeButtonItemProvider.dispose();
 		if (applicationItemProvider != null)
 			applicationItemProvider.dispose();
+		if (packageItemProvider != null)
+			packageItemProvider.dispose();
+		if (primitiveTypeItemProvider != null)
+			primitiveTypeItemProvider.dispose();
+		if (entityItemProvider != null)
+			entityItemProvider.dispose();
+		if (attributeItemProvider != null)
+			attributeItemProvider.dispose();
+		if (listDeclarationItemProvider != null)
+			listDeclarationItemProvider.dispose();
+		if (listViewItemProvider != null)
+			listViewItemProvider.dispose();
 	}
 
 }
