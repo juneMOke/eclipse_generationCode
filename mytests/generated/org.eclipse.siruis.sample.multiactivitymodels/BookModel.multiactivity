@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<multiactivity:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:multiactivity="http://www.example.org/multiactivity">
+  <namedelements xsi:type="multiactivity:Package" name="model">
+    <packageables xsi:type="multiactivity:Entity" name="Book">
+      <attributes type="//@namedelements.1/@packageables.0" name="title"/>
+      <attributes type="//@namedelements.1/@packageables.0" name="summary"/>
+    </packageables>
+    <packageables xsi:type="multiactivity:Entity" name="Author">
+      <attributes type="//@namedelements.1/@packageables.0" name="lastName"/>
+      <attributes type="//@namedelements.1/@packageables.0" name="firstName"/>
+    </packageables>
+    <packageables xsi:type="multiactivity:ListDeclaration" name="bookList" entity="//@namedelements.0/@packageables.0"/>
+    <packageables xsi:type="multiactivity:ListDeclaration" name="authorList" entity="//@namedelements.0/@packageables.1"/>
+  </namedelements>
+  <namedelements xsi:type="multiactivity:Package" name="EntityTypes">
+    <packageables xsi:type="multiactivity:PrimitiveType" name="String"/>
+  </namedelements>
+  <namedelements xsi:type="multiactivity:Package" name="controller">
+    <packageables xsi:type="multiactivity:Activity" name="MainAvtivity">
+      <layouts name="activity_main">
+        <views xsi:type="multiactivity:ListView" name="RecyclerView" id_view="book_recycler" listdeclaration="//@namedelements.0/@packageables.3 //@namedelements.0/@packageables.2"/>
+      </layouts>
+    </packageables>
+  </namedelements>
+</multiactivity:Application>
