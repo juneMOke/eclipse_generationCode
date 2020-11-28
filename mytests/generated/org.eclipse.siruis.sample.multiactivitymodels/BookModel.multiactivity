@@ -6,19 +6,20 @@
       <attributes type="//@namedelements.1/@packageables.0" name="summary"/>
     </packageables>
     <packageables xsi:type="multiactivity:Entity" name="Author">
-      <attributes type="//@namedelements.1/@packageables.0" name="lastName"/>
+      <attributes type="//@namedelements.1/@packageables.0" name="name"/>
       <attributes type="//@namedelements.1/@packageables.0" name="firstName"/>
     </packageables>
-    <packageables xsi:type="multiactivity:ListDeclaration" name="bookList" entity="//@namedelements.0/@packageables.0"/>
-    <packageables xsi:type="multiactivity:ListDeclaration" name="authorList" entity="//@namedelements.0/@packageables.1"/>
+    <packageables xsi:type="multiactivity:ListDeclaration" name="BookList" entity="//@namedelements.0/@packageables.0"/>
+    <packageables xsi:type="multiactivity:ListDeclaration" name="AuthorList" entity="//@namedelements.0/@packageables.1"/>
   </namedelements>
   <namedelements xsi:type="multiactivity:Package" name="EntityTypes">
-    <packageables xsi:type="multiactivity:PrimitiveType" name="String"/>
+    <packageables xsi:type="multiactivity:PrimitiveType"/>
   </namedelements>
   <namedelements xsi:type="multiactivity:Package" name="controller">
     <packageables xsi:type="multiactivity:Activity" name="MainAvtivity">
       <layouts name="activity_main">
-        <views xsi:type="multiactivity:ListView" name="RecyclerView" id_view="book_recycler" listdeclaration="//@namedelements.0/@packageables.3 //@namedelements.0/@packageables.2"/>
+        <views xsi:type="multiactivity:ListView" name="RecyclerVIew" id_view="RecyclerVIew3" listdeclaration="//@namedelements.0/@packageables.2" attributesDisplayInList="//@namedelements.0/@packageables.0/@attributes.0" attributesDisplayInDetail="//@namedelements.0/@packageables.0/@attributes.1 //@namedelements.0/@packageables.0/@attributes.0"/>
+        <views xsi:type="multiactivity:ListView" name="RecyclerView" id_view="RecyclerView4" listdeclaration="//@namedelements.0/@packageables.3" attributesDisplayInList="//@namedelements.0/@packageables.1/@attributes.1 //@namedelements.0/@packageables.1/@attributes.0" attributesDisplayInDetail="//@namedelements.0/@packageables.1/@attributes.1 //@namedelements.0/@packageables.1/@attributes.0"/>
       </layouts>
     </packageables>
   </namedelements>

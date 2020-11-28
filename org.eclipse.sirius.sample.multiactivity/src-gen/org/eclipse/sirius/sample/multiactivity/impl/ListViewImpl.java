@@ -5,15 +5,14 @@ package org.eclipse.sirius.sample.multiactivity.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.sirius.sample.multiactivity.Attribute;
 import org.eclipse.sirius.sample.multiactivity.ListDeclaration;
 import org.eclipse.sirius.sample.multiactivity.ListView;
 import org.eclipse.sirius.sample.multiactivity.MultiactivityPackage;
@@ -30,20 +29,22 @@ import org.eclipse.sirius.sample.multiactivity.MultiactivityPackage;
  *   <li>{@link org.eclipse.sirius.sample.multiactivity.impl.ListViewImpl#isDisplayDetail <em>Display Detail</em>}</li>
  *   <li>{@link org.eclipse.sirius.sample.multiactivity.impl.ListViewImpl#isAllowedCreation <em>Allowed Creation</em>}</li>
  *   <li>{@link org.eclipse.sirius.sample.multiactivity.impl.ListViewImpl#isAllowDeletion <em>Allow Deletion</em>}</li>
+ *   <li>{@link org.eclipse.sirius.sample.multiactivity.impl.ListViewImpl#getAttributesDisplayInList <em>Attributes Display In List</em>}</li>
+ *   <li>{@link org.eclipse.sirius.sample.multiactivity.impl.ListViewImpl#getAttributesDisplayInDetail <em>Attributes Display In Detail</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ListViewImpl extends ViewImpl implements ListView {
 	/**
-	 * The cached value of the '{@link #getListdeclaration() <em>Listdeclaration</em>}' reference list.
+	 * The cached value of the '{@link #getListdeclaration() <em>Listdeclaration</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getListdeclaration()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ListDeclaration> listdeclaration;
+	protected ListDeclaration listdeclaration;
 
 	/**
 	 * The default value of the '{@link #isDisplayDetail() <em>Display Detail</em>}' attribute.
@@ -106,6 +107,26 @@ public class ListViewImpl extends ViewImpl implements ListView {
 	protected boolean allowDeletion = ALLOW_DELETION_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getAttributesDisplayInList() <em>Attributes Display In List</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributesDisplayInList()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Attribute> attributesDisplayInList;
+
+	/**
+	 * The cached value of the '{@link #getAttributesDisplayInDetail() <em>Attributes Display In Detail</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributesDisplayInDetail()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Attribute> attributesDisplayInDetail;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -130,12 +151,40 @@ public class ListViewImpl extends ViewImpl implements ListView {
 	 * @generated
 	 */
 	@Override
-	public EList<ListDeclaration> getListdeclaration() {
-		if (listdeclaration == null) {
-			listdeclaration = new EObjectResolvingEList<ListDeclaration>(ListDeclaration.class, this,
-					MultiactivityPackage.LIST_VIEW__LISTDECLARATION);
+	public ListDeclaration getListdeclaration() {
+		if (listdeclaration != null && listdeclaration.eIsProxy()) {
+			InternalEObject oldListdeclaration = (InternalEObject) listdeclaration;
+			listdeclaration = (ListDeclaration) eResolveProxy(oldListdeclaration);
+			if (listdeclaration != oldListdeclaration) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							MultiactivityPackage.LIST_VIEW__LISTDECLARATION, oldListdeclaration, listdeclaration));
+			}
 		}
 		return listdeclaration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ListDeclaration basicGetListdeclaration() {
+		return listdeclaration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setListdeclaration(ListDeclaration newListdeclaration) {
+		ListDeclaration oldListdeclaration = listdeclaration;
+		listdeclaration = newListdeclaration;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MultiactivityPackage.LIST_VIEW__LISTDECLARATION,
+					oldListdeclaration, listdeclaration));
 	}
 
 	/**
@@ -216,16 +265,50 @@ public class ListViewImpl extends ViewImpl implements ListView {
 	 * @generated
 	 */
 	@Override
+	public EList<Attribute> getAttributesDisplayInDetail() {
+		if (attributesDisplayInDetail == null) {
+			attributesDisplayInDetail = new EObjectResolvingEList<Attribute>(Attribute.class, this,
+					MultiactivityPackage.LIST_VIEW__ATTRIBUTES_DISPLAY_IN_DETAIL);
+		}
+		return attributesDisplayInDetail;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Attribute> getAttributesDisplayInList() {
+		if (attributesDisplayInList == null) {
+			attributesDisplayInList = new EObjectResolvingEList<Attribute>(Attribute.class, this,
+					MultiactivityPackage.LIST_VIEW__ATTRIBUTES_DISPLAY_IN_LIST);
+		}
+		return attributesDisplayInList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case MultiactivityPackage.LIST_VIEW__LISTDECLARATION:
-			return getListdeclaration();
+			if (resolve)
+				return getListdeclaration();
+			return basicGetListdeclaration();
 		case MultiactivityPackage.LIST_VIEW__DISPLAY_DETAIL:
 			return isDisplayDetail();
 		case MultiactivityPackage.LIST_VIEW__ALLOWED_CREATION:
 			return isAllowedCreation();
 		case MultiactivityPackage.LIST_VIEW__ALLOW_DELETION:
 			return isAllowDeletion();
+		case MultiactivityPackage.LIST_VIEW__ATTRIBUTES_DISPLAY_IN_LIST:
+			return getAttributesDisplayInList();
+		case MultiactivityPackage.LIST_VIEW__ATTRIBUTES_DISPLAY_IN_DETAIL:
+			return getAttributesDisplayInDetail();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -240,8 +323,7 @@ public class ListViewImpl extends ViewImpl implements ListView {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case MultiactivityPackage.LIST_VIEW__LISTDECLARATION:
-			getListdeclaration().clear();
-			getListdeclaration().addAll((Collection<? extends ListDeclaration>) newValue);
+			setListdeclaration((ListDeclaration) newValue);
 			return;
 		case MultiactivityPackage.LIST_VIEW__DISPLAY_DETAIL:
 			setDisplayDetail((Boolean) newValue);
@@ -251,6 +333,14 @@ public class ListViewImpl extends ViewImpl implements ListView {
 			return;
 		case MultiactivityPackage.LIST_VIEW__ALLOW_DELETION:
 			setAllowDeletion((Boolean) newValue);
+			return;
+		case MultiactivityPackage.LIST_VIEW__ATTRIBUTES_DISPLAY_IN_LIST:
+			getAttributesDisplayInList().clear();
+			getAttributesDisplayInList().addAll((Collection<? extends Attribute>) newValue);
+			return;
+		case MultiactivityPackage.LIST_VIEW__ATTRIBUTES_DISPLAY_IN_DETAIL:
+			getAttributesDisplayInDetail().clear();
+			getAttributesDisplayInDetail().addAll((Collection<? extends Attribute>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -265,7 +355,7 @@ public class ListViewImpl extends ViewImpl implements ListView {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case MultiactivityPackage.LIST_VIEW__LISTDECLARATION:
-			getListdeclaration().clear();
+			setListdeclaration((ListDeclaration) null);
 			return;
 		case MultiactivityPackage.LIST_VIEW__DISPLAY_DETAIL:
 			setDisplayDetail(DISPLAY_DETAIL_EDEFAULT);
@@ -275,6 +365,12 @@ public class ListViewImpl extends ViewImpl implements ListView {
 			return;
 		case MultiactivityPackage.LIST_VIEW__ALLOW_DELETION:
 			setAllowDeletion(ALLOW_DELETION_EDEFAULT);
+			return;
+		case MultiactivityPackage.LIST_VIEW__ATTRIBUTES_DISPLAY_IN_LIST:
+			getAttributesDisplayInList().clear();
+			return;
+		case MultiactivityPackage.LIST_VIEW__ATTRIBUTES_DISPLAY_IN_DETAIL:
+			getAttributesDisplayInDetail().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -289,13 +385,17 @@ public class ListViewImpl extends ViewImpl implements ListView {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case MultiactivityPackage.LIST_VIEW__LISTDECLARATION:
-			return listdeclaration != null && !listdeclaration.isEmpty();
+			return listdeclaration != null;
 		case MultiactivityPackage.LIST_VIEW__DISPLAY_DETAIL:
 			return displayDetail != DISPLAY_DETAIL_EDEFAULT;
 		case MultiactivityPackage.LIST_VIEW__ALLOWED_CREATION:
 			return allowedCreation != ALLOWED_CREATION_EDEFAULT;
 		case MultiactivityPackage.LIST_VIEW__ALLOW_DELETION:
 			return allowDeletion != ALLOW_DELETION_EDEFAULT;
+		case MultiactivityPackage.LIST_VIEW__ATTRIBUTES_DISPLAY_IN_LIST:
+			return attributesDisplayInList != null && !attributesDisplayInList.isEmpty();
+		case MultiactivityPackage.LIST_VIEW__ATTRIBUTES_DISPLAY_IN_DETAIL:
+			return attributesDisplayInDetail != null && !attributesDisplayInDetail.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

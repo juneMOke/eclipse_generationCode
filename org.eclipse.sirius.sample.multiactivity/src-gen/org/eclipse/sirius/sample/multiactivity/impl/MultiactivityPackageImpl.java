@@ -503,26 +503,6 @@ public class MultiactivityPackageImpl extends EPackageImpl implements Multiactiv
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAttribute_DisplayInList() {
-		return (EAttribute) attributeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAttribute_DisplayInDetail() {
-		return (EAttribute) attributeEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getType() {
 		return typeEClass;
 	}
@@ -623,6 +603,26 @@ public class MultiactivityPackageImpl extends EPackageImpl implements Multiactiv
 	 * @generated
 	 */
 	@Override
+	public EReference getListView_AttributesDisplayInDetail() {
+		return (EReference) listViewEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getListView_AttributesDisplayInList() {
+		return (EReference) listViewEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getPropertyKind() {
 		return propertyKindEEnum;
 	}
@@ -699,8 +699,6 @@ public class MultiactivityPackageImpl extends EPackageImpl implements Multiactiv
 		attributeEClass = createEClass(ATTRIBUTE);
 		createEReference(attributeEClass, ATTRIBUTE__TYPE);
 		createEAttribute(attributeEClass, ATTRIBUTE__NAME);
-		createEAttribute(attributeEClass, ATTRIBUTE__DISPLAY_IN_LIST);
-		createEAttribute(attributeEClass, ATTRIBUTE__DISPLAY_IN_DETAIL);
 
 		typeEClass = createEClass(TYPE);
 
@@ -712,6 +710,8 @@ public class MultiactivityPackageImpl extends EPackageImpl implements Multiactiv
 		createEAttribute(listViewEClass, LIST_VIEW__DISPLAY_DETAIL);
 		createEAttribute(listViewEClass, LIST_VIEW__ALLOWED_CREATION);
 		createEAttribute(listViewEClass, LIST_VIEW__ALLOW_DELETION);
+		createEReference(listViewEClass, LIST_VIEW__ATTRIBUTES_DISPLAY_IN_LIST);
+		createEReference(listViewEClass, LIST_VIEW__ATTRIBUTES_DISPLAY_IN_DETAIL);
 
 		// Create enums
 		propertyKindEEnum = createEEnum(PROPERTY_KIND);
@@ -824,7 +824,7 @@ public class MultiactivityPackageImpl extends EPackageImpl implements Multiactiv
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrimitiveType_PropertyKind(), this.getPropertyKind(), "propertyKind", "", 0, 1,
 				PrimitiveType.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				IS_DERIVED, IS_ORDERED);
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEntity_Attributes(), this.getAttribute(), null, "attributes", null, 0, -1, Entity.class,
@@ -838,12 +838,6 @@ public class MultiactivityPackageImpl extends EPackageImpl implements Multiactiv
 				IS_ORDERED);
 		initEAttribute(getAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, Attribute.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttribute_DisplayInList(), ecorePackage.getEBoolean(), "displayInList", "true", 0, 1,
-				Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttribute_DisplayInDetail(), ecorePackage.getEBoolean(), "displayInDetail", "true", 0, 1,
-				Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(typeEClass, Type.class, "Type", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -855,7 +849,7 @@ public class MultiactivityPackageImpl extends EPackageImpl implements Multiactiv
 
 		initEClass(listViewEClass, ListView.class, "ListView", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getListView_Listdeclaration(), this.getListDeclaration(), null, "listdeclaration", null, 0, -1,
+		initEReference(getListView_Listdeclaration(), this.getListDeclaration(), null, "listdeclaration", null, 1, 1,
 				ListView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getListView_DisplayDetail(), ecorePackage.getEBoolean(), "displayDetail", "true", 0, 1,
@@ -867,6 +861,12 @@ public class MultiactivityPackageImpl extends EPackageImpl implements Multiactiv
 		initEAttribute(getListView_AllowDeletion(), ecorePackage.getEBoolean(), "allowDeletion", "true", 0, 1,
 				ListView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getListView_AttributesDisplayInList(), this.getAttribute(), null, "attributesDisplayInList",
+				null, 0, -1, ListView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getListView_AttributesDisplayInDetail(), this.getAttribute(), null, "attributesDisplayInDetail",
+				null, 0, -1, ListView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(propertyKindEEnum, PropertyKind.class, "PropertyKind");

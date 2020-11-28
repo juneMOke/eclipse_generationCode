@@ -55,8 +55,6 @@ public class AttributeItemProvider extends ItemProviderAdapter implements IEditi
 
 			addTypePropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
-			addDisplayInListPropertyDescriptor(object);
-			addDisplayInDetailPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -90,38 +88,6 @@ public class AttributeItemProvider extends ItemProviderAdapter implements IEditi
 								"_UI_Attribute_type"),
 						MultiactivityPackage.Literals.ATTRIBUTE__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Display In List feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDisplayInListPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Attribute_displayInList_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Attribute_displayInList_feature",
-								"_UI_Attribute_type"),
-						MultiactivityPackage.Literals.ATTRIBUTE__DISPLAY_IN_LIST, true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Display In Detail feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDisplayInDetailPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Attribute_displayInDetail_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Attribute_displayInDetail_feature",
-								"_UI_Attribute_type"),
-						MultiactivityPackage.Literals.ATTRIBUTE__DISPLAY_IN_DETAIL, true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -171,8 +137,6 @@ public class AttributeItemProvider extends ItemProviderAdapter implements IEditi
 
 		switch (notification.getFeatureID(Attribute.class)) {
 		case MultiactivityPackage.ATTRIBUTE__NAME:
-		case MultiactivityPackage.ATTRIBUTE__DISPLAY_IN_LIST:
-		case MultiactivityPackage.ATTRIBUTE__DISPLAY_IN_DETAIL:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

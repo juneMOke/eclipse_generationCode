@@ -39,7 +39,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrimitiveType" eSuperTypes="#//Packageable #//Type">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyKind" eType="#//PropertyKind"
-        transient="true" defaultValueLiteral="" derived="true"/>
+        transient="true" defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//Packageable #//Type">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
@@ -48,18 +48,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="Attribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="displayInList" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="displayInDetail" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Type" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="ListDeclaration" eSuperTypes="#//Packageable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
         eType="#//Entity"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ListView" eSuperTypes="#//View">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="listdeclaration" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listdeclaration" lowerBound="1"
         eType="#//ListDeclaration"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="displayDetail" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
@@ -67,11 +63,15 @@
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="allowDeletion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributesDisplayInList"
+        upperBound="-1" eType="#//Attribute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributesDisplayInDetail"
+        upperBound="-1" eType="#//Attribute"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PropertyKind">
     <eLiterals name="int" literal="int"/>
-    <eLiterals name="boolean" value="1" literal="boolean"/>
-    <eLiterals name="string" value="2" literal="string"/>
+    <eLiterals name="Boolean" value="1" literal="Boolean"/>
+    <eLiterals name="String" value="2" literal="String"/>
     <eLiterals name="double" value="3"/>
     <eLiterals name="Date" value="4"/>
   </eClassifiers>

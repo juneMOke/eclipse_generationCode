@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<multiactivity:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:multiactivity="http://www.example.org/multiactivity">
+  <namedelements xsi:type="multiactivity:Package" name="controler">
+    <packageables xsi:type="multiactivity:Activity" name="MainActivity">
+      <layouts>
+        <views xsi:type="multiactivity:PopupMessageButton" content="WHO AM I ?" name="Button" id_view="" message="I am MainActivity"/>
+        <views xsi:type="multiactivity:NewActivityButton" content="Activity 2" name="Button" id_view="" activity="//@namedelements.0/@packageables.1"/>
+        <views xsi:type="multiactivity:NewActivityButton" content="Activity3" name="Button" id_view="" activity="//@namedelements.0/@packageables.2"/>
+      </layouts>
+    </packageables>
+    <packageables xsi:type="multiactivity:Activity" name="Activity2">
+      <layouts>
+        <views xsi:type="multiactivity:NewActivityButton" content="Activity4" name="Button" id_view="" activity="//@namedelements.0/@packageables.3"/>
+        <views xsi:type="multiactivity:PopupMessageButton" content="WHO AM I?" name="Button" id_view="" message="I am Activity 2"/>
+      </layouts>
+    </packageables>
+    <packageables xsi:type="multiactivity:Activity" name="Activity3">
+      <layouts>
+        <views xsi:type="multiactivity:PopupMessageButton" content="Who am I ?" name="Button" id_view="" message="I am activity 3"/>
+      </layouts>
+    </packageables>
+    <packageables xsi:type="multiactivity:Activity" name="Activity4">
+      <layouts>
+        <views xsi:type="multiactivity:PopupMessageButton" content="Who am I ?" name="Button" id_view="" message=" I am Activity4"/>
+      </layouts>
+    </packageables>
+  </namedelements>
+</multiactivity:Application>

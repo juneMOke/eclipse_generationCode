@@ -13,8 +13,8 @@
       ecorePackage="multiactivity.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="multiactivity.ecore#//PropertyKind">
       <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/int"/>
-      <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/boolean"/>
-      <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/string"/>
+      <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/Boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/String"/>
       <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/double"/>
       <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/Date"/>
     </genEnums>
@@ -57,8 +57,6 @@
     <genClasses ecoreClass="multiactivity.ecore#//Attribute">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference multiactivity.ecore#//Attribute/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//Attribute/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//Attribute/displayInList"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//Attribute/displayInDetail"/>
     </genClasses>
     <genClasses ecoreClass="multiactivity.ecore#//Type"/>
     <genClasses ecoreClass="multiactivity.ecore#//ListDeclaration">
@@ -69,6 +67,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//ListView/displayDetail"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//ListView/allowedCreation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//ListView/allowDeletion"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference multiactivity.ecore#//ListView/attributesDisplayInList"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference multiactivity.ecore#//ListView/attributesDisplayInDetail"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

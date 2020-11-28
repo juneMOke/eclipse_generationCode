@@ -21,7 +21,7 @@
 	[/if]
 	
 	
-	[for (anActivity : Activity | self.activities)]
+	[for (anActivity : Activity | self.eAllContents(Activity))]
 		[self.generateActivity()/]	
 		[self.generateLayout()/]	
 	[/for]

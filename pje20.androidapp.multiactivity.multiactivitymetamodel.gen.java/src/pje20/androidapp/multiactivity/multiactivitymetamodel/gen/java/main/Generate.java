@@ -340,6 +340,9 @@ public class Generate extends AbstractAcceleoGenerator {
     @Override
     public void registerPackages(ResourceSet resourceSet) {
         super.registerPackages(resourceSet);
+        if (!isInWorkspace(org.eclipse.sirius.sample.multiactivity.MultiactivityPackage.class)) {
+            resourceSet.getPackageRegistry().put(org.eclipse.sirius.sample.multiactivity.MultiactivityPackage.eINSTANCE.getNsURI(), org.eclipse.sirius.sample.multiactivity.MultiactivityPackage.eINSTANCE);
+        }
         
         /*
          * If you want to change the content of this method, do NOT forget to change the "@generated"

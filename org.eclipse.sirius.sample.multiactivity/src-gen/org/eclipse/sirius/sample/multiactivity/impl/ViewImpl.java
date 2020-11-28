@@ -45,6 +45,15 @@ public abstract class ViewImpl extends MinimalEObjectImpl.Container implements V
 	 * @ordered
 	 */
 	protected String content = CONTENT_EDEFAULT;
+	/**
+	 * The number use to generate view's id .
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #setId_view()
+	 * @generated NOT
+	 * @ordered
+	 */
+	protected static int ID_NUMBER = 0;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -73,6 +82,7 @@ public abstract class ViewImpl extends MinimalEObjectImpl.Container implements V
 	 * @generated
 	 * @ordered
 	 */
+
 	protected static final String ID_VIEW_EDEFAULT = null;
 	/**
 	 * The cached value of the '{@link #getId_view() <em>Id view</em>}' attribute.
@@ -140,7 +150,7 @@ public abstract class ViewImpl extends MinimalEObjectImpl.Container implements V
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void setName(String newName) {
@@ -148,6 +158,7 @@ public abstract class ViewImpl extends MinimalEObjectImpl.Container implements V
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MultiactivityPackage.VIEW__NAME, oldName, name));
+		setId_view("");
 	}
 
 	/**
@@ -163,12 +174,13 @@ public abstract class ViewImpl extends MinimalEObjectImpl.Container implements V
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void setId_view(String newId_view) {
+		ID_NUMBER += 1;
 		String oldId_view = id_view;
-		id_view = newId_view;
+		id_view = getName() + ID_NUMBER;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MultiactivityPackage.VIEW__ID_VIEW, oldId_view,
 					id_view));

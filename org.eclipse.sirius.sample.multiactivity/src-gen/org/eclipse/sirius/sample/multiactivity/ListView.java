@@ -17,6 +17,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.sirius.sample.multiactivity.ListView#isDisplayDetail <em>Display Detail</em>}</li>
  *   <li>{@link org.eclipse.sirius.sample.multiactivity.ListView#isAllowedCreation <em>Allowed Creation</em>}</li>
  *   <li>{@link org.eclipse.sirius.sample.multiactivity.ListView#isAllowDeletion <em>Allow Deletion</em>}</li>
+ *   <li>{@link org.eclipse.sirius.sample.multiactivity.ListView#getAttributesDisplayInList <em>Attributes Display In List</em>}</li>
+ *   <li>{@link org.eclipse.sirius.sample.multiactivity.ListView#getAttributesDisplayInDetail <em>Attributes Display In Detail</em>}</li>
  * </ul>
  *
  * @see org.eclipse.sirius.sample.multiactivity.MultiactivityPackage#getListView()
@@ -25,16 +27,26 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface ListView extends View {
 	/**
-	 * Returns the value of the '<em><b>Listdeclaration</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.sirius.sample.multiactivity.ListDeclaration}.
+	 * Returns the value of the '<em><b>Listdeclaration</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Listdeclaration</em>' reference list.
+	 * @return the value of the '<em>Listdeclaration</em>' reference.
+	 * @see #setListdeclaration(ListDeclaration)
 	 * @see org.eclipse.sirius.sample.multiactivity.MultiactivityPackage#getListView_Listdeclaration()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<ListDeclaration> getListdeclaration();
+	ListDeclaration getListdeclaration();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.sirius.sample.multiactivity.ListView#getListdeclaration <em>Listdeclaration</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Listdeclaration</em>' reference.
+	 * @see #getListdeclaration()
+	 * @generated
+	 */
+	void setListdeclaration(ListDeclaration value);
 
 	/**
 	 * Returns the value of the '<em><b>Display Detail</b></em>' attribute.
@@ -104,5 +116,29 @@ public interface ListView extends View {
 	 * @generated
 	 */
 	void setAllowDeletion(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Attributes Display In Detail</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.sirius.sample.multiactivity.Attribute}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Attributes Display In Detail</em>' reference list.
+	 * @see org.eclipse.sirius.sample.multiactivity.MultiactivityPackage#getListView_AttributesDisplayInDetail()
+	 * @model
+	 * @generated
+	 */
+	EList<Attribute> getAttributesDisplayInDetail();
+
+	/**
+	 * Returns the value of the '<em><b>Attributes Display In List</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.sirius.sample.multiactivity.Attribute}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Attributes Display In List</em>' reference list.
+	 * @see org.eclipse.sirius.sample.multiactivity.MultiactivityPackage#getListView_AttributesDisplayInList()
+	 * @model
+	 * @generated
+	 */
+	EList<Attribute> getAttributesDisplayInList();
 
 } // ListView

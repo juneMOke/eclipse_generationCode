@@ -3,44 +3,74 @@
  * The documentation of the module generateAndroidManifest.
  */]
 [module generateAndroidManifest('http://www.example.org/multiactivity')]
-
+[import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::generateLayouts /]
 
 [**
- * The documentation of the template generateElement.
- * @param anActivity
+ * Generate the manifest file of Application.
+ * @param anApplication
  */]
+
 [template public generateManifest(anApplication : Application)]
 [file ('AndroidManifest.xml', false, 'UTF-8')]
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pje20.androidapp.app1">
+	<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	    package="pje20.androidapp.app1">
+	    <application
+	        android:allowBackup="true"
+	        android:icon="@mipmap/ic_launcher"
+	        android:label="@string/app_name"
+	        android:roundIcon="@mipmap/ic_launcher_round"
+	        android:supportsRtl="true"
+	        android:theme="@style/Theme.Application1">
+			[for (anActivity : Activity | self.eAllContents(Activity))]
+			[self.createActivityManifest()/]
+			[self.manageListView()/]
+			[/for]	
+			
+		</application>
+	</manifest>    
+[/file]
+[/template]
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.Application1">
-	[for (anActivity : Activity | self.activities)]
-	[if (anActivity.name = 'MainActivity')]
-		<activity android:name=".MainActivity">
+
+[**
+ * declare an activity in manifest   
+ * @param anActivity an activity Element 
+ */]
+[template public createActivityManifest (anActivity : Activity)]
+[if (anActivity.name = 'MainActivity')]
+		<activity android:name=".[anActivity.eContainer(Package).name/].MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>	
         </activity>
-	[/if]
-	[if (anActivity.name <> 'MainActivity')]
-        <activity android:name=".[anActivity.name.toUpperFirst()/]">
-			
+	[else]
+		 <activity android:name=".[anActivity.eContainer(Package).name/].[anActivity.name.toUpperFirst()/]">	
         </activity>
-    [/if]    
-    [/for]
-	</application>
+	[/if]
+	    
+[/template]
 
-</manifest>
-    
-[/file]
+[**
+ * manage the Listview so it can add a detail activity and generate his layout   
+ * @param anActivity an activity Element
+ *  
+ */]
+
+[template public manageListView (anActivity : Activity) ]
+	[let aListViews : Sequence(ListView) = self.eAllContents(ListView)]
+	[if (aListViews -> notEmpty())]
+	[for (aListView : ListView | aListViews)]
+	[if (self.displayDetail)]
+	<activity android:name="[self.listdeclaration.name.toUpperFirst()/]DetailActivity">
+	[comment] load the javaclass and layout creation			[/comment]
+		[self.generateLayoutsFromName()/]	
+	[/if]
+	[/for]
+	
+	[/if]
+	</activity>
+	[/let]
+		
 [/template]

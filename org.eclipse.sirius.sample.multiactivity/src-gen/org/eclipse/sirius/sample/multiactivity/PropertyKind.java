@@ -36,7 +36,7 @@ public enum PropertyKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BOOLEAN(1, "boolean", "boolean"),
+	BOOLEAN(1, "Boolean", "Boolean"),
 
 	/**
 	 * The '<em><b>String</b></em>' literal object.
@@ -46,7 +46,7 @@ public enum PropertyKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	STRING(2, "string", "string"),
+	STRING(2, "String", "String"),
 
 	/**
 	 * The '<em><b>Double</b></em>' literal object.
@@ -84,7 +84,7 @@ public enum PropertyKind implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #BOOLEAN
-	 * @model name="boolean"
+	 * @model name="Boolean"
 	 * @generated
 	 * @ordered
 	 */
@@ -95,7 +95,7 @@ public enum PropertyKind implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #STRING
-	 * @model name="string"
+	 * @model name="String"
 	 * @generated
 	 * @ordered
 	 */

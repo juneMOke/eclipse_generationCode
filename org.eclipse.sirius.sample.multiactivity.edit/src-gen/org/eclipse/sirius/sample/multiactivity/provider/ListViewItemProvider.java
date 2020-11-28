@@ -7,7 +7,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -48,6 +47,8 @@ public class ListViewItemProvider extends ViewItemProvider {
 			addDisplayDetailPropertyDescriptor(object);
 			addAllowedCreationPropertyDescriptor(object);
 			addAllowDeletionPropertyDescriptor(object);
+			addAttributesDisplayInListPropertyDescriptor(object);
+			addAttributesDisplayInDetailPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -113,6 +114,38 @@ public class ListViewItemProvider extends ViewItemProvider {
 								"_UI_ListView_type"),
 						MultiactivityPackage.Literals.LIST_VIEW__ALLOW_DELETION, true, false, false,
 						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Attributes Display In List feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAttributesDisplayInListPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ListView_attributesDisplayInList_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ListView_attributesDisplayInList_feature",
+						"_UI_ListView_type"),
+				MultiactivityPackage.Literals.LIST_VIEW__ATTRIBUTES_DISPLAY_IN_LIST, true, false, true, null, null,
+				null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Attributes Display In Detail feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAttributesDisplayInDetailPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ListView_attributesDisplayInDetail_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ListView_attributesDisplayInDetail_feature",
+						"_UI_ListView_type"),
+				MultiactivityPackage.Literals.LIST_VIEW__ATTRIBUTES_DISPLAY_IN_DETAIL, true, false, true, null, null,
+				null));
 	}
 
 	/**

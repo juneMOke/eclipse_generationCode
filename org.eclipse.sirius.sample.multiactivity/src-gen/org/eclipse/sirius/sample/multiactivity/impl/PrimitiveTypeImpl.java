@@ -161,4 +161,14 @@ public class PrimitiveTypeImpl extends PackageableImpl implements PrimitiveType 
 		return result.toString();
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public String getName() {
+		return getPropertyKind().getName();
+	}
+
 } //PrimitiveTypeImpl

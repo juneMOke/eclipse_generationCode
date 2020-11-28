@@ -30,7 +30,7 @@ public interface PrimitiveType extends Packageable, Type {
 	 * @see org.eclipse.sirius.sample.multiactivity.PropertyKind
 	 * @see #setPropertyKind(PropertyKind)
 	 * @see org.eclipse.sirius.sample.multiactivity.MultiactivityPackage#getPrimitiveType_PropertyKind()
-	 * @model default="" transient="true" derived="true"
+	 * @model default="" transient="true"
 	 * @generated
 	 */
 	PropertyKind getPropertyKind();

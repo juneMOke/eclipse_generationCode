@@ -730,31 +730,13 @@ public interface MultiactivityPackage extends EPackage {
 	int ATTRIBUTE__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Display In List</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATTRIBUTE__DISPLAY_IN_LIST = 2;
-
-	/**
-	 * The feature id for the '<em><b>Display In Detail</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATTRIBUTE__DISPLAY_IN_DETAIL = 3;
-
-	/**
 	 * The number of structural features of the '<em>Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_FEATURE_COUNT = 4;
+	int ATTRIBUTE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Attribute</em>' class.
@@ -867,7 +849,7 @@ public interface MultiactivityPackage extends EPackage {
 	int LIST_VIEW__ID_VIEW = VIEW__ID_VIEW;
 
 	/**
-	 * The feature id for the '<em><b>Listdeclaration</b></em>' reference list.
+	 * The feature id for the '<em><b>Listdeclaration</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -903,13 +885,31 @@ public interface MultiactivityPackage extends EPackage {
 	int LIST_VIEW__ALLOW_DELETION = VIEW_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Attributes Display In List</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_VIEW__ATTRIBUTES_DISPLAY_IN_LIST = VIEW_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Attributes Display In Detail</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_VIEW__ATTRIBUTES_DISPLAY_IN_DETAIL = VIEW_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>List View</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIST_VIEW_FEATURE_COUNT = VIEW_FEATURE_COUNT + 4;
+	int LIST_VIEW_FEATURE_COUNT = VIEW_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>List View</em>' class.
@@ -1215,28 +1215,6 @@ public interface MultiactivityPackage extends EPackage {
 	EAttribute getAttribute_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.sirius.sample.multiactivity.Attribute#isDisplayInList <em>Display In List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Display In List</em>'.
-	 * @see org.eclipse.sirius.sample.multiactivity.Attribute#isDisplayInList()
-	 * @see #getAttribute()
-	 * @generated
-	 */
-	EAttribute getAttribute_DisplayInList();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.sirius.sample.multiactivity.Attribute#isDisplayInDetail <em>Display In Detail</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Display In Detail</em>'.
-	 * @see org.eclipse.sirius.sample.multiactivity.Attribute#isDisplayInDetail()
-	 * @see #getAttribute()
-	 * @generated
-	 */
-	EAttribute getAttribute_DisplayInDetail();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.sirius.sample.multiactivity.Type <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1299,10 +1277,10 @@ public interface MultiactivityPackage extends EPackage {
 	EClass getListView();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.sirius.sample.multiactivity.ListView#getListdeclaration <em>Listdeclaration</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.sirius.sample.multiactivity.ListView#getListdeclaration <em>Listdeclaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Listdeclaration</em>'.
+	 * @return the meta object for the reference '<em>Listdeclaration</em>'.
 	 * @see org.eclipse.sirius.sample.multiactivity.ListView#getListdeclaration()
 	 * @see #getListView()
 	 * @generated
@@ -1341,6 +1319,28 @@ public interface MultiactivityPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getListView_AllowDeletion();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.sirius.sample.multiactivity.ListView#getAttributesDisplayInDetail <em>Attributes Display In Detail</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Attributes Display In Detail</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.ListView#getAttributesDisplayInDetail()
+	 * @see #getListView()
+	 * @generated
+	 */
+	EReference getListView_AttributesDisplayInDetail();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.sirius.sample.multiactivity.ListView#getAttributesDisplayInList <em>Attributes Display In List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Attributes Display In List</em>'.
+	 * @see org.eclipse.sirius.sample.multiactivity.ListView#getAttributesDisplayInList()
+	 * @see #getListView()
+	 * @generated
+	 */
+	EReference getListView_AttributesDisplayInList();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.sirius.sample.multiactivity.PropertyKind <em>Property Kind</em>}'.
@@ -1618,22 +1618,6 @@ public interface MultiactivityPackage extends EPackage {
 		EAttribute ATTRIBUTE__NAME = eINSTANCE.getAttribute_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Display In List</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATTRIBUTE__DISPLAY_IN_LIST = eINSTANCE.getAttribute_DisplayInList();
-
-		/**
-		 * The meta object literal for the '<em><b>Display In Detail</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATTRIBUTE__DISPLAY_IN_DETAIL = eINSTANCE.getAttribute_DisplayInDetail();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.sirius.sample.multiactivity.Type <em>Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1690,7 +1674,7 @@ public interface MultiactivityPackage extends EPackage {
 		EClass LIST_VIEW = eINSTANCE.getListView();
 
 		/**
-		 * The meta object literal for the '<em><b>Listdeclaration</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Listdeclaration</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1720,6 +1704,22 @@ public interface MultiactivityPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LIST_VIEW__ALLOW_DELETION = eINSTANCE.getListView_AllowDeletion();
+
+		/**
+		 * The meta object literal for the '<em><b>Attributes Display In Detail</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIST_VIEW__ATTRIBUTES_DISPLAY_IN_DETAIL = eINSTANCE.getListView_AttributesDisplayInDetail();
+
+		/**
+		 * The meta object literal for the '<em><b>Attributes Display In List</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIST_VIEW__ATTRIBUTES_DISPLAY_IN_LIST = eINSTANCE.getListView_AttributesDisplayInList();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.sirius.sample.multiactivity.PropertyKind <em>Property Kind</em>}' enum.
