@@ -16,10 +16,10 @@
     <packageables xsi:type="multiactivity:PrimitiveType"/>
   </namedelements>
   <namedelements xsi:type="multiactivity:Package" name="controller">
-    <packageables xsi:type="multiactivity:Activity" name="MainAvtivity">
+    <packageables xsi:type="multiactivity:Activity" name="MainActivity">
       <layouts name="activity_main">
-        <views xsi:type="multiactivity:ListView" name="RecyclerVIew" id_view="RecyclerVIew3" listdeclaration="//@namedelements.0/@packageables.2" attributesDisplayInList="//@namedelements.0/@packageables.0/@attributes.0" attributesDisplayInDetail="//@namedelements.0/@packageables.0/@attributes.1 //@namedelements.0/@packageables.0/@attributes.0"/>
-        <views xsi:type="multiactivity:ListView" name="RecyclerView" id_view="RecyclerView4" listdeclaration="//@namedelements.0/@packageables.3" attributesDisplayInList="//@namedelements.0/@packageables.1/@attributes.1 //@namedelements.0/@packageables.1/@attributes.0" attributesDisplayInDetail="//@namedelements.0/@packageables.1/@attributes.1 //@namedelements.0/@packageables.1/@attributes.0"/>
+        <views xsi:type="multiactivity:ListView" name="RecyclerVIew" id_view="RecyclerVIew18" listdeclaration="//@namedelements.0/@packageables.2" attributesDisplayInList="//@namedelements.0/@packageables.0/@attributes.0" attributesDisplayInDetail="//@namedelements.0/@packageables.0/@attributes.1 //@namedelements.0/@packageables.0/@attributes.0"/>
+        <views xsi:type="multiactivity:ListView" name="RecyclerView" id_view="RecyclerView20" listdeclaration="//@namedelements.0/@packageables.3" attributesDisplayInList="//@namedelements.0/@packageables.1/@attributes.1 //@namedelements.0/@packageables.1/@attributes.0" attributesDisplayInDetail="//@namedelements.0/@packageables.1/@attributes.1 //@namedelements.0/@packageables.1/@attributes.0"/>
       </layouts>
     </packageables>
   </namedelements>

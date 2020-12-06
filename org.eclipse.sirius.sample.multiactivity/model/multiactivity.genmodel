@@ -12,9 +12,9 @@
   <genPackages prefix="Multiactivity" basePackage="org.eclipse.sirius.sample" disposableProviderFactory="true"
       ecorePackage="multiactivity.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="multiactivity.ecore#//PropertyKind">
-      <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/int"/>
-      <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/Boolean"/>
       <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/String"/>
+      <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/Boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/int"/>
       <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/double"/>
       <genEnumLiterals ecoreEnumLiteral="multiactivity.ecore#//PropertyKind/Date"/>
     </genEnums>
@@ -37,7 +37,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute multiactivity.ecore#//PopupMessageButton/message"/>
     </genClasses>
     <genClasses ecoreClass="multiactivity.ecore#//TextView"/>
-    <genClasses ecoreClass="multiactivity.ecore#//PopupTimeButton"/>
+    <genClasses ecoreClass="multiactivity.ecore#//PopupTimeButton">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference multiactivity.ecore#//PopupTimeButton/textview"/>
+    </genClasses>
     <genClasses ecoreClass="multiactivity.ecore#//Application">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference multiactivity.ecore#//Application/namedelements"/>
     </genClasses>

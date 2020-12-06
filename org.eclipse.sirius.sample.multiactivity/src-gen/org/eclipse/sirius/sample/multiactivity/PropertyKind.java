@@ -19,26 +19,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum PropertyKind implements Enumerator {
 	/**
-	 * The '<em><b>Int</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #INT_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	INT(0, "int", "int"),
-
-	/**
-	 * The '<em><b>Boolean</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #BOOLEAN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	BOOLEAN(1, "Boolean", "Boolean"),
-
-	/**
 	 * The '<em><b>String</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -46,7 +26,25 @@ public enum PropertyKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	STRING(2, "String", "String"),
+	STRING(0, "String", "String"),
+	/**
+	* The '<em><b>Boolean</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #BOOLEAN_VALUE
+	* @generated
+	* @ordered
+	*/
+	BOOLEAN(1, "Boolean", "Boolean"),
+	/**
+	* The '<em><b>Int</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #INT_VALUE
+	* @generated
+	* @ordered
+	*/
+	INT(2, "int", "int"),
 
 	/**
 	 * The '<em><b>Double</b></em>' literal object.
@@ -69,15 +67,15 @@ public enum PropertyKind implements Enumerator {
 	DATE(4, "Date", "Date");
 
 	/**
-	 * The '<em><b>Int</b></em>' literal value.
+	 * The '<em><b>String</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #INT
-	 * @model name="int"
+	 * @see #STRING
+	 * @model name="String"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int INT_VALUE = 0;
+	public static final int STRING_VALUE = 0;
 
 	/**
 	 * The '<em><b>Boolean</b></em>' literal value.
@@ -91,15 +89,15 @@ public enum PropertyKind implements Enumerator {
 	public static final int BOOLEAN_VALUE = 1;
 
 	/**
-	 * The '<em><b>String</b></em>' literal value.
+	 * The '<em><b>Int</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #STRING
-	 * @model name="String"
+	 * @see #INT
+	 * @model name="int"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int STRING_VALUE = 2;
+	public static final int INT_VALUE = 2;
 
 	/**
 	 * The '<em><b>Double</b></em>' literal value.
@@ -129,7 +127,7 @@ public enum PropertyKind implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final PropertyKind[] VALUES_ARRAY = new PropertyKind[] { INT, BOOLEAN, STRING, DOUBLE, DATE, };
+	private static final PropertyKind[] VALUES_ARRAY = new PropertyKind[] { STRING, BOOLEAN, INT, DOUBLE, DATE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Property Kind</b></em>' enumerators.
@@ -185,12 +183,12 @@ public enum PropertyKind implements Enumerator {
 	 */
 	public static PropertyKind get(int value) {
 		switch (value) {
-		case INT_VALUE:
-			return INT;
-		case BOOLEAN_VALUE:
-			return BOOLEAN;
 		case STRING_VALUE:
 			return STRING;
+		case BOOLEAN_VALUE:
+			return BOOLEAN;
+		case INT_VALUE:
+			return INT;
 		case DOUBLE_VALUE:
 			return DOUBLE;
 		case DATE_VALUE:

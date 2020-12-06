@@ -4,52 +4,81 @@
  */]
 [module generateActivityClass('http://www.example.org/multiactivity')]
 [import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::utils /]
+[import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::getterTemplate /]
 
 
 [**
  * generate an activity class
  * @param anActivity the activity 
  */]
-[template public generateActivity(anActivity : Activity) {
-layoutName : String = 'layout_' +anActivity.name.toLower();
-packageName : String = 'pje20.androidapp.app1.' + anActivity.eContainer(Package).name;
-}]
+[template public generateActivity(anActivity : Activity)]
+[file (self.getActivityPackagePath()  , false, 'UTF-8') ]
+package [self.getActivityPackageName()/];
+[anActivity.generateCommonImports()/]
+[anActivity.generateElementsImports()/]
 
-	[file ('java/'+packageName.substituteAll('.', '/')+'/'  + anActivity.name.toUpperFirst() + '.java', false, 'UTF-8') ]
-		package [packageName/];
-		[anActivity.generateCommonImports()/]
-		[anActivity.generateElementsImports()/]
-		[anActivity.generateSpecificImports()/]
-		
-		public class [anActivity.name.toUpperFirst()/] extends AppCompatActivity 
-		[anActivity.interfacesImplementation()/]{
-			[anActivity.declareAttribute()/]
-			@Override
-		    protected void onCreate(Bundle savedInstanceState) {		
-				super.onCreate(savedInstanceState);
-				setContentView(R.layout.[layoutName/]);
-				[anActivity.defineAttribute()/]				
-			}
-		
-			@Override
-		    protected void onStart() {
-		        super.onStart();
-			[for (aView : View | anActivity.layouts.views)]		
-			[aView.setViewClickListener()/]
-			[/for]
-		    }
-			@Override
-    		public void onClick(View v) {
-        	switch (v.getId()) {
-        	[for (aView : View | anActivity.layouts.views)]
-			[aView.viewCase()/]
-			[/for]    
-        	}
-    		}
-			[for (aView : View | anActivity.layouts.views)]
-			[aView.displayDetail()/]
-			[/for]  
+public class [anActivity.name.toUpperFirst()/] extends AppCompatActivity 
+[anActivity.interfacesImplementation()/]{
+	[anActivity.declareAttribute()/]
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {		
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.[self.getActivityLayoutName()/]);
+		[anActivity.defineAttribute()/]				
+	}
 
+	@Override
+    protected void onStart() {
+        super.onStart();
+	[for (aView : View | anActivity.layouts.views)]		
+	[aView.setViewClickListener()/]
+	[/for]
+    }
+	@Override
+	public void onClick(View v) {
+	switch (v.getId()) {
+	[for (aView : View | anActivity.layouts.views)]
+	[aView.viewCase()/]
+	[/for]    
+	}
+	}
+	[for (aView : View | anActivity.layouts.views)]
+	[aView.displayDetail()/]
+	[aView.removeItem()/]
+	[/for]  
+
+}
+[/file]
+[/template]
+
+
+
+[template public generateDetailActivity(aListView : ListView) { ModelName : String =self.getModelName();}]
+
+[file (self.getActivityDetailPackagePath(), false, 'UTF-8')]
+package [self.getActivityDetailPackageName()/];
+[self.eContainer(Activity).generateCommonImports()/]
+import android.widget.TextView;
+import androidx.annotation.Nullable;
+import pje20.androidapp.app1.model.[ModelName/];
+import static [self.eContainer(Activity).getActivityPackageName()/].[self.getAdapterName()/].ITEM_POSITION;
+
+public class [self.getActivityDetailName()/] extends AppCompatActivity {
+
+	protected void onCreate(@Nullable Bundle savedInstanceState) {		
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.[self.getActivityDetailLayoutName()/]);
+		Intent intent = getIntent();
+		if( intent.getExtras()!= null) { 
+			[ModelName/] [ModelName.toLowerFirst()/] = ([ModelName/]) intent.getSerializableExtra(ITEM_POSITION);
+		[for (detailAttribute : Attribute | aListView.attributesDisplayInDetail)]
+			((TextView) findViewById(R.id.[getAttributeId(detailAttribute, ModelName)/])).setText([ModelName.toLowerFirst()/].get[self.name.toUpperFirst()/]());		
+		[/for]
 		}
+	}
+}
 	[/file]
 [/template]
+
+
+

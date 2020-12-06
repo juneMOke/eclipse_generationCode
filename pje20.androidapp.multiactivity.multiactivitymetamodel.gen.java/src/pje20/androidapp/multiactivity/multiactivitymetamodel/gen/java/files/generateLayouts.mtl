@@ -3,45 +3,55 @@
  * The documentation of the module generateLayouts.
  */]
 [module generateLayouts('http://www.example.org/multiactivity')]
+[import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::getterTemplate /]
 
 
 [**
- * The documentation of the template generateElement.
+ * Generate the activity layout
  * @param anActivity
  */]
 [template public generateLayout(anActivity : Activity){
-	layoutName : String = anActivity.layouts -> first().name;
 	xml : String = '<?xml version="1.0" encoding="utf-8"?>';
 }]
 
-[file ('res/layout/' +anActivity.layouts.name.toLower() + '.xml', false, 'UTF-8') ]
+[file (self.getActivityLayoutName().getLayoutFilePath(), false, 'UTF-8') ]
 [xml/]
-	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	    xmlns:app="http://schemas.android.com/apk/res-auto"
-	    xmlns:tools="http://schemas.android.com/tools"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    tools:context=".[anActivity.name/]"
-	    android:orientation="vertical"
-	    android:gravity="center">
-	    
-	[for (view : View | anActivity.layouts.views)]
-		<[view.name/]
-			android:id="@+id/[view.name/]_[view.id_view/]"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="[view.content/]"
-	        app:layout_constraintBottom_toBottomOf="parent"
-	        app:layout_constraintEnd_toEndOf="parent"
-	        app:layout_constraintStart_toStartOf="parent"
-	        app:layout_constraintTop_toTopOf="parent" 
-			android:layout_margin="5dp"/>
-		[self.createSpecificView()/]			
-	[/for]
-	</LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:weightSum="9"
+    tools:context="[self.getActivityContext()/]"
+    android:orientation="vertical"
+    android:gravity="center">
+    
+[for (view : View | anActivity.layouts.views)]
+	[self.createSpecificView()/]			
+[/for]
+</LinearLayout>
 [/file]
 		
 [/template]
+
+[**
+ * manage  creation of a view Element 
+ * @param aView the view
+ * 
+ */]
+[template public manageViewCreation (aView : View) ]
+<[aView.name/]
+		android:id="@+id/[self.getViewId()/]"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[aView.content/]"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" 
+		android:layout_margin="5dp"/>
+[/template]
+
 
 [**
  * Create a specific user interface element 
@@ -51,8 +61,9 @@
  */]
 
 [template private createSpecificView (aView : View)]
-	
+[self.manageViewCreation()/]
 [/template]
+
 
  [**
  * Create a TextView button for displaying the Time 
@@ -60,18 +71,19 @@
  * 
  */]
 [template private createSpecificView (aView : PopupTimeButton)]
-	<TextView
-			android:id="@+id/textview_[aView.name/]_[aView.id_view/]"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text=""
-	        app:layout_constraintBottom_toBottomOf="parent"
-	        app:layout_constraintEnd_toEndOf="parent"
-	        app:layout_constraintStart_toStartOf="parent"
-	        app:layout_constraintTop_toTopOf="parent" 
-			android:layout_gravity="top"
-			android:layout_margin="5dp"/>
-	
+[self.manageViewCreation()/]
+[comment]<TextView
+		android:id="@+id/[self.getViewId()/]"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" 
+		android:layout_gravity="top"
+		android:layout_margin="5dp"/>[/comment]
+
 [/template]
 
 [**
@@ -80,28 +92,46 @@
  * 
  */]
 [template private createSpecificView (aView : ListView)]
-	[if (aView.allowedCreation)]
-		<LinearLayout
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_weight="0"
-	        android:orientation="vertical">
+ <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/[self.getViewId()/]"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            >
 
-	        <ImageView
-	            android:id="@+id/add_todo"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentRight="true"
-	            android:layout_alignParentBottom="true"
-	            android:layout_marginRight="12dp"
-	            android:layout_marginBottom="12dp"
-	            android:layout_gravity="center"
-	            android:elevation="2dp"
-	            android:src="@android:drawable/ic_menu_add" />
+        </androidx.recyclerview.widget.RecyclerView>
 
-    	</LinearLayout>
 
-	[/if]
+    </RelativeLayout>
+
+
+
+[if (aView.allowedCreation)]
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/add_todo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_gravity="center"
+        android:elevation="2dp"
+        android:src="@android:drawable/ic_menu_add" />
+
+</LinearLayout>
+
+[/if]
 	
 [/template]
 
@@ -115,24 +145,15 @@
  * 
  */]
 
-[template public generateLayoutsFromName(aListView : ListView) 
-{
-LayoutName : String = self.listdeclaration.name.toLowerCase(); 
-ModelName : String =self.listdeclaration.entity.name.toLower();
-ActivityName: String = self.listdeclaration.name.toUpperFirst()+'DetailActivity';
-
-}]
-		[comment] generate the detail[/comment]
-	
-	[file ('res/layout/' + LayoutName + '_detail_layout.xml', false, 'UTF-8')]
-		[if (self.displayDetail)]
-			[recylerLayout(self.attributesDisplayInDetail,ActivityName,ModelName)/]
-		[/if]
-	[/file]
-	[file ('res/layout/' +LayoutName+ '_row_layout.xml', false, 'UTF-8')]
-		[recylerLayout(self.attributesDisplayInList,'',ModelName)/]
-	[/file]
-[comment]the row layouts[/comment]
+[template public generateLayoutsActivitiesFromName(aListView : ListView) {ModelName : String =self.listdeclaration.entity.name.toLower();}]
+[file (self.getActivityDetailLayoutName().getLayoutFilePath(), false, 'UTF-8')]
+[if (self.displayDetail)]
+[recylerLayout(self.attributesDisplayInDetail,self.getActivityDetailContext(),ModelName)/]
+[/if]
+[/file]
+[file (self.getActivitylistItemLayoutName().getLayoutFilePath(), false, 'UTF-8')]
+[recylerLayout(self.attributesDisplayInList,'',ModelName)/]
+[/file]
 [/template]
 
 [**
@@ -146,16 +167,27 @@ ActivityName: String = self.listdeclaration.name.toUpperFirst()+'DetailActivity'
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    
 	[if (aContext <> '')]
-    tools:context='.'+[aContext/]		
-	[/if]
+	android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ 	tools:context='[aContext/]'
     android:orientation="vertical"
-    android:gravity="center">
+	android:background="@drawable/background_detail"
+
+	[else]
+	android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+	android:padding="6dip"
+	android:background="@color/teal_700"
+	android:layout_margin="3dp"
+   		
+	[/if]
+	
+ 	>
 	[for (anAttribute : Attribute | self)]
 	<TextView
-			android:id="@+id/[aModelName/]_[self.name.toLower()/]"
+			android:id="@+id/[getAttributeId(self,aModelName)/]"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        app:layout_constraintBottom_toBottomOf="parent"

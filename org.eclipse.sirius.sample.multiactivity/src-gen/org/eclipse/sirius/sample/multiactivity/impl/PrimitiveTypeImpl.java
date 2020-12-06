@@ -32,7 +32,7 @@ public class PrimitiveTypeImpl extends PackageableImpl implements PrimitiveType 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final PropertyKind PROPERTY_KIND_EDEFAULT = PropertyKind.INT;
+	protected static final PropertyKind PROPERTY_KIND_EDEFAULT = PropertyKind.STRING;
 	/**
 	 * The cached value of the '{@link #getPropertyKind() <em>Property Kind</em>}' attribute.
 	 * <!-- begin-user-doc -->

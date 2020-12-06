@@ -1,0 +1,70 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module getterTemplate.
+ */]
+[module getterTemplate('http://www.example.org/multiactivity')]
+
+
+[**
+ * Return Activities of an Application.
+ * @param anApplication
+ */]
+[query public getActivities(anApplication : Application) : Sequence(Activity) = self.eAllContents(Activity)/]
+[query public getListView(anAppLication : Application) : ListView =  self.eAllContents(ListView)->first()/]
+[query public getApplicationPackage(anApplication : Application) : String = 'pje20.androidapp.app1' /]
+[query  public getApplicationPackagePath(anApplication : Application) : String = 'java/'+self.getApplicationPackage().substituteAll('.', '/') +'/' /]
+[query public getParticularClassPackageName(anApplication : Application) : String = self.getApplicationPackage()+'.controller' /]
+[query public getParticularClassPackagePath(anApplication : Application) : String = 'java/'+self.getParticularClassPackageName().substituteAll('.', '/') + '/' /]
+
+[query public getLayoutFilePath(aLayoutName : String) : String ='res/layout/'+ self + '.xml' /]
+
+[query public getDrawableFilePath(aDrawableName : String) : String ='res/drawable/'+ self + '.xml' /]
+
+
+[query public getActivityPackageName(anActivity : Activity) : String = self.eContainer(Application).getApplicationPackage() + '.'+ self.eContainer(Package).name/]
+[query public getActivityContext(anActivity : Activity) : String ='.'+self.eContainer(Package).name+'.' + self.name.toUpperFirst() /]
+[query public getActivityPackagePath(anActivity : Activity) : String = 'java/'+self.getActivityPackageName().substituteAll('.', '/')+'/'+self.name.toUpperFirst()+'.java'/]
+
+
+[query public getActivityLayoutName(anActivity : Activity) : String = self.name.toLower()+'_layout' /]
+
+
+[query public getListViewAllowedDisplayInDetail(anActivity : Activity) : Sequence(ListView) = self.eAllContents(ListView) -> select(e|e.displayDetail=true)/]
+[query public getListViewAllowedCreation(anActivity : Activity) : Sequence(ListView) = self.eAllContents(ListView) -> select(e|e.allowedCreation=true)/]
+
+[query public getActivityDetailName(aListView : ListView) : String = self.listdeclaration.name.toUpperFirst() + 'DetailActivity' /]
+[query public getActivityDetailContext(aListView : ListView) : String = '.utils.'+ self.getActivityDetailName() /]
+[query public getActivityDetailPackageName(aListView : ListView) : String = self.eContainer(Application).getApplicationPackage() + '.'+'utils'/]
+[query public getActivityDetailPackagePath(aListView : ListView) : String = 'java/'+self.getActivityDetailPackageName().substituteAll('.', '/')+'/'+self.getActivityDetailName()+ '.java' /]
+[query public getActivityDetailLayoutName(aListView : ListView) : String = self.listdeclaration.name.toLowerCase()+'_detail_layout' /]
+
+[query public getActivitylistItemLayoutName(aListView : ListView) : String = self.listdeclaration.name.toLowerCase()+'_listitem_layout' /]
+[query public getModelName(aListView : ListView) : String = self.listdeclaration.entity.name.toUpperFirst() /]
+
+
+
+[query public getModelPackageName(aListView : ListView) : String = self.eContainer(Application).getApplicationPackage()+'.' +'model'/]
+[query public getModelPackagePath(aListView : ListView) : String = 'java/'+self.getModelPackageName().substituteAll('.', '/')+'/'/]
+
+[query public getAttributeId(anAttribute : Attribute, aModelName : String) : String = aModelName.toLower()+'_'+anAttribute.name.toLower() /]
+[query public getAttributeName(anAttribute : Attribute  ) : String = anAttribute.name.toUpperFirst() /]
+
+
+[query public getViewId(aView : View) : String = self.name+'_'+ self.id_view /]
+[query public getAdapterInterfaceName(aListView : ListView) : String =  'SelectedItem' /]
+[query public getNoticeDialiogListenerClassName(aListView : ListView) : String =  'AddTodoDialogFragment.'+ self.listdeclaration.entity.name.toUpperFirst()+'NoticeDialogListener' /]
+[query public getAdapterName(aListView : ListView) : String = self.getModelName()+'Adapter' /]
+[query public getViewModelName(aListView : ListView) : String = self.getModelName()+'ViewModel' /]
+[query public getRecyclerViewName(aListView : ListView) : String = self.getModelName()+'RecyclerView' /]
+[query public getLayoutManagerName(aListView : ListView) : String = self.getModelName()+'LayoutManager' /]
+[query public getViewHolderName(aListView : ListView) : String = self.getModelName()+'ViewHolder' /]
+[query public getDataHolderName(aListView : ListView) : String = self.getModelName()+'DataHolder' /]
+
+
+[query public getPath(aPackageName : String) : String = 'java/' + aPackageName.substituteAll('.', '/') /]
+
+
+
+
+
+

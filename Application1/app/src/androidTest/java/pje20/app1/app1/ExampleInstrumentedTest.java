@@ -1,4 +1,4 @@
-package pje20.androidapp.app1;
+package pje20.app1.app1;
 
 import android.content.Context;
 

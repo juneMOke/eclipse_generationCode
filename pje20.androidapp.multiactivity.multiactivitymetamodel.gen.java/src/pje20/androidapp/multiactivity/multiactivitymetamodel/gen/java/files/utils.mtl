@@ -3,6 +3,7 @@
  * The documentation of the module utils.
  */]
 [module utils('http://www.example.org/multiactivity')]
+[import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::getterTemplate /]
 
 
 [**
@@ -12,12 +13,18 @@
 
 				[comment  ########### interfaces implementation section ########### /]
 
-[template public interfacesImplementation(anActivity : Activity)]
-	[if (self.eAllContents(ListView)) -> notEmpty()]
-		implements MyAdapter.TodoSelected,
-        View.OnClickListener,
-        AddTodoDialogFragment.TodoNoticeDialogListener,
-        RecyclerItemTouchHelper.RecyclerItemTouchHelperListener	
+[template public interfacesImplementation(anActivity : Activity)
+{ listViews : Sequence(ListView) = self.eAllContents(ListView); }
+]
+[comment]gèrer les adapters[/comment]
+	[if (listViews -> notEmpty())]
+		implements View.OnClickListener,
+		[listViews-> first().getAdapterInterfaceName()/],
+        	
+	[for (aListView : ListView | listViews)]
+	//	[self.getNoticeDialiogListenerClassName()/],
+	[/for]
+		RecyclerItemTouchHelper.RecyclerItemTouchHelperListener   
 	[else]
 		implements View.OnClickListener
 	[/if]
@@ -33,11 +40,11 @@
  */]
 
 [template public generateElementsImports (anActivity : Activity) ? (self.eAllContents(PopupTimeButton) -> notEmpty())]
-	import android.widget.TextView;
-	import android.os.Build;
-	import androidx.annotation.RequiresApi;
-	import java.time.LocalDateTime; 
-	import java.time.format.DateTimeFormatter; 
+import android.widget.TextView;
+import android.os.Build;
+import androidx.annotation.RequiresApi;
+import java.time.LocalDateTime; 
+import java.time.format.DateTimeFormatter; 
 [/template]
 
 [**
@@ -45,24 +52,38 @@
  * @param anActivity the activity 
  */]
 [template public generateElementsImports (anActivity : Activity) ? (self.eAllContents(ListView) -> notEmpty())]
-	import androidx.lifecycle.LiveData;
-	import androidx.lifecycle.ViewModelProvider;
-	import androidx.recyclerview.widget.ItemTouchHelper;
-	import androidx.recyclerview.widget.LinearLayoutManager;
-	import androidx.recyclerview.widget.RecyclerView;
-	import android.app.Dialog;
-	[if (anActivity.eAllContents(PopupMessageButton)->isEmpty())]
-	import pje20.androidapp.app1.popup.HelloWorldDialogFragment;
-	[/if]
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import android.app.Dialog;
+import java.util.List;
+[for (aListView : ListView | self.eAllContents(ListView))]
+import [aListView.getModelPackageName()/].[aListView.getModelName()/];
+import [aListView.getModelPackageName()/].[aListView.getViewModelName()/];
+
+[if (self.displayDetail)]
+import [self.getActivityDetailPackageName()/].[self.getActivityDetailName()/];
+[/if]
+[/for]
+[let allowedCreationValues : Sequence(ListView) = anActivity.getListViewAllowedCreation()]
+[if (allowedCreationValues -> notEmpty())]
+import android.widget.EditText;
+import android.widget.ImageView;
+[/if]
+[/let]
+
+[if (anActivity.eAllContents(PopupMessageButton)->isEmpty())]
+//import pje20.androidapp.app1.popup.HelloWorldDialogFragment;
+[/if]
 [/template]
 [**
  * generate imports for activity with some specification
  * @param anActivity the activity 
  */]
-[template public generateSpecificImports (anActivity : Activity)]
-	[if (anActivity.eAllContents(PopupMessageButton)->notEmpty())]		
-	import pje20.androidapp.app1.popup.HelloWorldDialogFragment;
-	[/if]
+[template public generateElementsImports (anActivity : Activity) ? (anActivity.eAllContents(PopupMessageButton)->notEmpty())]
+import pje20.androidapp.app1.popup.HelloWorldDialogFragment;
 [/template]
 
 [**
@@ -88,15 +109,12 @@ import pje20.androidapp.app1.R;
 [/for]	
 [/template]
 [template public declareAttribute(anActivity : Activity) ? (self.eAllContents(ListView) -> notEmpty())]
-public static String ITEM_POSITION = 'POSITION'
+public static String ITEM_POSITION = "POSITION";
 [for (aListView : ListView | self.eAllContents(ListView))]
-[let aModelName : String = self.listdeclaration.entity.name.toUpperFirst()]
-	RecyclerView m[aModelName/]RecyclerView;
-	MyViewModel m[aModelName/]ViewModel;
-	RecyclerView.LayoutManager m[aModelName/]LayoutManager;
-	LiveData<List<[aModelName/]>> [aModelName/]Data
-	RecyclerView.Adapter m[aModelName/]Adapter;	
-[/let]
+	RecyclerView m[aListView.getRecyclerViewName()/];
+	RecyclerView.Adapter m[aListView.getAdapterName()/];	
+	RecyclerView.LayoutManager m[aListView.getLayoutManagerName()/];
+	[aListView.getViewModelName()/] m[aListView.getViewModelName()/];
 [/for]
 [/template]
 
@@ -113,36 +131,34 @@ public static String ITEM_POSITION = 'POSITION'
 
 [for (aListView : ListView | self.eAllContents(ListView))]
 [let aModelName : String = self.listdeclaration.entity.name.toUpperFirst()]
-	m[aModelName/]RecyclerView =findViewById(R.id.@+id/[aListView.name/]_[aListView.id_view/]"_) ;
-	m[aModelName/]ViewModel = new ViewModelProvider(this).get([aModelName/]ViewModel.class);
-	[aModelName/]Data = m[aModelName/]ViewModel.get[aModelName/]LiveData();
-	m[aModelName/]LayoutManager = new LinearLayoutManager(this);
-	m[aModelName/]Adapter = new [aModelName/]Adapter([aModelName/]Data,this);	
-	m[aModelName/]RecyclerView.setLayoutManager(m[aModelName/]LayoutManager);
-	m[aModelName/]RecyclerView.setAdapter(m[aModelName/]Adapter);
+	m[aListView.getRecyclerViewName()/] =findViewById(R.id.[aListView.name/]_[aListView.id_view/]) ;
+	m[aListView.getViewModelName()/] = new ViewModelProvider(this).get([aModelName/]ViewModel.class);
+	LiveData<List<[aModelName/]>> m[aModelName/]Data = m[aModelName/]ViewModel.getSampleData();
+	m[aListView.getAdapterName()/] = new [aListView.getAdapterName()/](m[aModelName/]Data,this);	
+	m[aListView.getLayoutManagerName()/] = new LinearLayoutManager(this);
+	m[aListView.getRecyclerViewName()/].setLayoutManager(m[aListView.getLayoutManagerName()/]);
+	m[aListView.getRecyclerViewName()/].setAdapter(m[aListView.getAdapterName()/]);
 	final androidx.lifecycle.Observer<List<[aModelName/]>> [aModelName/]Observer = new androidx.lifecycle.Observer<List<[aModelName/]>>() {
             @Override
             public void onChanged(List<[aModelName/]> [aModelName.toLower()/]) {
                 m[aModelName/]Adapter.notifyDataSetChanged();
             };
         };
-        m[aModelName/]ViewModel.get[aModelName/]LiveData().observe(this,[aModelName/]Observer);
+       m[aListView.getViewModelName()/].get[aModelName/]LiveData().observe(this,[aModelName/]Observer);
 [/let]
+[if (self.allowDeletion)]
+		RecyclerItemTouchHelper RecyclerItemTouchHelpers = new RecyclerItemTouchHelper(0, ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT,this);
+    	ItemTouchHelper itemTouchHelper = new ItemTouchHelper(RecyclerItemTouchHelpers);
+    	itemTouchHelper.attachToRecyclerView(m[self.getRecyclerViewName()/]);
+[/if]
 [/for]
-		
+[comment]	si l'une des listview permet la création d'un élément	[/comment]
 [if (self.eAllContents(ListView)-> first().allowedCreation)]
     ImageView AddButton = findViewById(R.id.add_todo);
 	AddButton.setOnClickListener(this);
-	AddTodoDialogFragments = new AddTodoDialogFragment();
+	//AddTodoDialogFragments = new AddTodoDialogFragment();
 [/if]
 
-[for (aListView : ListView | self.eAllContents(ListView))]
-	[if (self.allowDeletion)]
-		RecyclerItemTouchHelper RecyclerItemTouchHelpers = new RecyclerItemTouchHelper(0, ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT,this);
-    	ItemTouchHelper itemTouchHelper = new ItemTouchHelper(RecyclerItemTouchHelpers);
-    	itemTouchHelper.attachToRecyclerView([self.listdeclaration.entity.name.toUpperFirst()/]RecyclerView);
-	[/if]
-[/for]
 [/template]
 
 
@@ -150,23 +166,38 @@ public static String ITEM_POSITION = 'POSITION'
 
 
 
-[template public setViewClickListener(aView : View) ? ((self.oclIsTypeOf(TextView)=false) or (self.oclIsTypeOf(ListView)=false))]
-	findViewById(R.id.[self.name/]_[self.id_view/]).setOnClickListener(this);
+[template public setViewClickListener(aView : View) ? ((self.oclIsTypeOf(TextView)=false) and (self.oclIsTypeOf(ListView)=false))]
+	findViewById(R.id.[self.getViewId()/]).setOnClickListener(this);
 [/template]
 
 [template public displayDetail(aView : View) ]
 
 [/template]
 
-[template public displayDetail(aListView : ListView) { aModelName : String = self.listdeclaration.entity.name.toUpperFirst(); }]
+[template public displayDetail(aListView : ListView) { aModelName : String = self.getModelName() ;}]
 @Override	
 public void display[aModelName/]Detail(View View, [aModelName/] m[aModelName/]){
-			Intent intent  = new Intent(this,[aModelName/]DetailActivity.class);
-			intent.putExtra(ITEM_POSITION,m[aModelName/]);
-			startActivity(intent);
+	Intent intent  = new Intent(this,[self.getActivityDetailName()/].class);
+	intent.putExtra(ITEM_POSITION,m[aModelName/]);
+	startActivity(intent);
 
 }
 [/template]
+
+[template public removeItem(aView : View) ]
+
+[/template]
+
+[template public removeItem(aListView : ListView)]
+@Override
+public void onSwiped(RecyclerView.ViewHolder viewHolder) {
+	int position = viewHolder.getAdapterPosition();
+    m[aListView.getViewModelName()/].remove[aListView.getModelName()/](position);
+	}
+	
+[/template]
+
+[comment gerer les boutons add /]
 
 [template public viewCase(aView : ListView)]
 	case R.id.add_todo : {
@@ -179,7 +210,7 @@ public void display[aModelName/]Detail(View View, [aModelName/] m[aModelName/]){
 [/template]
 
 [template public viewCase(aView : View) ]
-	case R.id.[self.name/]_[self.id_view/]: {
+	case R.id.[self.getViewId()/]: {
                 [self.handleClick()/]
                 break;
             } 
@@ -194,19 +225,12 @@ public void display[aModelName/]Detail(View View, [aModelName/] m[aModelName/]){
 [/template]
 
 [template public handleClick(buttonActivity : NewActivityButton)]
-	
 		Intent intent = new Intent(this, [self.activity.name.toUpperFirst()/].class);
-	    startActivity(intent);
-	
-
-	
+	    startActivity(intent);		
 [/template]
 
-[template public handleClick(buttonPopUp : PopupMessageButton)]
-	
-        mDialog[self.id_view.toUpperFirst()/].show(getSupportFragmentManager(),"[self.message/]");
- 
-	
+[template public handleClick(buttonPopUp : PopupMessageButton)]	
+        mDialog[self.id_view.toUpperFirst()/].show(getSupportFragmentManager(),"[self.message/]");	
 [/template]
 
 [template public handleClick(aTimeButton : PopupTimeButton)]
@@ -215,7 +239,7 @@ public void display[aModelName/]Detail(View View, [aModelName/] m[aModelName/]){
 		 LocalDateTime myDateObj = LocalDateTime.now();
 		 DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
     	 String formattedDate = myDateObj.format(myFormatObj);
-		 TextView txt = findViewById(R.id.textview_[self.name/]_[self.id_view/]);
+		 TextView txt = findViewById(R.id.textview_[self.getViewId()/]);
 		 txt.setText(formattedDate);
 			
     }

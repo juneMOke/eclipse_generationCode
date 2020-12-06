@@ -3,13 +3,14 @@
  * The documentation of the module generateDialogClass.
  */]
 [module generateDialogClass('http://www.example.org/multiactivity')]
+[import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::getterTemplate /]
 
 
 [**
  * The documentation of the template generateElement.
  * @param anApplication
  */]
-[template public createDialogPopUpClass(anApplication : Application)]
+[template public createDialogPopUpClass(anApplication : Application) ? (self.eAllContents(PopupMessageButton) -> notEmpty())]
 [file ('java/pje20/androidapp/app1/popup/HelloWorldDialogFragment.java', false, 'UTF-8')]
 	
 	package pje20.androidapp.app1.popup;
@@ -54,6 +55,55 @@
 	    }
 	}
 [/file]
+[/template]
+
+[template public generateAddDialogFragment(anApp : Application)]
+[file (anApp.getParticularClassPackagePath() + 'AddDialogFragment.java', false, 'UTF-8')]
+	private  TodoNoticeDialogListener listener;
+    @NonNull
+    @Override
+    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        LayoutInflater inflater = requireActivity().getLayoutInflater();
+        builder.setView(inflater.inflate(R.layout.add_new_todo_layout,null))
+                .setPositiveButton(R.string.add_todo, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        EditText edt = (EditText) getDialog().findViewById(R.id.add_todo_title);
+                        listener.onDialogPositiveClick(AddTodoDialogFragment.this);
+
+
+
+                    }
+                })
+                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        AddTodoDialogFragment.this.getDialog().cancel();
+                    }
+                });
+        return builder.create();
+    }
+
+    public interface TodoNoticeDialogListener{
+        public void  onDialogPositiveClick(DialogFragment dialog);
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        try {
+            listener = (TodoNoticeDialogListener) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(getActivity().toString() + "must implement NoticeDialogListener");
+        }
+    }
+}
+
+[/file]
+
+
+
 [/template]
 
 

@@ -870,9 +870,9 @@ public class MultiactivityPackageImpl extends EPackageImpl implements Multiactiv
 
 		// Initialize enums and add enum literals
 		initEEnum(propertyKindEEnum, PropertyKind.class, "PropertyKind");
-		addEEnumLiteral(propertyKindEEnum, PropertyKind.INT);
-		addEEnumLiteral(propertyKindEEnum, PropertyKind.BOOLEAN);
 		addEEnumLiteral(propertyKindEEnum, PropertyKind.STRING);
+		addEEnumLiteral(propertyKindEEnum, PropertyKind.BOOLEAN);
+		addEEnumLiteral(propertyKindEEnum, PropertyKind.INT);
 		addEEnumLiteral(propertyKindEEnum, PropertyKind.DOUBLE);
 		addEEnumLiteral(propertyKindEEnum, PropertyKind.DATE);
 

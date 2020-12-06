@@ -1,0 +1,218 @@
+[comment encoding = UTF-8 /]
+[**
+ * This module ensures the generation of a model, viewmodel and dataHolder.
+ */]
+[module generateModel('http://www.example.org/multiactivity')]
+[import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::getterTemplate /]
+
+
+
+
+
+[template public generateActivityModel(anActivity : Activity) ? (anActivity.eAllContents(ListView)-> notEmpty())]
+[for (aListView : ListView | anActivity.eAllContents(ListView))]
+	[self.generateModelFiles()/]
+[/for]
+
+[/template]
+[**
+ * Generate a model, viewmodel and dataHolder files
+ * @param aListView
+ */]
+[template public generateModelFiles(aListView : ListView)]
+	[aListView.generateModel()/]
+	[aListView.generateViewModel()/]
+	[aListView.generateModelDataHolder()/]
+[/template]
+
+[**
+ * Generate a model file
+ * @param aModel
+ * @param aPackageName
+ */]
+[template private generateModel(aListView: ListView) 
+{ 
+attributes: OrderedSet(Attribute) =  aListView.listdeclaration.entity.attributes; 
+modelName : String = aListView.getModelName()
+} ]
+[file (aListView.getModelPackagePath()+ modelName + '.java', false, 'UTF-8')]
+package [aListView.getModelPackageName()/];
+import java.io.Serializable;
+
+
+public class [modelName/] implements Serializable {
+
+
+[for (anAttribute : Attribute | attributes)]
+	private [anAttribute.type.getType()/] m[anAttribute.getAttributeName()/];
+[/for]
+
+[for (anAttribute : Attribute | attributes)]
+	public [anAttribute.type.getType()/] get[anAttribute.getAttributeName()/]() { return m[anAttribute.getAttributeName()/]; }
+	public void set[anAttribute.getAttributeName()/]([anAttribute.type.getType()/] [anAttribute.name.toLowerFirst()/]) { m[anAttribute.getAttributeName()/] = [anAttribute.name/]; }
+[/for]
+	public [modelName/]([aListView.listdeclaration.entity.generateParams()/]) {
+	[for (anAttribute : Attribute |attributes)]
+		m[anAttribute.getAttributeName()/] = [anAttribute.name.toLowerFirst()/];
+	[/for]
+	}
+}
+
+[/file]
+
+[/template]
+
+[**
+ * Generate a viewmodel file
+ * @param aModel
+ * @param aPackageName
+ * @param creationAllowed to check if item creation is allowed for this view
+ * @param deletionAllowed to check if item deletion is allowed for this view
+ */]
+[template private generateViewModel(aListView:ListView) 
+{ 
+modelName : String = aListView.getModelName(); 
+viewModelName : String = aListView.getViewModelName();
+entity : Entity = aListView.listdeclaration.entity
+
+}]
+[file (aListView.getModelPackagePath()+viewModelName+'.java', false, 'UTF-8')]
+package [aListView.getModelPackageName()/];
+
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
+
+import java.util.List;
+
+public class [viewModelName/] extends ViewModel {
+	
+	private MutableLiveData<List<[modelName/]>> m[modelName/]LiveData;
+
+	public MutableLiveData<List<[modelName/]>> get[modelName/]LiveData() {
+		return m[modelName/]LiveData;
+	}
+	public MutableLiveData<List<[modelName/]>> getSampleData() {
+		if (m[modelName/]LiveData == null) {
+            m[modelName/]LiveData = [self.getDataHolderName()/].getInstance().getAll[modelName/]();
+        }
+        return m[modelName/]LiveData;
+	}
+	
+	[if (aListView.allowedCreation)]
+	public void add[modelName/]([entity.generateParams()/]) {
+		[aListView.getDataHolderName()/].getInstance().add[modelName/]([entity.generateParamsNames()/],m[modelName/]LiveData);
+	}
+	[/if]
+	
+	[if (aListView.allowDeletion)]
+	public void remove[modelName/](int position) {
+		[aListView.getDataHolderName()/].getInstance().remove[modelName/](position,m[modelName/]LiveData);
+	}
+	[/if]
+}
+
+[/file]
+[/template]
+
+[**
+ * Generate a dataholder file
+ * @param aModel
+ * @param aPackageName
+ * @param creationAllowed to check if item creation is allowed for this view
+ * @param deletionAllowed to check if item deletion is allowed for this view
+ */]
+[template private generateModelDataHolder(aListView: ListView ) 
+{
+ modelName:String = aListView.getModelName(); 
+dataHolderName : String = aListView.getDataHolderName();
+entity : Entity = aListView.listdeclaration.entity
+}]
+[file (aListView.getModelPackagePath()+ dataHolderName +'.java', false, 'UTF-8')]
+package [aListView.getModelPackageName()/];
+
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class [dataHolderName/] {
+	
+	
+	private List<[modelName/]> m[modelName/] = new ArrayList<[modelName/]>();
+	
+	private static [dataHolderName/] holder = new [dataHolderName/]();
+	public static [dataHolderName/] getInstance() { return holder; }
+	
+	public MutableLiveData<List<[modelName/]>> getAll[modelName/]() {
+		MutableLiveData<List<[modelName/]>> [modelName.toLowerFirst()/]ListLiveData = new MutableLiveData<List<[modelName/]>>();
+		for (int i = 1; i < 13 ; i++) {
+            m[modelName/].add(new [modelName/](i+"/"+i+"/2020","title"+i,"this is the "+i+"content","author"+i));
+        }
+		[modelName.toLowerFirst()/]ListLiveData.setValue(m[modelName/]);
+		return [modelName.toLowerFirst()/]ListLiveData;
+
+	}
+	
+	[if (aListView.allowedCreation)]
+	public void add[modelName/]([entity.generateParams()/], MutableLiveData<List<[modelName/]>> mutableLiveData) {
+		m[modelName/].add(new [modelName/]([entity.generateParamsNames()/]));
+		mutableLiveData.setValue(m[modelName/]);
+	}
+	[/if]
+	
+	[if (aListView.allowDeletion)]
+	public void remove[modelName/](int position, MutableLiveData<List<[modelName/]>> mutableLiveData) {
+		m[modelName/].remove(position);
+		mutableLiveData.setValue(m[modelName/]);
+	}
+	[/if]
+}	
+[/file]
+[/template]
+
+[**
+ * Generate a model params like "paramType paramName, ..."
+ * @param aModel
+ */]
+[template private generateParams(aModel : Entity)]
+[for (att : Attribute | aModel.attributes) separator (', ') ]
+[att.type.getType()+ ' ' + att.name/]
+[/for]
+[/template]
+
+[**
+ * Generate a model params name like "paramName, ..."
+ * @param aModel
+ */]
+[template private generateParamsNames(aModel : Entity)]
+[for (att : Attribute | aModel.attributes) separator (', ') ]
+[att.name/]
+[/for]
+[/template]
+
+[template private getType(aType : Type)]
+	// TODO
+[/template]
+
+[template private getType(aType : Entity)]
+[aType.name.toUpperFirst()/]
+[/template]
+
+[template private getType(aType : PrimitiveType)]
+[aType.propertyKind/]
+[/template]
+
+
+
+
+
+
+
+
+
+
+
+
+

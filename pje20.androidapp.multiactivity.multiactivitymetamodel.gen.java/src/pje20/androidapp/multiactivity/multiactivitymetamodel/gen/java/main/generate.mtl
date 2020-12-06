@@ -4,10 +4,13 @@
  */]
 
 [module generate('http://www.example.org/multiactivity')]
-[import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::generateLayouts /]
-[import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::generateAndroidManifest /]
-[import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::generateDialogClass /]
+
 [import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::generateActivityClass /]
+[import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::generateAndroidManifest /]
+[import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::generateModel /]
+[import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::generateUtilsClasses /]
+[import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::generateAdapter /]
+[import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::generateDialogClass /]
 
 [**
  * The documentation of the template generateElement.
@@ -16,16 +19,9 @@
 [template public generateApplication(anApplication : Application)]
 [comment @main/]
 	[self.generateManifest()/]
-	[if (self.eAllContents(PopupMessageButton) -> notEmpty())]
-		[self.createDialogPopUpClass()/]
-	[/if]
-	
-	
-	[for (anActivity : Activity | self.eAllContents(Activity))]
-		[self.generateActivity()/]	
-		[self.generateLayout()/]	
-	[/for]
+	[self.createDialogPopUpClass()/]
+	[self.generateToucheHelper()/]
+	[self.generateAdapterInterface()/]
 
-	
 [/template]
 

@@ -24,7 +24,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TextView" eSuperTypes="#//View"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PopupTimeButton" eSuperTypes="#//View"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PopupTimeButton" eSuperTypes="#//View">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="textview" lowerBound="1"
+        eType="#//TextView"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Application">
     <eStructuralFeatures xsi:type="ecore:EReference" name="namedelements" upperBound="-1"
         eType="#//NamedElement" containment="true"/>
@@ -69,9 +72,9 @@
         upperBound="-1" eType="#//Attribute"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PropertyKind">
-    <eLiterals name="int" literal="int"/>
+    <eLiterals name="String" literal="String"/>
     <eLiterals name="Boolean" value="1" literal="Boolean"/>
-    <eLiterals name="String" value="2" literal="String"/>
+    <eLiterals name="int" value="2" literal="int"/>
     <eLiterals name="double" value="3"/>
     <eLiterals name="Date" value="4"/>
   </eClassifiers>

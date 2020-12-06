@@ -1,0 +1,64 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generateUtilsClasses.
+ */]
+[module generateUtilsClasses('http://www.example.org/multiactivity')]
+[import pje20::androidapp::multiactivity::multiactivitymetamodel::gen::java::files::getterTemplate /]
+
+[**
+ * Generate a touch helper for deleting an item swipped to right / left.
+ * @param anApplication
+ */]
+[template public generateToucheHelper(anApp : Application)]
+
+[file (self.getParticularClassPackagePath() + 'RecyclerItemTouchHelper.java', false, 'UTF-8')]
+package [self.getParticularClassPackageName()/];
+
+import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.RecyclerView;
+
+public class RecyclerItemTouchHelper extends ItemTouchHelper.SimpleCallback {
+    RecyclerItemTouchHelperListener mRecyclerItemTouchHelperListener;
+    public RecyclerItemTouchHelper(int dragDirs, int swipeDirs,RecyclerItemTouchHelperListener listener) {
+        super(dragDirs, swipeDirs);
+        mRecyclerItemTouchHelperListener = listener;
+
+    }
+
+    @Override
+    public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+        return false;
+    }
+
+
+    @Override
+    public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+        mRecyclerItemTouchHelperListener.onSwiped(viewHolder);
+    }
+    public interface RecyclerItemTouchHelperListener{
+        void onSwiped(RecyclerView.ViewHolder viewHolder);
+    }
+}
+[/file]
+[/template]
+
+[template public genarateDetailBackground(anApp : Application)]
+[file (getDrawableFilePath('background_detail'), false, 'UTF-8')]
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <gradient
+        android:startColor="@android:color/holo_blue_light"
+        android:endColor="@android:color/background_light"
+        android:centerColor="@color/design_default_color_on_primary"
+        android:type="linear"
+        >
+
+    </gradient>
+
+</shape>
+[/file]
+[/template]
